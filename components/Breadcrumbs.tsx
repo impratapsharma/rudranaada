@@ -1,0 +1,3 @@
+import Link from 'next/link'; import { JsonLd } from './JsonLd'; import { site } from '@/lib/site';
+type Item={label:string;href:string};
+export function Breadcrumbs({items}:{items:Item[]}){const all=[{label:'Home',href:'/'},...items];return <><nav className="breadcrumbs" aria-label="Breadcrumb">{all.map((item,index)=><span key={item.href}>{index>0&&<span aria-hidden="true"> / </span>}{index===all.length-1?<span aria-current="page">{item.label}</span>:<Link href={item.href}>{item.label}</Link>}</span>)}</nav><JsonLd data={{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:all.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.label,item:site.url+item.href}))}}/></>}
