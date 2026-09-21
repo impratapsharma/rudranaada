@@ -1,0 +1,1 @@
+export const site = {name:'RudraNāda',asciiName:'RudraNaada',url:'https://rudranaada.com',description:'Stories, music and meaning from India’s epics and devotional traditions. Explore the Mahabharata, Ramayana, deities, mantras, philosophy and original RudraNāda music.',youtube:'https://www.youtube.com/@rudranaada',locale:'en_IN'};
