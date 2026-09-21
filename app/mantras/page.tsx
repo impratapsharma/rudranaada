@@ -1,0 +1,3 @@
+import type {Metadata} from 'next'; import {Breadcrumbs} from '@/components/Breadcrumbs';
+export const metadata:Metadata={title:'Mantras & Stotras',description:'Meaning, context, transliteration and source-aware guides to mantras, stotras and devotional language.',alternates:{canonical:'/mantras'}};
+export default function Page(){return <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Mantras',href:'/mantras'}]}/><div className="eyebrow">Sacred language</div><h1>Meaning without flattening the mantra.</h1><p>This library will pair Sanskrit text with careful transliteration, plain-English meaning, textual context and pronunciation guidance where useful.</p></div></section>}
