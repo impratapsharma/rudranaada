@@ -19,6 +19,6 @@ export default function Page(){
       <div className="card"><h3>Mahāvākya</h3><p>A “great saying” of the Upanishadic tradition. Aham Brahmasmi is a mahāvākya, even when modern music places it inside a chant or meditation.</p></div>
     </div></div></section>
 
-    <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>Let repetition become attention.</h2></div><p>These RudraNāda recordings move from stotra to mantra, nāma-japa and contemplative music. The page for each release will gradually add text, transliteration, meaning and practice context.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
+    <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>Let repetition become attention.</h2></div><p>These RudraNāda recordings move from stotra to mantra, nāma-japa and contemplative music. Listen for the differences in form instead of treating every sacred phrase as the same kind of chant.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
   </>
 }
