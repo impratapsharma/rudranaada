@@ -153,7 +153,7 @@ export const hubEnhancements:Record<string,HubEnhancement>={
       {question:'Why is Parashurama both Brahmin and warrior?',answer:'Traditional accounts identify him with a Brahmin lineage while also presenting him as an extraordinary warrior. The combination is one reason his character resists simple social or moral classification.'},
       {question:'Does Parashurama appear in the Mahabharata?',answer:'Yes. Later epic tradition remembers Parashurama as a formidable teacher associated with warriors including Bhishma and Karna, though the details belong to specific narrative contexts within the Mahabharata tradition.'}
     ]
-  }
+  },
   about:{
     quickAnswer:'RudraNāda is a devotional music and editorial project that brings original music, Indian epics, sacred stories, mantras and reflective writing into the same space. Music opens the door; careful reading helps the listener understand what the story, text or tradition actually says.',
     keyTakeaways:[
