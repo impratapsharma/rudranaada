@@ -1,3 +1,22 @@
-import type {Metadata} from 'next'; import {Breadcrumbs} from '@/components/Breadcrumbs';
-export const metadata:Metadata={title:'Ramayana',description:'Stories, characters and traditions connected to the Ramayana, with careful sourcing and context.',alternates:{canonical:'/ramayana'}};
-export default function Page(){return <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Ramayana',href:'/ramayana'}]}/><div className="eyebrow">Epic library</div><h1>A living tradition of duty, devotion and return.</h1><p>Explore the Ramayana through stories, characters, regional traditions, devotional meaning and music.</p></div></section>}
+import type {Metadata} from 'next';
+import {Breadcrumbs} from '@/components/Breadcrumbs';
+
+export const metadata: Metadata = {
+  title: 'Ramayana',
+  description: 'Stories, characters and traditions connected to the Ramayana, with careful sourcing and context.',
+  alternates: {canonical: '/ramayana'},
+  robots: {index: false, follow: true},
+};
+
+export default function Page() {
+  return (
+    <section className="pageHero">
+      <div className="shell">
+        <Breadcrumbs items={[{label:'Ramayana',href:'/ramayana'}]} />
+        <div className="eyebrow">Epic library</div>
+        <h1>A living tradition of duty, devotion and return.</h1>
+        <p>Explore the Ramayana through stories, characters, regional traditions, devotional meaning and music.</p>
+      </div>
+    </section>
+  );
+}
