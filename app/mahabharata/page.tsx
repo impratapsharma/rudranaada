@@ -5,6 +5,9 @@ import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {MusicCard} from '@/components/MusicCard';
 import {JsonLd} from '@/components/JsonLd';
 import {site} from '@/lib/site';
+import {QuickAnswer} from '@/components/QuickAnswer';
+import {FaqSection} from '@/components/FaqSection';
+import {getHubEnhancement} from '@/lib/hub-enhancements';
 
 export const metadata:Metadata={title:'Mahabharata: Stories, Characters & RudraNāda Music',description:'Explore the Mahabharata through Krishna, Arjuna, Karna, Abhimanyu, Draupadi, Bhishma, Kurukshetra, the Bhagavad Gita and RudraNāda music.',alternates:{canonical:'/mahabharata'},robots:{index:true,follow:true}};
 
@@ -17,12 +20,15 @@ const pathways=[
 ];
 
 export default function Page(){
+  const enhancement=getHubEnhancement('mahabharata');
   const releases=fullSongs.filter(v=>v.themes.includes('Mahabharata'));
   const uthParth=releases.find(v=>v.slug==='uth-parth');
   return <>
     <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mahabharata | RudraNāda',description:'RudraNāda music and story pathways through the Mahabharata.',url:site.url+'/mahabharata',hasPart:releases.map(v=>({'@type':'VideoObject',name:v.title,url:site.url+'/music/'+v.slug}))}}/>
 
     <section className="pageHero mahabharataHero"><div className="shell"><Breadcrumbs items={[{label:'Mahabharata',href:'/mahabharata'}]}/><div className="eyebrow">Mahabharata</div><h1>The Mahabharata does not give easy people easy choices.</h1><p>Vows become burdens. Loyalty becomes dangerous. Dharma changes shape depending on who is standing where. We enter the epic through the people who had to choose.</p>{uthParth&&<div className="heroActions"><Link className="button" href="/music/uth-parth">Begin on Kurukshetra</Link><Link className="button buttonGhost" href="/music">Hear all music</Link></div>}</div></section>
+
+    <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
 
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Before the teaching</div><h2>First, Arjuna’s hand begins to tremble.</h2></div><p>The Bhagavad Gita does not begin with a calm philosopher asking a tidy question. It begins with a warrior looking at teachers, relatives and friends across the battlefield and losing the will to act.</p></div>{uthParth&&<div className="featuredRelease"><MusicCard entry={uthParth}/><div className="featuredCopy"><h3>Uth Parth</h3><p>The song follows that movement from collapse to action. Its page now includes the lyrics, their meaning, the Kurukshetra setting and the Gita verses behind lines about the self, karma, Vishwaroopa and Time.</p><Link href="/music/uth-parth">Enter the song and the Gita behind it →</Link></div></div>}</div></section>
 
@@ -40,5 +46,7 @@ export default function Page(){
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Mahabharata in music</div><h2>Hear the epic through its people.</h2></div><p>These songs do not replace the text. They give a character, a vow or a moment enough emotional weight to make you want to return to the story.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
     <section className="section sacredStatement"><div className="shell"><div className="eyebrow">How we tell it</div><h2>We would rather say “this is a later telling” than make the story sound simpler than it is.</h2><p>When a song follows a specific passage, we point to it. When a beloved detail comes from a later or regional tradition, we name that layer. When RudraNāda invents a line for dramatic effect, we call it our interpretation.</p></div></section>
+
+    <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
   </>
 }
