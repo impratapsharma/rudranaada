@@ -83,14 +83,14 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       </div>
 
       {rich ? <>
-        <div className="callout richNote"><strong>Text and interpretation note</strong><p>{rich.editorialNote}</p></div>
+        <div className="callout richNote"><strong>Before you read</strong><p>{rich.editorialNote}</p></div>
 
         <div className="articleBody">
-          <h2>The story behind Uth Parth</h2>
+          <h2>The moment before Krishna speaks</h2>
           {rich.context.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
 
-          <h2>Uth Parth lyrics</h2>
-          <p className="sectionIntro">Presented from RudraNāda’s original composition text.</p>
+          <h2>The lyrics</h2>
+          <p className="sectionIntro">The words as they appear in RudraNāda’s original composition.</p>
           <div className="lyrics">
             {rich.lyrics.map(section=><section className="lyricSection" key={section.label}>
               <h3>{section.label}</h3>
@@ -98,13 +98,13 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
             </section>)}
           </div>
 
-          <h2>What the lyrics mean</h2>
+          <h2>What the song is saying</h2>
           <div className="meaningGrid">
             {rich.meanings.map(item=><section className="meaningCard" key={item.heading}><h3>{item.heading}</h3><p>{item.text}</p></section>)}
           </div>
 
-          <h2>Bhagavad Gita references behind the song</h2>
-          <p className="sectionIntro">These references are textual anchors for the song’s themes. They are not claims that every lyric line is a direct quotation.</p>
+          <h2>Where the Bhagavad Gita enters the song</h2>
+          <p className="sectionIntro">These are the verses that sit behind the song’s ideas. A lyrical paraphrase is still labelled as a paraphrase.</p>
           <div className="referenceList">
             {rich.references.map(ref=><section className="referenceItem" key={ref.verse}>
               <div className="referenceVerse">{ref.verse}</div>
@@ -114,7 +114,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
             </section>)}
           </div>
 
-          <h2>Frequently asked questions</h2>
+          <h2>Questions listeners ask</h2>
           <div className="faqList">
             {rich.faq.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
           </div>
@@ -123,12 +123,12 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
             <strong>Primary reference:</strong> Bhagavad Gita text and translations linked above are from IIT Kanpur’s Gita Supersite. RudraNāda’s lyrics and explanatory prose are presented separately from scripture.
           </div>
         </div>
-      </> : m.description && <div className="articleBody"><h2>About this release</h2><div className="releaseDescription">{m.description}</div></div>}
+      </> : m.description && <div className="articleBody"><h2>About the song</h2><div className="releaseDescription">{m.description}</div></div>}
 
       <div className="tagRow">{m.themes.map(t=><span className="tag" key={t}>{t}</span>)}</div>
       {hubs.length>0&&<div className="heroActions">{hubs.map(d=><Link key={d.slug} href={'/deities/'+d.slug}>Explore {d.name} →</Link>)}</div>}
     </article>
 
-    {related.length>0&&<section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Related RudraNāda</div><h2>Keep listening</h2></div></div><div className="grid3">{related.map(v=><MusicCard key={v.videoId} entry={v}/>)}</div></div></section>}
+    {related.length>0&&<section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Stay in this world</div><h2>More from the same story-world</h2></div></div><div className="grid3">{related.map(v=><MusicCard key={v.videoId} entry={v}/>)}</div></div></section>}
   </>;
 }
