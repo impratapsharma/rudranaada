@@ -8,7 +8,8 @@ export const researchArticles:Article[]=[
     dek:'Sharad Navratri begins on 11 October 2026. The calendar matters, but the deeper question is what the nine nights are asking us to remember.',
     description:'Navratri 2026 dates, the nine forms of Durga, the textual roots of Navdurga, regional traditions, and what is scripture versus later custom.',
     publishedAt:'2026-09-21',
-    readingMinutes:13,
+    updatedAt:'2026-09-22',
+    readingMinutes:15,
     category:'Festivals',
     author:'Pratap Sharma',
     featuredImage:{
