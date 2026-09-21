@@ -14,6 +14,6 @@ export default function Page(){
 
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>Sometimes the story begins with a name.</h2></div><p>Rama can be approached through epic narrative, but also through remembrance. The Ram Naam chant and our orchestral Ramayana release hold those two moods side by side.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
-    <section className="section sacredStatement"><div className="shell"><div className="eyebrow">The path ahead</div><h2>Rama is not the only center of the Ramayana.</h2><p>As this library grows, Sita, Hanuman, Lakshmana, Bharata, Ravana and the women, sages and kingdoms around them will receive their own space. The epic becomes richer when no single character is forced to carry the whole meaning.</p></div></section>
+    <section className="section sacredStatement"><div className="shell"><div className="eyebrow">The path ahead</div><h2>Rama is not the only center of the Ramayana.</h2><p>Sita, Hanuman, Lakshmana, Bharata, Ravana, the sages and the kingdoms around them change the meaning of the story depending on where you stand. The epic becomes richer when no single character is forced to carry the whole meaning.</p></div></section>
   </>
 }
