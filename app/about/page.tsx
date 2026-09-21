@@ -1,0 +1,3 @@
+import type {Metadata} from 'next'; import {Breadcrumbs} from '@/components/Breadcrumbs';
+export const metadata:Metadata={title:'About',description:'About RudraNāda and its approach to music, storytelling and research.',alternates:{canonical:'/about'}};
+export default function Page(){return <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'About',href:'/about'}]}/><div className="eyebrow">About RudraNāda</div><h1>Music can be the doorway. Curiosity takes it further.</h1><p>RudraNāda is a growing home for original devotional and epic music, researched stories, philosophy, mantras and source-aware cultural writing.</p></div></section>}
