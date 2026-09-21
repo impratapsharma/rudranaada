@@ -2,6 +2,8 @@ import type {Metadata} from 'next';
 import Link from 'next/link';
 import {articles} from '@/lib/content';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
+import {JsonLd} from '@/components/JsonLd';
+import {site} from '@/lib/site';
 
 export const metadata:Metadata={
   title:'Pratap Sharma | Author',
@@ -12,6 +14,7 @@ export const metadata:Metadata={
 export default function Page(){
   const authored=articles.filter(a=>a.author==='Pratap Sharma');
   return <>
+    <JsonLd data={{'@context':'https://schema.org','@type':'ProfilePage',url:site.url+'/authors/pratap',mainEntity:{'@type':'Person','@id':site.url+'/authors/pratap#person',name:'Pratap Sharma',url:site.url+'/authors/pratap',jobTitle:'Founder & Editor',worksFor:{'@id':site.url+'/#organization'},knowsAbout:['Mahabharata','Ramayana','Bhagavad Gita','Hindu devotional traditions','Mantras','Indian epics']}}}/>
     <section className="pageHero"><div className="shell">
       <Breadcrumbs items={[{label:'Authors',href:'/articles'},{label:'Pratap Sharma',href:'/authors/pratap'}]}/>
       <div className="eyebrow">Founder & Editor</div>
