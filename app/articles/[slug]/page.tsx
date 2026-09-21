@@ -6,6 +6,8 @@ import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
 import {getArticleEnhancement} from '@/lib/article-enhancements';
+import {QuickAnswer} from '@/components/QuickAnswer';
+import {FaqSection} from '@/components/FaqSection';
 
 export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
 
@@ -17,7 +19,9 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
     title:a.seoTitle??a.title,
     description:a.description,
     alternates:{canonical:'/articles/'+a.slug},
-    openGraph:{type:'article',title:a.seoTitle??a.title,description:a.description,url:site.url+'/articles/'+a.slug,publishedTime:a.publishedAt,modifiedTime:a.updatedAt??a.publishedAt,tags:a.tags,authors:a.author?[a.author]:undefined,images:a.featuredImage?[{url:a.featuredImage.src,alt:a.featuredImage.alt}]:undefined}
+    authors:[{name:a.author??'Pratap Sharma',url:'/authors/pratap'}],
+    openGraph:{type:'article',title:a.seoTitle??a.title,description:a.description,url:site.url+'/articles/'+a.slug,publishedTime:a.publishedAt,modifiedTime:a.updatedAt??a.publishedAt,tags:a.tags,authors:[a.author??'Pratap Sharma'],images:a.featuredImage?[{url:a.featuredImage.src,alt:a.featuredImage.alt}]:undefined},
+    twitter:{card:'summary_large_image',title:a.seoTitle??a.title,description:a.description,images:a.featuredImage?[a.featuredImage.src]:undefined}
   };
 }
 
@@ -32,7 +36,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     : {'@type':'Organization',name:'RudraNāda',url:site.url};
 
   return <article className="articleWrap researchArticle">
-    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:a.category,about:a.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
     <Breadcrumbs items={[{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
     <div className="eyebrow">{a.category}</div>
     <h1>{a.title}</h1>
@@ -49,11 +53,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       {a.featuredImage.caption&&<figcaption>{a.featuredImage.caption}</figcaption>}
     </figure>}
 
-    {enhancement&&<section className="answerBlock">
-      <div className="eyebrow">In brief</div>
-      <p className="answerLead">{enhancement.quickAnswer}</p>
-      <ul>{enhancement.keyTakeaways.map(item=><li key={item}>{item}</li>)}</ul>
-    </section>}
+    {enhancement&&<QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/>} 
 
     <div className="articleBody">
       {a.body.map((s,i)=><section key={i}>
@@ -64,11 +64,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       </section>)}
     </div>
 
-    {enhancement&&<section className="articleFaq">
-      <div className="eyebrow">FAQ</div>
-      <h2>Questions readers ask</h2>
-      <div className="faqList">{enhancement.faq.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
-    </section>}
+    {enhancement&&<FaqSection items={enhancement.faq}/>} 
 
     {a.relatedLinks&&a.relatedLinks.length>0&&<section className="internalJourney">
       <div className="eyebrow">Continue inside RudraNāda</div>
