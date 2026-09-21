@@ -154,6 +154,23 @@ export const hubEnhancements:Record<string,HubEnhancement>={
       {question:'Does Parashurama appear in the Mahabharata?',answer:'Yes. Later epic tradition remembers Parashurama as a formidable teacher associated with warriors including Bhishma and Karna, though the details belong to specific narrative contexts within the Mahabharata tradition.'}
     ]
   }
+  about:{
+    quickAnswer:'RudraNāda is a devotional music and editorial project that brings original music, Indian epics, sacred stories, mantras and reflective writing into the same space. Music opens the door; careful reading helps the listener understand what the story, text or tradition actually says.',
+    keyTakeaways:[
+      'RudraNāda creates original devotional and epic music.',
+      'The site connects songs with stories, meanings, texts and traditions.',
+      'Scripture, later retellings and RudraNāda artistic interpretation are kept distinct.',
+      'Pratap Sharma is the founder and editor behind the long-form writing.',
+      'The aim is deeper remembrance and understanding, not religious trivia.'
+    ],
+    faq:[
+      {question:'What is RudraNāda?',answer:'RudraNāda is a devotional music and editorial project focused on Indian epics, deities, mantras, sacred stories and spiritual reflection. It combines original music with long-form, source-aware writing.'},
+      {question:'Is RudraNāda only a YouTube music channel?',answer:'No. Music is the starting point, but RudraNāda also publishes Mahabharata and Ramayana stories, deity guides, mantra explainers, festival research and Guru Bodha reflections.'},
+      {question:'Who writes RudraNāda articles?',answer:'RudraNāda long-form articles are published under Pratap Sharma, founder and editor of the project.'},
+      {question:'How does RudraNāda handle scripture and later retellings?',answer:'The editorial approach is to distinguish what primary texts say from later tradition, regional retellings, popular belief and RudraNāda’s own artistic interpretation instead of merging them into a single version.'},
+      {question:'Why combine devotional music with research?',answer:'Music can make a story emotionally immediate. Research and writing can then slow the reader down enough to understand context, language, textual differences and the meaning behind the song.'}
+    ]
+  }
 };
 
 export const getHubEnhancement=(key:string)=>hubEnhancements[key];
