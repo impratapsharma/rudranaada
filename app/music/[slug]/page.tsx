@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {getMusic,music,deityHubs} from '@/lib/content';
 import {getRichMusic} from '@/lib/rich-music';
-import {formatDate,formatDuration} from '@/lib/music-format';
+import {formatDate,formatDuration,getDisplayTitle} from '@/lib/music-format';
 import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
@@ -31,6 +31,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const m=getMusic((await params).slug);
   if(!m)notFound();
   const rich=getRichMusic(m.slug);
+  const displayTitle=rich?.displayTitle ?? getDisplayTitle(m.slug,m.title);
   const related=music.filter(v=>v.videoId!==m.videoId&&v.format==='video'&&v.themes.some(t=>m.themes.includes(t))).sort((a,b)=>Number(b.videoId===m.relatedVideoId)-Number(a.videoId===m.relatedVideoId)).slice(0,3);
   const hubs=deityHubs.filter(d=>m.themes.some(t=>t.toLowerCase()===d.name.toLowerCase()));
 
@@ -63,9 +64,9 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   return <>
     <article className="articleWrap musicArticle">
       <JsonLd data={schemas}/>
-      <Breadcrumbs items={[{label:'Music',href:'/music'},{label:rich?.displayTitle ?? m.title,href:'/music/'+m.slug}]}/>
+      <Breadcrumbs items={[{label:'Music',href:'/music'},{label:displayTitle,href:'/music/'+m.slug}]}/>
       <div className="eyebrow">{m.eyebrow}</div>
-      <h1>{rich?.displayTitle ?? m.title}</h1>
+      <h1>{displayTitle}</h1>
       <p className="lede">{rich?.dek ?? m.summary}</p>
       <div className="articleMeta">
         <span>{m.format==='short'?'YouTube Short':'Full video'}</span>
