@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function NotFound(){return <section className="pageHero"><div className="shell"><div className="eyebrow">404</div><h1>This path has gone quiet.</h1><p>The page may have moved or may not exist yet.</p><div className="heroActions"><Link className="button" href="/">Return home</Link></div></div></section>}
