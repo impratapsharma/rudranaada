@@ -10,7 +10,12 @@ export const researchArticles:Article[]=[
     publishedAt:'2026-09-21',
     readingMinutes:13,
     category:'Festivals',
-    author:'Pratap',
+    author:'Pratap Sharma',
+    featuredImage:{
+      src:'https://i.ytimg.com/vi/c4IidET0umQ/maxresdefault.jpg',
+      alt:'RudraNāda artwork for Mahakali, used as the featured image for the Navratri 2026 guide',
+      caption:'Mahakali in the RudraNāda visual world. Navratri holds the Goddess in many moods, from nurturing to fierce.'
+    },
     tags:['Navratri 2026','Navdurga','Durga','Devi','Dussehra','Shakti'],
     body:[
       {
@@ -43,7 +48,12 @@ export const researchArticles:Article[]=[
         paragraphs:[
           'The nine forms commonly called Navadurga are listed together in the Devi Kavaca, a text recited in the wider Durga Saptashati tradition. Its verses name Shailaputri, Brahmacharini, Chandraghanta, Kushmanda, Skandamata, Katyayani, Kalaratri, Mahagauri and Siddhidatri, and then call them the nine Durgas.',
           'This matters because modern Navratri culture often makes the daily colour, food or social-media card feel like the festival itself. Those practices can be joyful and meaningful, but they are not all the same historical layer. The names of the Navadurga belong to a textual and devotional tradition. A weekday colour chart belongs to a much later popular observance.'
-        ]
+        ],
+        image:{
+          src:'https://i.ytimg.com/vi/NvbwdAzyVbY/maxresdefault.jpg',
+          alt:'RudraNāda Mahakali artwork showing a fierce form of Devi',
+          caption:'The Goddess is not only gentle. Navratri makes room for forms that protect, confront and transform.'
+        }
       },
       {
         heading:'1. Shailaputri: the mountain daughter',
@@ -131,6 +141,20 @@ export const researchArticles:Article[]=[
         ]
       },
       {
+        heading:'Vijayadashami and Sri Rama: the victory remembered at the end of Navratri',
+        paragraphs:[
+          'For millions of people, Vijayadashami is also inseparable from Sri Rama. In North Indian Dussehra traditions, the final days of Ramlila move toward the battle in Lanka and the defeat of Ravana. Effigies of Ravana, Kumbhakarna and Meghanada are burned in many places, turning the epic battle into a public memory of dharma confronting arrogance, abduction and destructive power.',
+          'The Valmiki Ramayana tells the final battle in the Yuddha Kanda. Rama and Ravana meet after a war that has already consumed warriors on both sides. When the moment comes, Rama uses the weapon associated with Brahma and Ravana falls. The story does not need Ravana to be weak or foolish in order for Rama’s victory to matter. Ravana is formidable, learned and powerful. His fall is therefore not a victory over incompetence. It is a warning that brilliance without restraint can still carry a person toward ruin.',
+          'It is worth keeping one textual distinction clear. The Valmiki Ramayana narrates Ravana’s death, but the familiar festival equation “Vijayadashami is the exact calendar day on which Rama killed Ravana” belongs to the living ritual and retelling tradition rather than to a simple date statement in the Sanskrit epic. Ramlila, especially in North India, often draws heavily on Tulsidas’s Ramcharitmanas and culminates during the Dussehra season.',
+          'This is one reason Vijayadashami can hold more than one sacred memory without contradiction. In a Shakta frame, the season culminates in the victory of Devi over Mahishasura. In a Rama tradition, it remembers Rama’s victory over Ravana. In Karnataka, Ayudha Puja and Mysuru Dasara add further layers. The shared word is vijaya, victory, but the deeper question is always the same: after power defeats disorder, what kind of order will it create?'
+        ],
+        image:{
+          src:'https://i.ytimg.com/vi/soEEsE7qf5U/maxresdefault.jpg',
+          alt:'RudraNāda Ramayana artwork used with the Vijayadashami section',
+          caption:'Vijayadashami is also remembered through Sri Rama’s victory over Ravana, especially in Dussehra and Ramlila traditions.'
+        }
+      },
+      {
         heading:'The tenth day is not an escape from the nine nights',
         paragraphs:[
           'Vijayadashami is called a day of victory, but the most interesting victories in the epics and Devi traditions are never merely about defeating someone else. Victory asks what order is restored after conflict.',
@@ -141,7 +165,9 @@ export const researchArticles:Article[]=[
     sources:[
       {label:'Drik Panchang, 2026 Shardiya Navratri calendar for Karnataka',note:'Used for the 2026 tithi sequence and Vijayadashami date. Exact muhurta varies by location.'},
       {label:'Devi Kavaca, verses 3–5',note:'Textual list of the nine names commonly called Navadurga.'},
-      {label:'Devi Mahatmya / Durga Saptashati tradition',note:'Context for the wider Shakta recitation tradition during Navratri.'}
+      {label:'Devi Mahatmya / Durga Saptashati tradition',note:'Context for the wider Shakta recitation tradition during Navratri.'},
+      {label:'Valmiki Ramayana, Yuddha Kanda, final battle with Ravana',note:'Primary epic context for Sri Rama’s defeat of Ravana.'},
+      {label:'UNESCO, Ramlila: the traditional performance of the Ramayana',note:'Documents the North Indian Ramlila tradition during the Dussehra season and its strong relationship with the Ramcharitmanas.'}
     ],
     relatedLinks:[
       {label:'Listen to Mahakali',href:'/music/mahakali'},
@@ -158,7 +184,7 @@ export const researchArticles:Article[]=[
     publishedAt:'2026-09-21',
     readingMinutes:14,
     category:'Mahabharata',
-    author:'Pratap',
+    author:'Pratap Sharma',
     tags:['Karna','Mahabharata','Kavach Kundal','Draupadi','Duryodhana','Kurukshetra'],
     body:[
       {
@@ -264,7 +290,7 @@ export const researchArticles:Article[]=[
     publishedAt:'2026-09-21',
     readingMinutes:12,
     category:'Mantras',
-    author:'Pratap',
+    author:'Pratap Sharma',
     tags:['Om Namah Shivaya','Shiva','Panchakshara','Mantra','Sri Rudram','Meditation'],
     body:[
       {
