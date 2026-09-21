@@ -1,3 +1,11 @@
-import type {Metadata} from 'next'; import Link from 'next/link'; import {music} from '@/lib/content'; import {Breadcrumbs} from '@/components/Breadcrumbs'; import {site} from '@/lib/site';
-export const metadata:Metadata={title:'Original Music',description:'Original RudraNāda devotional and epic music with story context and meaning.',alternates:{canonical:'/music'}};
-export default function Page(){return <><section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Music',href:'/music'}]}/><div className="eyebrow">Original RudraNāda</div><h1>Hear the story before it becomes an explanation.</h1><p>Original compositions inspired by epic characters, devotional traditions and philosophical questions.</p><div className="heroActions"><a className="button" href={site.youtube} target="_blank" rel="noreferrer">Open YouTube ↗</a></div></div></section><section className="section"><div className="shell grid3">{music.map(m=><Link className="card" href={'/music/'+m.slug} key={m.slug}><div className="cardMeta">{m.eyebrow}</div><h3>{m.title}</h3><p>{m.description}</p></Link>)}</div></section></>}
+import type {Metadata} from 'next';
+import {music,fullSongs,shorts} from '@/lib/content';
+import {Breadcrumbs} from '@/components/Breadcrumbs';
+import {MusicCatalogue} from '@/components/MusicCatalogue';
+import {site} from '@/lib/site';
+
+export const metadata:Metadata={title:'Original Music',description:'Explore RudraNāda devotional songs, epic music, chants and Shorts. Listen by deity, character or epic.',alternates:{canonical:'/music'}};
+export default function Page(){return <>
+  <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Music',href:'/music'}]}/><div className="eyebrow">Original RudraNāda</div><h1>Hear the story.</h1><p>Devotional chants, epic characters and quiet moments. Explore {fullSongs.length} full videos and {shorts.length} Shorts from RudraNāda.</p><div className="heroActions"><a className="button buttonGhost" href={site.youtube} target="_blank" rel="noreferrer">Visit the YouTube channel ↗</a></div></div></section>
+  <section className="section catalogueSection"><div className="shell"><MusicCatalogue entries={music}/></div></section>
+</>}

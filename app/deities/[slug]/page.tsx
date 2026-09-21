@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
-import {deityHubs,music} from '@/lib/content';
+import {deityHubs,fullSongs} from '@/lib/content';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 
 export function generateStaticParams() {
@@ -25,7 +25,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}) {
   const d = deityHubs.find((x) => x.slug === slug);
   if (!d) notFound();
 
-  const related = music.filter((m) =>
+  const related = fullSongs.filter((m) =>
     m.themes.some((t) => t.toLowerCase() === d.name.toLowerCase() || t.toLowerCase() === d.slug)
   );
 
@@ -51,7 +51,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}) {
                 <Link className="card" href={'/music/' + m.slug} key={m.slug}>
                   <div className="cardMeta">Music</div>
                   <h3>{m.title}</h3>
-                  <p>{m.description}</p>
+                  <p>{m.summary}</p>
                 </Link>
               ))}
             </div>
