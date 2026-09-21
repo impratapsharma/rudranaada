@@ -12,28 +12,55 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const a=getArticle(slug);
   if(!a)return{};
-  return {title:a.title,description:a.description,alternates:{canonical:'/articles/'+a.slug},openGraph:{type:'article',title:a.title,description:a.description,url:site.url+'/articles/'+a.slug,publishedTime:a.publishedAt,tags:a.tags}};
+  return {
+    title:a.seoTitle??a.title,
+    description:a.description,
+    alternates:{canonical:'/articles/'+a.slug},
+    openGraph:{type:'article',title:a.seoTitle??a.title,description:a.description,url:site.url+'/articles/'+a.slug,publishedTime:a.publishedAt,tags:a.tags,authors:a.author?[a.author]:undefined}
+  };
 }
 
 export default async function Page({params}:{params:Promise<{slug:string}>}){
   const {slug}=await params;
   const a=getArticle(slug);
   if(!a)notFound();
-  return <article className="articleWrap">
-    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:{'@type':'Organization',name:'RudraNāda'},publisher:{'@id':site.url+'/#organization'},inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
+  const author=a.author??'RudraNāda';
+  const authorSchema=a.author
+    ? {'@type':'Person',name:a.author,url:site.url+'/authors/pratap'}
+    : {'@type':'Organization',name:'RudraNāda',url:site.url};
+
+  return <article className="articleWrap researchArticle">
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,publisher:{'@id':site.url+'/#organization'},inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
     <Breadcrumbs items={[{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
     <div className="eyebrow">{a.category}</div>
     <h1>{a.title}</h1>
     <p className="lede">{a.dek}</p>
-    <div className="articleMeta"><span>{new Date(a.publishedAt).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}</span><span>·</span><span>{a.readingMinutes} min read</span><span>·</span><span>RudraNāda</span></div>
-    <div className="articleBody">{a.body.map((s,i)=><section key={i}>{s.heading&&<h2>{s.heading}</h2>}{s.paragraphs.map((p,j)=><p key={j}>{p}</p>)}</section>)}</div>
+    <div className="articleMeta">
+      <span>{new Date(a.publishedAt).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}</span>
+      <span>·</span><span>{a.readingMinutes} min read</span><span>·</span>
+      {a.author?<Link href="/authors/pratap" className="authorLink">{author}</Link>:<span>{author}</span>}
+    </div>
 
-    {a.sources&&a.sources.length>0&&<section className="articleSources">
-      <div className="eyebrow">Sources & passages</div><h2>Read further</h2>
-      {a.sources.map(source=><a href={source.url} target="_blank" rel="noreferrer" key={source.url}><strong>{source.label}</strong>{source.note&&<span>{source.note}</span>}<b>↗</b></a>)}
+    <div className="articleBody">
+      {a.body.map((s,i)=><section key={i}>
+        {s.heading&&<h2>{s.heading}</h2>}
+        {s.paragraphs.map((p,j)=><p key={j}>{p}</p>)}
+        {s.items&&<ul className="articleList">{s.items.map(item=><li key={item}>{item}</li>)}</ul>}
+      </section>)}
+    </div>
+
+    {a.relatedLinks&&a.relatedLinks.length>0&&<section className="internalJourney">
+      <div className="eyebrow">Continue inside RudraNāda</div>
+      <div className="internalJourneyLinks">{a.relatedLinks.map(link=><Link href={link.href} key={link.href}>{link.label}<span>→</span></Link>)}</div>
     </section>}
 
-    {a.category==='Guru Bodha'&&<div className="heroActions"><Link className="button buttonGhost" href="/guru">More from Guru Bodha</Link></div>}
+    {a.sources&&a.sources.length>0&&<section className="articleSources">
+      <div className="eyebrow">Research references</div>
+      <h2>Texts and editions consulted</h2>
+      <p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>
+      {a.sources.map(source=><div className="sourceReference" key={source.label}><strong>{source.label}</strong>{source.note&&<span>{source.note}</span>}</div>)}
+    </section>}
+
     <div className="tagRow">{a.tags.map(t=><span className="tag" key={t}>{t}</span>)}</div>
   </article>
 }
