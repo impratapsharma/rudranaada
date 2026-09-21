@@ -110,7 +110,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
               <div className="referenceVerse">{ref.verse}</div>
               <h3>{ref.title}</h3>
               <p>{ref.note}</p>
-              <a href={ref.url} target="_blank" rel="noreferrer">Read the verse on IIT Kanpur Gita Supersite ↗</a>
+              <div className="referenceSource">Reference checked: IIT Kanpur Gita Supersite</div>
             </section>)}
           </div>
 
@@ -120,7 +120,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
           </div>
 
           <div className="sourceNote">
-            <strong>Primary reference:</strong> Bhagavad Gita text and translations linked above are from IIT Kanpur’s Gita Supersite. RudraNāda’s lyrics and explanatory prose are presented separately from scripture.
+            <strong>Primary reference:</strong> Bhagavad Gita text and translations were checked against IIT Kanpur’s Gita Supersite. RudraNāda’s lyrics and explanatory prose are presented separately from scripture.
           </div>
         </div>
       </> : m.description && <div className="articleBody"><h2>About the song</h2><div className="releaseDescription">{m.description}</div></div>}
