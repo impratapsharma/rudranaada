@@ -5,6 +5,7 @@ import {articles,getArticle} from '@/lib/content';
 import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
+import {getArticleEnhancement} from '@/lib/article-enhancements';
 
 export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
 
@@ -25,6 +26,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const a=getArticle(slug);
   if(!a)notFound();
   const author=a.author??'Pratap Sharma';
+  const enhancement=getArticleEnhancement(a.slug);
   const authorSchema=a.author
     ? {'@type':'Person',name:a.author,url:site.url+'/authors/pratap'}
     : {'@type':'Organization',name:'RudraNāda',url:site.url};
@@ -47,6 +49,12 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       {a.featuredImage.caption&&<figcaption>{a.featuredImage.caption}</figcaption>}
     </figure>}
 
+    {enhancement&&<section className="answerBlock">
+      <div className="eyebrow">In brief</div>
+      <p className="answerLead">{enhancement.quickAnswer}</p>
+      <ul>{enhancement.keyTakeaways.map(item=><li key={item}>{item}</li>)}</ul>
+    </section>}
+
     <div className="articleBody">
       {a.body.map((s,i)=><section key={i}>
         {s.heading&&<h2>{s.heading}</h2>}
@@ -55,6 +63,12 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
         {s.items&&<ul className="articleList">{s.items.map(item=><li key={item}>{item}</li>)}</ul>}
       </section>)}
     </div>
+
+    {enhancement&&<section className="articleFaq">
+      <div className="eyebrow">FAQ</div>
+      <h2>Questions readers ask</h2>
+      <div className="faqList">{enhancement.faq.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
+    </section>}
 
     {a.relatedLinks&&a.relatedLinks.length>0&&<section className="internalJourney">
       <div className="eyebrow">Continue inside RudraNāda</div>
