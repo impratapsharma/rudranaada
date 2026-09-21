@@ -28,6 +28,15 @@ export default function Page(){
 
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Five lives</div><h2>Five ways into the same war.</h2></div><p>You do not need to understand the entire Mahabharata before it can speak to you. Begin with one life. The rest of the epic will slowly gather around it.</p></div><div className="pathwayGrid">{pathways.map(item=><Link className="pathwayCard" href={item.href} key={item.title}><span>{item.title}</span><p>{item.text}</p><strong>Enter →</strong></Link>)}</div></div></section>
 
+    <section className="section"><div className="shell">
+      <div className="featuredEssay">
+        <div className="eyebrow">A harder look at Karna</div>
+        <h2>Karna becomes smaller when we make him only a victim or only a villain.</h2>
+        <p>Our new essay follows his birth, Duryodhana, Draupadi, the kavacha-kundala, Kunti and his death, including the manuscript question around Draupadi’s famous svayamvara rejection.</p>
+        <Link href="/articles/karna-mahabharata-story-text-popular-retellings">Read the Karna essay →</Link>
+      </div>
+    </div></section>
+
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Mahabharata in music</div><h2>Hear the epic through its people.</h2></div><p>These songs do not replace the text. They give a character, a vow or a moment enough emotional weight to make you want to return to the story.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
     <section className="section sacredStatement"><div className="shell"><div className="eyebrow">How we tell it</div><h2>We would rather say “this is a later telling” than make the story sound simpler than it is.</h2><p>When a song follows a specific passage, we point to it. When a beloved detail comes from a later or regional tradition, we name that layer. When RudraNāda invents a line for dramatic effect, we call it our interpretation.</p></div></section>

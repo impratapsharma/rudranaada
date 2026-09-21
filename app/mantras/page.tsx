@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Link from 'next/link';
 import {fullSongs} from '@/lib/content';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {MusicCard} from '@/components/MusicCard';
@@ -18,6 +19,15 @@ export default function Page(){
       <div className="card"><h3>Nāma-japa</h3><p>The repeated remembrance of a divine name. Ram Naam is powerful precisely because the practice can be simple.</p></div>
       <div className="card"><h3>Mahāvākya</h3><p>A “great saying” of the Upanishadic tradition. Aham Brahmasmi is a mahāvākya, even when modern music places it inside a chant or meditation.</p></div>
     </div></div></section>
+
+    <section className="section"><div className="shell">
+      <div className="featuredEssay">
+        <div className="eyebrow">Go deeper</div>
+        <h2>What does Om Namah Shivaya actually mean?</h2>
+        <p>We trace the mantra back to Sri Rudram, explain why Namaḥ Śivāya is called Panchakshara, separate the Vedic phrase from later five-element symbolism, and draw a careful line around modern claims about mantra “benefits.”</p>
+        <Link href="/articles/om-namah-shivaya-meaning-origin-panchakshara">Read the Om Namah Shivaya guide →</Link>
+      </div>
+    </div></section>
 
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>Let repetition become attention.</h2></div><p>These RudraNāda recordings move from stotra to mantra, nāma-japa and contemplative music. Listen for the differences in form instead of treating every sacred phrase as the same kind of chant.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
   </>
