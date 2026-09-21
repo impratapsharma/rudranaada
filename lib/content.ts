@@ -9,6 +9,7 @@ export type Article={
   dek:string;
   description:string;
   publishedAt:string;
+  updatedAt?:string;
   readingMinutes:number;
   category:string;
   author?:string;
