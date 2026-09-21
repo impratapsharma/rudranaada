@@ -49,18 +49,6 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     creator:{'@type':'Organization',name:'RudraNāda',url:site.url}
   }];
 
-  if(rich){
-    schemas.push({
-      '@context':'https://schema.org',
-      '@type':'FAQPage',
-      mainEntity:rich.faq.map(item=>({
-        '@type':'Question',
-        name:item.question,
-        acceptedAnswer:{'@type':'Answer',text:item.answer}
-      }))
-    });
-  }
-
   return <>
     <article className="articleWrap musicArticle">
       <JsonLd data={schemas}/>
@@ -83,6 +71,17 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       </div>
 
       {rich ? <>
+        <section className="answerBlock">
+          <div className="eyebrow">In brief</div>
+          <p className="answerLead">Uth Parth is RudraNāda’s dramatic retelling of Arjuna’s crisis on Kurukshetra and Krishna’s call to rise. The song draws on Bhagavad Gita themes including the immortal self, action without attachment, Vishwaroopa and Krishna as Time, while keeping RudraNāda’s lyrical interpretation separate from the scripture itself.</p>
+          <ul>
+            <li>The title means, in spirit, “Rise, Parth,” with Pārtha being a name of Arjuna.</li>
+            <li>The song begins with Arjuna’s collapse before the battle and moves toward action.</li>
+            <li>“Na tu marta, na tu maarega” is a lyrical paraphrase, not a literal Gita verse.</li>
+            <li>The karma line is anchored most clearly in Bhagavad Gita 2.47.</li>
+            <li>The cosmic imagery draws strongly from Chapter 11 and the Vishwaroopa vision.</li>
+          </ul>
+        </section>
         <div className="callout richNote"><strong>Before you read</strong><p>{rich.editorialNote}</p></div>
 
         <div className="articleBody">
