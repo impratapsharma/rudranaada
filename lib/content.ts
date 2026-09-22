@@ -18,6 +18,9 @@ export type Article={
   body:ArticleSection[];
   sources?:ArticleSource[];
   relatedLinks?:ArticleLink[];
+  quickAnswer?:string;
+  keyTakeaways?:string[];
+  faq?:{question:string;answer:string}[];
 };
 
 export {music,fullSongs,shorts,getMusic} from './music';
