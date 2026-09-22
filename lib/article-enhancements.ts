@@ -1,3 +1,5 @@
+import {diwaliEnhancements} from './diwali-enhancements';
+
 export type ArticleFaq={question:string;answer:string};
 export type ArticleEnhancement={
   quickAnswer:string;
@@ -95,4 +97,4 @@ const articleEnhancements:Record<string,ArticleEnhancement>={
   }
 };
 
-export const getArticleEnhancement=(slug:string)=>articleEnhancements[slug];
+export const getArticleEnhancement=(slug:string)=>diwaliEnhancements[slug]??articleEnhancements[slug];

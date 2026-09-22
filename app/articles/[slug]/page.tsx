@@ -8,6 +8,7 @@ import {JsonLd} from '@/components/JsonLd';
 import {getArticleEnhancement} from '@/lib/article-enhancements';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
+import {DiwaliOverview} from '@/components/DiwaliOverview';
 
 export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
 
@@ -54,6 +55,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     </figure>}
 
     {enhancement&&<QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/>} 
+
+    {a.slug==='diwali-2026-date-meaning-five-days-stories'&&<DiwaliOverview/>}
 
     <div className="articleBody">
       {a.body.map((s,i)=><section key={i}>

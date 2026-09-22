@@ -1,6 +1,7 @@
 import type {Article} from './content';
+import {diwaliArticles} from './diwali-articles';
 
-export const researchArticles:Article[]=[
+const coreResearchArticles:Article[]=[
   {
     slug:'navratri-2026-nine-forms-of-durga',
     title:'Navratri 2026: Nine Nights, Nine Forms, and What We Are Really Worshipping',
@@ -408,3 +409,6 @@ export const researchArticles:Article[]=[
     ]
   }
 ];
+
+
+export const researchArticles:Article[]=[...diwaliArticles,...coreResearchArticles];

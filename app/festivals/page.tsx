@@ -39,7 +39,13 @@ export default function Page(){
       </div>
     </div></section>
 
-    <section className="section"><div className="shell">
+    <section className="section"><div className="shell festivalFeatureGrid">
+      <div className="featuredEssay">
+        <div className="eyebrow">Read for Diwali</div>
+        <h2>Diwali 2026: one festival season, many stories.</h2>
+        <p>Start with the complete guide to the date, five-day sequence, Rama, Lakshmi, Krishna, Kali, Govardhan, Jain and Sikh traditions.</p>
+        <Link href="/articles/diwali-2026-date-meaning-five-days-stories">Read the Diwali 2026 guide →</Link>
+      </div>
       <div className="featuredEssay">
         <div className="eyebrow">Read before Navratri</div>
         <h2>Navratri 2026: beyond dates, colours and fasting lists.</h2>
