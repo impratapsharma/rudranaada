@@ -4,7 +4,7 @@ import {site} from '@/lib/site';
 export function Footer(){return <footer className="footer">
   <div className="shell footerGrid">
     <div>
-      <div className="brand footerBrand"><span className="brandMark" aria-hidden="true">ॐ</span><span>RudraNāda</span></div>
+      <Link className="brand footerBrand brandLogo" href="/" aria-label="RudraNāda home"><img src="/rudranaada-logo.svg" alt="RudraNāda"/></Link>
       <p className="muted">Original devotional music, epic stories and reflections for people who want to stay with the meaning a little longer.</p>
     </div>
     <div className="footerLinks">
