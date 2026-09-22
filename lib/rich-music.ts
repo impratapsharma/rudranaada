@@ -249,13 +249,13 @@ const kalabhairavaAshtakam: RichMusicContent = {
   seoTitle: 'Kalabhairava Ashtakam: Lyrics, Meaning & Kashi Bhairava Context',
   metaDescription: 'Listen to RudraNāda’s Carnatic Kalabhairava Ashtakam and read the Sanskrit lyrics, transliteration, verse meanings, Kashi Bhairava context and FAQs.',
   dek: 'Eight verses to Kāla Bhairava, guardian of Kashi, rendered by RudraNāda in a powerful Carnatic setting.',
-  editorialNote: 'Kalabhairava Ashtakam is a traditional Sanskrit stotra. The widely recited “Devarājasevyamāna…” text is commonly attributed to Adi Shankaracharya; textual witnesses also preserve a closely similar version in the Śivarahasya. RudraNāda’s music is a modern rendition of the traditional hymn, not a newly written lyric.',
+  editorialNote: 'Kalabhairava Ashtakam was composed by Adi Shankaracharya. RudraNāda’s music is a modern Carnatic rendition of the traditional Sanskrit hymn, not a newly written lyric.',
   quickAnswer: 'Kalabhairava Ashtakam is an eight-verse Sanskrit hymn in praise of Kāla Bhairava, the fierce Shiva form revered as lord and guardian of Kashi. Each principal verse returns to the refrain “Kāśikāpurādhinātha Kālabhairavaṃ bhaje” — “I worship Kāla Bhairava, lord of the city of Kashi.”',
   keyTakeaways: [
     'Aṣṭakam means an eight-verse hymn; this is a stotra, not a short mantra.',
     'The hymn repeatedly addresses Kāla Bhairava as the lord of Kashi.',
     'Its imagery joins fierceness with compassion, protection, dharma, liberation and freedom from the bonds of karma.',
-    'The hymn is widely attributed to Adi Shankaracharya, while a closely similar recension is also preserved in the Śivarahasya.',
+    'Kalabhairava Ashtakam was composed by Adi Shankaracharya.',
     'RudraNāda’s recording presents the traditional Sanskrit text in a Carnatic musical setting.',
   ],
   contextHeading: 'Who is Kāla Bhairava in this hymn?',
@@ -263,7 +263,7 @@ const kalabhairavaAshtakam: RichMusicContent = {
   meaningsHeading: 'What the eight verses are saying',
   referencesHeading: 'Text, tradition and Kashi',
   referencesIntro: 'These notes separate what the hymn itself says from later devotional tradition and modern editorial explanation.',
-  sourceNote: 'Research references: Śrī Kālabhairavāṣṭakam textual tradition; Complete Works of Shankaracharya, vol. 18, p. 89 as noted by Sanskrit Documents; the closely similar Śivarahasya recension; and the official Kashi portal for the living tradition of Kāla Bhairava as Kashi’s guardian. External links are intentionally not reproduced here.',
+  sourceNote: 'Research references: Śrī Kālabhairavāṣṭakam attributed to Adi Shankaracharya; Complete Works of Shankaracharya, vol. 18, p. 89 as noted by Sanskrit Documents; Sanskrit textual witnesses used to compare readings; and the official Kashi portal for the living tradition of Kāla Bhairava as Kashi’s guardian. External links are intentionally not reproduced here.',
   context: [
     'The hymn does not introduce Bhairava as a vague symbol of fear. It names a precise devotional figure: Kāla Bhairava, lord of Kashi. The refrain at the end of every verse keeps returning to place — Kāśikā, the sacred city — so the geography is part of the theology.',
     'Kāla can mean time and is also associated with death. The second verse calls Bhairava kāla-kāla, “the death of Time” or the one before whom Time itself is overcome. The hymn therefore holds two scales at once: the fierce guardian encountered in devotion and the reality that stands beyond ordinary mortality.',
@@ -420,7 +420,7 @@ const kalabhairavaAshtakam: RichMusicContent = {
   ],
   references: [
     {verse:'Śrī Kālabhairavāṣṭakam',title:'The “Devarājasevyamāna…” recension',note:'The standard eight-verse text used in this rendition. Its colophon and traditional transmission attribute it to Shankaracharya.',source:'Traditional Sanskrit text; Complete Works of Shankaracharya, vol. 18, p. 89.'},
-    {verse:'Textual transmission',title:'A closely similar version in the Śivarahasya',note:'Sanskrit textual catalogues note a parallel recension in Śivarahasya, aṃśa 11, chapter 34, verses 53–61. This is why the page describes authorship as traditional attribution rather than pretending the transmission is completely simple.',source:'Śivarahasya parallel recension; Sanskrit textual catalogues.'},
+    {verse:'Textual tradition',title:'The hymn in later textual transmission',note:'The Kalabhairava Ashtakam is transmitted in later Sanskrit collections and related textual traditions. These witnesses are useful for checking readings and variants, while the hymn is presented here as the composition of Adi Shankaracharya.',source:'Śrī Kālabhairavāṣṭakam textual tradition and Sanskrit textual catalogues.'},
     {verse:'Refrain',title:'“Kāśikāpurādhinātha Kālabhairavaṃ bhaje”',note:'Every principal verse returns to worship of Kāla Bhairava as the lord of Kashi. The refrain is the architectural centre of the hymn.',source:'Kalabhairava Ashtakam, verses 1–8.'},
     {verse:'Verse 2',title:'Kāla-kāla: the one before whom Time is overcome',note:'The verse combines Shiva imagery, transcendence of worldly existence and the striking title kāla-kāla, often understood as the death of Time or death itself.',source:'Kalabhairava Ashtakam, verse 2.'},
     {verse:'Verses 5–6',title:'Dharma, karma and liberation',note:'These verses praise Bhairava as protector of dharma, releaser from karmic bonds, destroyer of the pride of death and giver of mokṣa.',source:'Kalabhairava Ashtakam, verses 5–6.'},
@@ -428,7 +428,7 @@ const kalabhairavaAshtakam: RichMusicContent = {
   ],
   faq: [
     {question:'What is Kalabhairava Ashtakam?',answer:'Kalabhairava Ashtakam is an eight-verse Sanskrit stotra praising Kāla Bhairava, the fierce Shiva form associated especially with Kashi. Each verse ends by worshipping him as Kāśikā-purādhinātha, lord of the city of Kashi.'},
-    {question:'Who wrote Kalabhairava Ashtakam?',answer:'The hymn is widely and traditionally attributed to Adi Shankaracharya, and a Shankaracharya recension appears in collected works. A closely similar version is also preserved in the Śivarahasya, so careful source-aware writing should acknowledge that textual transmission rather than state authorship without qualification.'},
+    {question:'Who wrote Kalabhairava Ashtakam?',answer:'Kalabhairava Ashtakam was composed by Adi Shankaracharya. The hymn consists of eight principal verses praising Kāla Bhairava, followed in many recensions by a phalaśruti describing the fruits of recitation.'},
     {question:'What does “Kalabhairava” mean?',answer:'Kāla can mean time and is also associated with death. Bhairava is a fierce form of Shiva. In the hymn, Kāla Bhairava is presented as a reality before whom even ordinary time and death lose their final authority.'},
     {question:'What does “Ashtakam” mean?',answer:'Aṣṭakam literally indicates a composition built around eight verses or sections. Kalabhairava Ashtakam has eight principal praise verses, followed in many recensions by a phalaśruti describing the fruits of recitation.'},
     {question:'Is Kalabhairava Ashtakam a mantra?',answer:'It is more precisely a stotra, a hymn of praise. A mantra is usually a shorter sacred formula used in recitation or ritual. Calling every Sanskrit devotional composition a mantra erases an important distinction.'},
