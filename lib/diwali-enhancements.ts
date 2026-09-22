@@ -1,7 +1,7 @@
 import type {ArticleEnhancement} from './article-enhancements';
 
 export const diwaliEnhancements:Record<string,ArticleEnhancement>={
-  'diwali-2026-date-meaning-five-days-stories':{
+  'diwali':{
     quickAnswer:'Diwali 2026 falls on Sunday, 8 November. The festival is larger than one night: Dhanteras begins the season, Naraka Chaturdashi and Choti Diwali carry regional traditions, Lakshmi Puja marks the main Amavasya night, and Govardhan Puja and Bhai Dooj continue the celebration. Diwali does not have only one story; Rama, Lakshmi, Krishna, Kali and other traditions all belong to its living history.',
     keyTakeaways:[
       'The main Diwali and Lakshmi Puja night in 2026 is 8 November.',
@@ -22,7 +22,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'Why do Diwali dates change every year?',answer:'Diwali follows the Hindu lunar or lunisolar calendar rather than a fixed Gregorian date. The main night is tied to Amavasya in the relevant Kartika period, so the civil date moves between October and November.'}
     ]
   },
-  'dhanteras-2026-date-meaning-dhanvantari':{
+  'dhanteras':{
     quickAnswer:'Dhanteras 2026 falls on Friday, 6 November. Also called Dhantrayodashi, it begins the Diwali season in many traditions and is associated with Dhanvantari, health, prosperity, Yama Deepam and auspicious new purchases.',
     keyTakeaways:[
       'Dhanteras 2026 is on 6 November.',
@@ -39,7 +39,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'What is Yama Deepam?',answer:'Yama Deepam is a lamp offered in connection with Yama, lord of death. Popular tradition links it with protection from untimely death and remembrance of mortality.'}
     ]
   },
-  'naraka-chaturdashi-2026-choti-diwali-story':{
+  'naraka-chaturdashi':{
     quickAnswer:'Naraka Chaturdashi 2026 is observed on 8 November in major Indian calendars. The day remembers Krishna’s defeat of Narakasura and is especially important in South Indian Deepavali traditions, where early-morning oil bath, new clothes and celebration can form the main festival experience.',
     keyTakeaways:[
       'Naraka Chaturdashi 2026 is observed on 8 November in major Indian calendars.',
@@ -56,7 +56,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'Why is an oil bath taken on Naraka Chaturdashi?',answer:'Abhyanga snana is a traditional early-morning oil bath observed in many South Indian and Maharashtrian families. It is associated with cleansing and the fresh beginning that follows the Narakasura story.'}
     ]
   },
-  'lakshmi-puja-diwali-2026-meaning-rituals':{
+  'lakshmi-puja':{
     quickAnswer:'Lakshmi Puja in 2026 falls on Sunday, 8 November, the main Diwali night. Families worship Lakshmi as the goddess of prosperity and auspiciousness, often alongside Ganesha, after cleaning and illuminating the home.',
     keyTakeaways:[
       'Lakshmi Puja 2026 is on 8 November.',
@@ -73,7 +73,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'Is Lakshmi Puja only about becoming rich?',answer:'No. Traditional ideas of prosperity include health, food, useful work, household stability, generosity and well-being. Money is one part of abundance, not the whole meaning.'}
     ]
   },
-  'govardhan-puja-2026-story-annakut':{
+  'govardhan-puja':{
     quickAnswer:'Govardhan Puja 2026 falls around 9–10 November depending on location; Bengaluru calendars place it on 10 November. The festival remembers Krishna lifting Govardhan Hill to protect the people and cattle of Braj after Indra sends a destructive storm.',
     keyTakeaways:[
       'Govardhan Puja 2026 can fall on 9 or 10 November depending on location and ritual window.',
@@ -90,7 +90,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'Why are cows important on Govardhan Puja?',answer:'Krishna’s Braj is a pastoral world where cattle are central to livelihood and devotion. Honouring cows on Govardhan Puja reflects both the Krishna story and the economic life behind it.'}
     ]
   },
-  'bhai-dooj-2026-story-meaning':{
+  'bhai-dooj':{
     quickAnswer:'Bhai Dooj 2026 falls on Wednesday, 11 November. It closes the Diwali season in many communities by celebrating the bond between brothers and sisters through welcome, tilak, food, gifts and blessings.',
     keyTakeaways:[
       'Bhai Dooj 2026 is on 11 November.',
@@ -107,7 +107,7 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
       {question:'Is Bhai Dooj the same as Raksha Bandhan?',answer:'No. Both celebrate sibling bonds, but Raksha Bandhan centres on the rakhi and falls in Shravana, while Bhai Dooj comes after Diwali and centres on welcome, tilak and a shared meal.'}
     ]
   },
-  'kali-puja-2026-diwali-bengal-meaning':{
+  'kali-puja':{
     quickAnswer:'Kali Puja 2026 falls on Sunday, 8 November, the same Amavasya night as Diwali. In Bengal and parts of eastern India, worship centres on Kali or Shyama, with late-night puja, lamps and a devotional mood very different from Lakshmi Puja.',
     keyTakeaways:[
       'Kali Puja 2026 is on 8 November.',
