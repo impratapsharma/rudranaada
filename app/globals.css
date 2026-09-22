@@ -280,3 +280,8 @@ h3{line-height:1.18}
   .diwaliTimeline,.diwaliStoryMap{grid-template-columns:1fr}
   .diwaliTimelineItem{border-right:0}
 }
+
+
+/* Evergreen festival guides */
+.festivalGuidePage{background:#fff}
+.festivalGuidePage .articleWrap{padding-top:50px}
