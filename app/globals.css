@@ -183,3 +183,8 @@ h3{line-height:1.18}
   .pageHero h1{font-size:4.4rem}
   .articleWrap h1{font-size:3.9rem}
 }
+
+
+/* Final editorial headline tuning */
+.researchArticle h1{max-width:100%;font-size:clamp(2.5rem,4vw,3.65rem);line-height:1.04}
+@media(min-width:1500px){.researchArticle h1{font-size:3.55rem}}
