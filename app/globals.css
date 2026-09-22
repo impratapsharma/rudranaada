@@ -188,3 +188,15 @@ h3{line-height:1.18}
 /* Final editorial headline tuning */
 .researchArticle h1{max-width:100%;font-size:clamp(2.5rem,4vw,3.65rem);line-height:1.04}
 @media(min-width:1500px){.researchArticle h1{font-size:3.55rem}}
+
+
+/* Editorial reading surface */
+.articlePage{background:#fff}
+.articlePage .answerBlock,
+.articlePage .internalJourney,
+.articlePage .featuredEssay{background:#fff;border-color:rgba(33,29,24,.14);box-shadow:none}
+.articlePage .callout{background:#fff}
+.articlePage .articleFaq,
+.articlePage .articleSources{background:#fff}
+.articlePage .articleInlineImage img,
+.articlePage .articleFeaturedImage img{background:#fff}

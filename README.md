@@ -21,3 +21,14 @@ Full video pages are indexable and included in the sitemap. Shorts remain noinde
 follow, with separate catalogue filtering. Empty YouTube descriptions stay empty in
 the source data; the page displays an editorial summary instead. Imported descriptions
 are preserved as published and are not independent verification of their claims.
+
+
+## Brand system
+
+RudraNāda's brand and editorial rules live in the repository and should be treated as source-of-truth documentation before changing the website, editorial system, artwork or social identity.
+
+- `docs/BRAND_GUIDELINES.md` — human-facing brand and editorial bible.
+- `docs/DESIGN_SYSTEM.md` — implementation rules for product/UI work.
+- `data/brand-tokens.json` — machine-readable design tokens and guardrails.
+
+Core principle: **ancient in spirit, contemporary in execution.**

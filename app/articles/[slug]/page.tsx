@@ -35,7 +35,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     ? {'@type':'Person',name:a.author,url:site.url+'/authors/pratap'}
     : {'@type':'Organization',name:'RudraNāda',url:site.url};
 
-  return <article className="articleWrap researchArticle">
+  return <div className="articlePage"><article className="articleWrap researchArticle">
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:a.category,about:a.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
     <Breadcrumbs items={[{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
     <div className="eyebrow">{a.category}</div>
@@ -79,5 +79,5 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     </section>}
 
     <div className="tagRow">{a.tags.map(t=><span className="tag" key={t}>{t}</span>)}</div>
-  </article>
+  </article></div>
 }
