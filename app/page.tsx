@@ -17,7 +17,7 @@ export default function Home(){return <>
     <h1>Listen first.<br/>Then go deeper.</h1>
     <p>RudraNāda brings the Mahabharata, Ramayana, bhakti and sacred sound into one living space through original music, stories and reflection.</p>
     <div className="heroActions"><Link className="button" href="/music">Listen to RudraNāda</Link><Link className="button buttonGhost" href="/articles">Read the stories</Link></div>
-  </div><div className="heroSeal" aria-label="RudraNāda sacred sound motif"><span>नाद</span></div></div></section>
+  </div><div className="heroSeal logoSeal" aria-label="RudraNāda mark"><img src="/icon.svg" alt=""/></div></div></section>
 
   <section className="section"><div className="shell">
     <div className="sectionHead"><div><div className="eyebrow">Where to begin</div><h2>Follow the question that brought you here.</h2></div><p>A battlefield, a name of God, a teacher, a mantra, a story heard in childhood. There is no single doorway into these traditions.</p></div>
