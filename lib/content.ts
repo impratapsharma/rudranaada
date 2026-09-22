@@ -46,7 +46,7 @@ const originalArticles:Article[]=[
   ],relatedLinks:[{label:'Explore Guru Bodha',href:'/guru'}]}
 ];
 
-export const articles:Article[]=[...researchArticles,...originalArticles];
+export const articles:Article[]=[...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
 
 export const deityHubs=[
   {slug:'krishna',name:'Krishna',description:'Friend, charioteer, teacher and the divine presence at the heart of the Bhagavad Gita.'},
