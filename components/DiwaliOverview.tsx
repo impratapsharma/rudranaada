@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 const days=[
-  {date:'6 Nov',name:'Dhanteras',href:'/articles/dhanteras-2026-date-meaning-dhanvantari',note:'Health, prosperity and preparation'},
-  {date:'7–8 Nov',name:'Choti Diwali / Naraka Chaturdashi',href:'/articles/naraka-chaturdashi-2026-choti-diwali-story',note:'Krishna, Narakasura and regional cleansing traditions'},
-  {date:'8 Nov',name:'Diwali / Lakshmi Puja',href:'/articles/lakshmi-puja-diwali-2026-meaning-rituals',note:'Main Amavasya night of lamps'},
-  {date:'9–10 Nov',name:'Govardhan Puja / Annakut',href:'/articles/govardhan-puja-2026-story-annakut',note:'Krishna, Govardhan and gratitude'},
-  {date:'11 Nov',name:'Bhai Dooj',href:'/articles/bhai-dooj-2026-story-meaning',note:'Brothers, sisters and family bonds'}
+  {date:'6 Nov',name:'Dhanteras',href:'/festivals/dhanteras',note:'Health, prosperity and preparation'},
+  {date:'7–8 Nov',name:'Choti Diwali / Naraka Chaturdashi',href:'/festivals/naraka-chaturdashi',note:'Krishna, Narakasura and regional cleansing traditions'},
+  {date:'8 Nov',name:'Diwali / Lakshmi Puja',href:'/festivals/lakshmi-puja',note:'Main Amavasya night of lamps'},
+  {date:'9–10 Nov',name:'Govardhan Puja / Annakut',href:'/festivals/govardhan-puja',note:'Krishna, Govardhan and gratitude'},
+  {date:'11 Nov',name:'Bhai Dooj',href:'/festivals/bhai-dooj',note:'Brothers, sisters and family bonds'}
 ];
 
 const stories=[
