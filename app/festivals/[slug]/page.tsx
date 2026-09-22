@@ -49,7 +49,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {guide.featuredImage&&<figure className="articleFeaturedImage"><img src={guide.featuredImage.src} alt={guide.featuredImage.alt}/>{guide.featuredImage.caption&&<figcaption>{guide.featuredImage.caption}</figcaption>}</figure>}
     {enhancement&&<QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/>}
-    {guide.slug==='diwali'&&<DiwaliOverview/>}
+    {guide.slug==='diwali'&&<><DiwaliOverview/><figure className="diwaliInfographic"><img src="/images/festivals/diwali-2026-infographic.webp" alt="Diwali 2026 infographic showing the five days of Diwali, major stories and regional traditions across India" loading="lazy"/><figcaption>The Diwali season at a glance: five days, many stories and regional traditions.</figcaption></figure></>}
 
     <div className="articleBody">
       {guide.body.map((section,index)=><section key={index}>
