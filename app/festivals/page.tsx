@@ -7,6 +7,7 @@ import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
 import {UpcomingFestivals} from '@/components/UpcomingFestivals';
+import {festivalGuides} from '@/lib/festival-guides';
 
 export const metadata:Metadata={title:'Festivals: Stories, Meaning & Music',description:'Explore the 2026 Hindu festival calendar, Ganesh Chaturthi, Navratri, Dussehra and other festivals through their stories, regional traditions and RudraNāda music.',alternates:{canonical:'/festivals'},robots:{index:true,follow:true}};
 
@@ -55,6 +56,11 @@ export default function Page(){
     </div></section>
 
     <section className="section"><div className="shell copyColumns"><div><div className="eyebrow">Why traditions differ</div><h2>The same festival can carry a different memory in the next state, town or family.</h2></div><div className="sectionCopy"><p>Hindu festivals are not a single uniform calendar of identical practices. Regional history, temple traditions, local deities, family customs and different retellings can change what is emphasized and how it is celebrated.</p><p>Our festival guides keep that diversity visible. We distinguish a textual story from a regional custom instead of pretending one explanation covers everyone.</p></div></div></section>
+
+    <section className="section"><div className="shell">
+      <div className="sectionHead"><div><div className="eyebrow">Festival guides</div><h2>Go beyond the date.</h2></div><p>Each guide keeps the current year at the top while the permanent URL stays the same, so the story, meaning and traditions can grow over time.</p></div>
+      <div className="grid3">{festivalGuides.map(guide=><Link className="card festivalGuideCard" href={'/festivals/'+guide.slug} key={guide.slug}><div className="eyebrow">{guide.title.match(/2026/) ? '2026 guide' : 'Festival guide'}</div><h3>{guide.title.replace(/ 2026:.*/, '')}</h3><p>{guide.dek}</p><span>Read guide →</span></Link>)}</div>
+    </div></section>
 
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">From the music</div><h2>Three festivals, three very different moods.</h2></div><p>Ganpati arrives with drums. Nag Panchami can become a quiet prayer for protection. Dussehra can be heard through the fierce presence of Mahakali.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
