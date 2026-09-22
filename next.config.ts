@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   trailingSlash:false,
   async redirects(){
     return [
+      {source:'/articles/navratri-2026-nine-forms-of-durga',destination:'/festivals/navratri',permanent:true},
       {source:'/articles/diwali-2026-date-meaning-five-days-stories',destination:'/festivals/diwali',permanent:true},
       {source:'/articles/dhanteras-2026-date-meaning-dhanvantari',destination:'/festivals/dhanteras',permanent:true},
       {source:'/articles/naraka-chaturdashi-2026-choti-diwali-story',destination:'/festivals/naraka-chaturdashi',permanent:true},
