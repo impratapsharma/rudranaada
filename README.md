@@ -32,3 +32,20 @@ RudraNāda's brand and editorial rules live in the repository and should be trea
 - `data/brand-tokens.json` — machine-readable design tokens and guardrails.
 
 Core principle: **ancient in spirit, contemporary in execution.**
+
+
+### Evergreen festival URL rule
+
+Festival guides use permanent URLs without a year, for example:
+
+- `/festivals/diwali`
+- `/festivals/dhanteras`
+- `/festivals/navratri`
+
+The current year belongs in the page title, date module, SEO title, meta description and date-related FAQ, not in the permanent URL.
+
+Yearly calendars remain year-specific:
+- `/festivals/2026`
+- `/festivals/2027`
+
+When a new year approaches, update the existing festival guide in place and preserve its URL. Do not create a new year-based festival URL unless there is a genuinely separate archive or editorial need.
