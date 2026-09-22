@@ -31,7 +31,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const guide=getFestivalGuide(slug);
   if(!guide)notFound();
   const author=guide.author??'Pratap Sharma';
-  const enhancement=getArticleEnhancement(guide.slug);
+  const enhancement=getArticleEnhancement(guide.slug)??(guide.quickAnswer&&guide.keyTakeaways&&guide.faq?{quickAnswer:guide.quickAnswer,keyTakeaways:guide.keyTakeaways,faq:guide.faq}:undefined);
 
   return <div className="articlePage festivalGuidePage"><article className="articleWrap researchArticle">
     <JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,datePublished:guide.publishedAt,dateModified:guide.updatedAt??guide.publishedAt,mainEntityOfPage:site.url+'/festivals/'+guide.slug,author:{'@type':'Person',name:author,url:site.url+'/authors/pratap'},image:guide.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:'Festivals',about:guide.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:guide.tags.join(', ')}}/>
