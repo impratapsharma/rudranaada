@@ -24,7 +24,7 @@ export default function Page(){
   const releases=fullSongs.filter(v=>v.themes.includes('Mahabharata'));
   const uthParth=releases.find(v=>v.slug==='uth-parth');
   return <>
-    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mahabharata | RudraNāda',description:'RudraNāda music and story pathways through the Mahabharata.',url:site.url+'/mahabharata',hasPart:releases.map(v=>({'@type':'VideoObject',name:v.title,url:site.url+'/music/'+v.slug}))}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mahabharata | RudraNāda',description:'RudraNāda music and story pathways through the Mahabharata.',url:site.url+'/mahabharata',mainEntity:{'@type':'ItemList',itemListElement:releases.map((v,index)=>({'@type':'ListItem',position:index+1,name:v.title,url:site.url+'/music/'+v.slug}))}}}/>
 
     <section className="pageHero mahabharataHero"><div className="shell"><Breadcrumbs items={[{label:'Mahabharata',href:'/mahabharata'}]}/><div className="eyebrow">Mahabharata</div><h1>The Mahabharata does not give easy people easy choices.</h1><p>Vows become burdens. Loyalty becomes dangerous. Dharma changes shape depending on who is standing where. We enter the epic through the people who had to choose.</p>{uthParth&&<div className="heroActions"><Link className="button" href="/music/uth-parth">Begin on Kurukshetra</Link><Link className="button buttonGhost" href="/music">Hear all music</Link></div>}</div></section>
 

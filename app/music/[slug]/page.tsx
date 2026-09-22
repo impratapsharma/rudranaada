@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {getMusic,music,deityHubs} from '@/lib/content';
 import {getRichMusic} from '@/lib/rich-music';
-import {formatDate,formatDuration,getDisplayTitle} from '@/lib/music-format';
+import {formatDate,formatDuration,formatIsoDuration,getDisplayTitle} from '@/lib/music-format';
 import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
@@ -42,7 +42,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     description:m.description||m.summary,
     thumbnailUrl:m.thumbnail,
     uploadDate:m.publishedAt,
-    duration:`PT${m.durationSeconds}S`,
+    duration:formatIsoDuration(m.durationSeconds),
     embedUrl:`https://www.youtube-nocookie.com/embed/${m.videoId}`,
     url:site.url+'/music/'+m.slug,
     sameAs:m.youtubeUrl,

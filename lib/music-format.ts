@@ -22,6 +22,7 @@ const displayTitles:Record<string,string>={
 
 export const getDisplayTitle=(slug:string,fallback:string)=>displayTitles[slug]??fallback;
 export const formatDuration=(seconds:number)=>`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}`;
+export const formatIsoDuration=(seconds:number)=>{const hours=Math.floor(seconds/3600);const minutes=Math.floor((seconds%3600)/60);const secs=seconds%60;return `PT${hours?`${hours}H`:''}${minutes?`${minutes}M`:''}${secs?`${secs}S`:''}`;};
 export const formatDate=(date:string)=>{
   const [year,month,day]=date.slice(0,10).split('-').map(Number);
   return new Intl.DateTimeFormat('en',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(year,month-1,day)));
