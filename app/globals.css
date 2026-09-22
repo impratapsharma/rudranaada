@@ -200,3 +200,44 @@ h3{line-height:1.18}
 .articlePage .articleSources{background:#fff}
 .articlePage .articleInlineImage img,
 .articlePage .articleFeaturedImage img{background:#fff}
+
+
+/* Festival calendar */
+.upcomingFestivalGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.upcomingFestivalCard{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px;display:grid;gap:16px;align-content:start}
+.upcomingFestivalCard h3{font-size:1.25rem;margin:0 0 8px}
+.upcomingFestivalCard p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:0 0 12px}
+.upcomingFestivalCard a{font-weight:750;color:var(--gold-soft);font-size:.9rem}
+.calendarDate{font:800 .75rem/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.festivalCalendarFeature{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 38px}
+.festivalCalendarFeature h2{max-width:16ch;margin:8px 0 14px}
+.festivalCalendarFeature p{max-width:680px;color:var(--muted);margin:0}
+.calendarNotice{max-width:880px;border-left:3px solid var(--gold);padding:18px 22px;background:#fff}
+.calendarNotice p{color:var(--muted);margin:6px 0 0}
+.monthJump{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0}
+.monthJump a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-size:.84rem}
+.festivalCalendar{display:grid;gap:60px}
+.festivalMonth{scroll-margin-top:100px}
+.festivalMonthHead{display:flex;align-items:baseline;gap:16px;margin-bottom:16px}
+.festivalMonthHead span{color:var(--gold);font-weight:800;letter-spacing:.08em}
+.festivalMonthHead h2{margin:0;font-size:2rem}
+.festivalRows{border-top:1px solid var(--line)}
+.festivalRow{display:grid;grid-template-columns:80px minmax(0,1fr) 130px;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}
+.festivalRow time{display:grid}
+.festivalRow time strong{font:700 2rem/1 Georgia,serif}
+.festivalRow time span{color:var(--muted);font-size:.82rem;margin-top:4px}
+.festivalNameLine{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.festivalNameLine h3{margin:0;font-size:1.35rem}
+.festivalTradition{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.festivalTithi,.festivalRegion,.festivalNote{font-size:.84rem;color:var(--muted)}
+.festivalTithi{margin-top:5px;font-weight:650}
+.festivalRowMain p{margin:10px 0 8px;max-width:720px;color:var(--muted)}
+.festivalNote{margin-top:6px;font-style:italic}
+.festivalRowAction{text-align:right;font-size:.86rem;font-weight:700}
+.festivalRowAction span{color:var(--muted);font-weight:500}
+.calendarSources{max-width:800px}
+.calendarSources p{color:var(--muted);line-height:1.72}
+.calendarEmpty{padding:22px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--muted)}
+@media(max-width:1000px){.upcomingFestivalGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.upcomingFestivalGrid{grid-template-columns:1fr 1fr}.festivalCalendarFeature{grid-template-columns:1fr}.festivalCalendarFeature .button{width:max-content}.festivalRow{grid-template-columns:64px 1fr}.festivalRowAction{grid-column:2;text-align:left}}
+@media(max-width:520px){.upcomingFestivalGrid{grid-template-columns:1fr}.festivalRow{grid-template-columns:52px 1fr;gap:16px}.festivalMonthHead h2{font-size:1.7rem}.festivalRow time strong{font-size:1.65rem}}
