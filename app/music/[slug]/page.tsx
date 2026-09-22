@@ -73,43 +73,38 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       {rich ? <>
         <section className="answerBlock">
           <div className="eyebrow">In brief</div>
-          <p className="answerLead">Uth Parth is RudraNāda’s dramatic retelling of Arjuna’s crisis on Kurukshetra and Krishna’s call to rise. The song draws on Bhagavad Gita themes including the immortal self, action without attachment, Vishwaroopa and Krishna as Time, while keeping RudraNāda’s lyrical interpretation separate from the scripture itself.</p>
-          <ul>
-            <li>The title means, in spirit, “Rise, Parth,” with Pārtha being a name of Arjuna.</li>
-            <li>The song begins with Arjuna’s collapse before the battle and moves toward action.</li>
-            <li>“Na tu marta, na tu maarega” is a lyrical paraphrase, not a literal Gita verse.</li>
-            <li>The karma line is anchored most clearly in Bhagavad Gita 2.47.</li>
-            <li>The cosmic imagery draws strongly from Chapter 11 and the Vishwaroopa vision.</li>
-          </ul>
+          <p className="answerLead">{rich.quickAnswer}</p>
+          <ul>{rich.keyTakeaways.map(item=><li key={item}>{item}</li>)}</ul>
         </section>
         <div className="callout richNote"><strong>Before you read</strong><p>{rich.editorialNote}</p></div>
 
         <div className="articleBody">
-          <h2>The moment before Krishna speaks</h2>
+          <h2>{rich.contextHeading}</h2>
           {rich.context.map((paragraph,index)=><p key={index}>{paragraph}</p>)}
 
           <h2>The lyrics</h2>
-          <p className="sectionIntro">The words as they appear in RudraNāda’s original composition.</p>
+          <p className="sectionIntro">{rich.lyricsIntro}</p>
           <div className="lyrics">
             {rich.lyrics.map(section=><section className="lyricSection" key={section.label}>
               <h3>{section.label}</h3>
-              <p>{section.lines.map((line,index)=><span className="lyricLine" key={index}>{line}</span>)}</p>
+              <p className="lyricOriginal">{section.lines.map((line,index)=><span className="lyricLine" key={index}>{line}</span>)}</p>
+              {section.transliteration&&<p className="lyricTransliteration">{section.transliteration.map((line,index)=><span className="lyricLine" key={index}>{line}</span>)}</p>}
             </section>)}
           </div>
 
-          <h2>What the song is saying</h2>
+          <h2>{rich.meaningsHeading}</h2>
           <div className="meaningGrid">
             {rich.meanings.map(item=><section className="meaningCard" key={item.heading}><h3>{item.heading}</h3><p>{item.text}</p></section>)}
           </div>
 
-          <h2>Where the Bhagavad Gita enters the song</h2>
-          <p className="sectionIntro">These are the verses that sit behind the song’s ideas. A lyrical paraphrase is still labelled as a paraphrase.</p>
+          <h2>{rich.referencesHeading}</h2>
+          <p className="sectionIntro">{rich.referencesIntro}</p>
           <div className="referenceList">
             {rich.references.map(ref=><section className="referenceItem" key={ref.verse}>
               <div className="referenceVerse">{ref.verse}</div>
               <h3>{ref.title}</h3>
               <p>{ref.note}</p>
-              <div className="referenceSource">Reference checked: IIT Kanpur Gita Supersite</div>
+              <div className="referenceSource">{ref.source ?? 'Reference checked: IIT Kanpur Gita Supersite'}</div>
             </section>)}
           </div>
 
@@ -118,9 +113,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
             {rich.faq.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}
           </div>
 
-          <div className="sourceNote">
-            <strong>Primary reference:</strong> Bhagavad Gita text and translations were checked against IIT Kanpur’s Gita Supersite. RudraNāda’s lyrics and explanatory prose are presented separately from scripture.
-          </div>
+          <div className="sourceNote">{rich.sourceNote}</div>
         </div>
       </> : m.description && <div className="articleBody"><h2>About the song</h2><div className="releaseDescription">{m.description}</div></div>}
 
