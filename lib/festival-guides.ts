@@ -1,5 +1,6 @@
 import type {Article} from './content';
 import {diwaliArticles} from './diwali-articles';
+import {researchArticles} from './research-articles';
 
 const evergreenSlugByLegacy:Record<string,string>={
   'diwali-2026-date-meaning-five-days-stories':'diwali',
@@ -30,5 +31,10 @@ const migrateLinks=(article:Article):Article=>({
   }))
 });
 
-export const festivalGuides:Article[]=diwaliArticles.map(migrateLinks);
+const navratri=researchArticles.find(article=>article.slug==='navratri-2026-nine-forms-of-durga');
+
+export const festivalGuides:Article[]=[
+  ...diwaliArticles.map(migrateLinks),
+  ...(navratri?[{...navratri,slug:'navratri',relatedLinks:navratri.relatedLinks?.map(link=>({...link,href:link.href==='/articles/navratri-2026-nine-forms-of-durga'?'/festivals/navratri':link.href}))}]:[])
+];
 export const getFestivalGuide=(slug:string)=>festivalGuides.find(guide=>guide.slug===slug);
