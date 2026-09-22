@@ -8,7 +8,7 @@ export type ArticleEnhancement={
 };
 
 const articleEnhancements:Record<string,ArticleEnhancement>={
-  'navratri-2026-nine-forms-of-durga':{
+  'navratri':{
     quickAnswer:'Sharad Navratri 2026 begins on 11 October and culminates in Vijayadashami on 20 October. The nine nights honour the Goddess through many regional traditions, including Navadurga worship, Durga Puja, Garba, Golu, Ayudha Puja and Ramlila.',
     keyTakeaways:[
       'Sharad Navratri 2026 begins on 11 October; Vijayadashami falls on 20 October.',
