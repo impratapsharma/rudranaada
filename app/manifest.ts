@@ -1,20 +1,13 @@
 import type {MetadataRoute} from 'next';
-
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'RudraNāda',
-    short_name: 'RudraNāda',
-    description: 'Stories, music and meaning from India’s epics and devotional traditions.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#0e0d0c',
-    theme_color: '#0e0d0c',
-    icons: [
-      {
-        src: '/icon.svg',
-        sizes: 'any',
-        type: 'image/svg+xml',
-      },
-    ],
+    name:'RudraNāda',
+    short_name:'RudraNāda',
+    description:'Stories, music and meaning from India’s epics and devotional traditions.',
+    start_url:'/',
+    display:'standalone',
+    background_color:'#fbfaf7',
+    theme_color:'#fbfaf7',
+    icons:[{src:'/icon.svg',sizes:'any',type:'image/svg+xml'}],
   };
 }
