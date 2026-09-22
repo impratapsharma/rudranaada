@@ -50,7 +50,7 @@ export default function Page(){
         <div className="eyebrow">Read before Navratri</div>
         <h2>Navratri 2026: beyond dates, colours and fasting lists.</h2>
         <p>Sharad Navratri begins on 11 October 2026. Our guide follows the nine forms of Durga, separates textual tradition from later custom, and explains why Vijayadashami also carries Sri Rama’s victory in many traditions.</p>
-        <Link href="/articles/navratri-2026-nine-forms-of-durga">Read the Navratri 2026 guide →</Link>
+        <Link href="/festivals/navratri">Read the Navratri 2026 guide →</Link>
       </div>
     </div></section>
 
