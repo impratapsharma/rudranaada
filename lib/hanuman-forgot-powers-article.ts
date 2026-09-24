@@ -49,7 +49,7 @@ export const hanumanForgotPowersArticle:Article={
       'Jambavan, the ancient king of the bears and elder among Rama’s allies, awakens Hanuman before the leap to Lanka.',
       'The southern search party has finally learned where Sita is. Sampati has identified Lanka beyond the ocean. Knowing the destination does not solve the problem. Someone still has to reach it.',
       'One by one, the vanara heroes state how far they can leap. Jambavan acknowledges that his youthful strength has diminished. Angada believes he can cross a vast distance but is uncertain whether he can return. Hanuman, meanwhile, has been sitting quietly.',
-      'Jambavan notices. In Kishkindha Kanda, Sarga 66, he turns toward Hanuman and asks why he is silent. Then he begins to tell Hanuman who he is.'
+      'Jambavan notices. In [Kishkindha Kanda, Sarga 66](/ramayana/kishkindha-kanda#jambavan), he turns toward Hanuman and asks why he is silent. Then he begins to tell Hanuman who he is.'
     ]},
     {heading:'What does Jambavan actually tell Hanuman?',paragraphs:[
       'Jambavan does more than offer encouragement. He reconstructs Hanuman’s identity through memory.',
@@ -64,7 +64,7 @@ export const hanumanForgotPowersArticle:Article={
     ]},
     {heading:'Is the curse mentioned in the same chapter as Jambavan’s speech?',paragraphs:[
       'No. This is one of the most important distinctions missing from many online explanations.',
-      'The awakening scene occurs in Kishkindha Kanda 66, immediately before Hanuman’s leap toward Lanka. The explicit account of the sages’ curse occurs in Uttara Kanda 36, where Agastya explains Hanuman’s earlier life to Rama after the events of Lanka.',
+      'The awakening scene occurs in Kishkindha Kanda 66, immediately before Hanuman’s leap toward Lanka. The explicit account of the sages’ curse occurs in [Uttara Kanda 36](/ramayana/uttara-kanda#hanuman-childhood), where Agastya explains Hanuman’s earlier life to Rama after the events of Lanka.',
       'Modern retellings usually combine them into one continuous backstory. That works for storytelling, but readers interested in what the Sanskrit epic actually says should know where each part comes from.',
       'There is another layer of nuance. The Uttara Kanda is part of the received Valmiki Ramayana and is included in the Baroda Critical Edition, but modern scholarship widely treats the first and seventh books, Bala and Uttara, as later strata relative to the epic’s older narrative core.',
       'The careful answer is therefore this: the curse is in the Sanskrit Valmiki Ramayana tradition, specifically the Uttara Kanda, while textual scholarship considers that book a later layer of the epic.'
@@ -121,6 +121,7 @@ export const hanumanForgotPowersArticle:Article={
   relatedLinks:[
     {label:'Explore the Ramayana',href:'/ramayana'},
     {label:'Explore Hanuman',href:'/deities/hanuman'},
+    {label:'Sundara Kanda: the leap and the mission in Lanka',href:'/ramayana/sundara-kanda'},
     {label:'Listen to RudraNāda music',href:'/music'}
   ]
 };

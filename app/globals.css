@@ -287,3 +287,73 @@ h3{line-height:1.18}
 .festivalGuidePage .articleWrap{padding-top:50px}
 
 
+
+/* Ramayana reading guides: static text, clear navigation and a narrow reading measure. */
+.ramayanaGuide{background:#fbfaf7;padding-bottom:92px}
+.guideHero{padding-top:44px;padding-bottom:38px}
+.guideHero h1{max-width:960px;font-size:clamp(2.35rem,4.8vw,4.3rem);line-height:1.09;letter-spacing:-.035em;margin:16px 0 24px}
+.guideDek{max-width:780px;font-size:1.2rem;line-height:1.7;color:#65584a}
+.guideMeta{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:.8rem;color:#74695e;margin:24px 0}
+.guideQuickAnswer{max-width:820px;background:#f1eade;border-left:3px solid #a66b16;padding:24px 28px;border-radius:0 14px 14px 0;margin-top:32px}
+.guideQuickAnswer>strong{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#81500f}
+.guideQuickAnswer p{font-size:1.05rem;line-height:1.8;margin:10px 0 0}
+.guideLayout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(36px,5vw,64px);align-items:start}
+.guideSidebar{position:sticky;top:100px;max-height:calc(100dvh - 120px);overflow:auto;scrollbar-width:thin}
+.guideContents{border-top:1px solid var(--line);padding:18px 12px 12px 0;font-size:.84rem;line-height:1.5}
+.guideContents summary{font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;color:#81500f;padding:8px 0}
+.guideContents ol{padding-left:20px;margin:12px 0}
+.guideContents li{padding:5px 0 5px 3px}
+.guideContents a{display:inline-block;padding:3px 0}
+.guideBody{min-width:0;max-width:780px;font-size:1.08rem;line-height:1.85;color:#342d26}
+.guideBody section[id],.guideBody div[id]{scroll-margin-top:108px}
+.guideBody h2{font-size:clamp(1.65rem,2.6vw,2.3rem);line-height:1.22;letter-spacing:-.022em;margin:0 0 20px;max-width:30ch}
+.guideBody>section,.guideBody>.guideProse>section{margin-bottom:60px}
+.guideBody p{margin:0 0 22px}
+.guideBody p a,.guideSources a,.guideRelated a,.guideBody td a{color:#81500f;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.guideBody a:hover{color:#583700}
+.guideBody a:focus-visible,.guideContents a:focus-visible,.guideContents summary:focus-visible{outline:2px solid #a66b16;outline-offset:4px;border-radius:2px}
+.guideEdition{font-size:.87rem;line-height:1.75;border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#fff;margin-bottom:44px!important;color:#65584a}
+.guideReference{font: .78rem/1.65 Inter,ui-sans-serif,system-ui,sans-serif;color:#74695e;border-top:1px solid var(--line);padding-top:12px;margin-top:24px!important}
+.guideReference span{white-space:normal}
+.kandaDirectory{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.kandaDirectory li{margin:0;border-bottom:1px solid var(--line)}
+.kandaDirectory a{display:grid;grid-template-columns:32px minmax(0,1fr) 18px;gap:20px;padding:22px 12px 22px 0;align-items:start;transition:background .15s}
+.kandaDirectory a:hover,.kandaDirectory a[aria-current=page]{background:#f1eade}
+.kandaNumber{font-size:.8rem;color:#81500f;font-weight:750;padding-top:3px}
+.kandaName{display:block;font-family:Georgia,serif;font-size:1.45rem;line-height:1.3;color:#211d18}
+.kandaDescription{display:block;font-size:.88rem;line-height:1.5;margin-top:5px;color:#74695e}
+.guideTableScroll{max-width:100%;overflow:auto;margin:26px 0;border:1px solid var(--line);border-radius:12px;background:#fff}
+.guideTableScroll:focus-visible{outline:2px solid #a66b16;outline-offset:3px}
+.guideBody table{width:100%;border-collapse:collapse;text-align:left;font-size:.91rem;line-height:1.65}
+.guideBody caption{text-align:left;padding:14px 18px;color:#74695e;font-size:.8rem;background:#f5f1ea}
+.guideBody th,.guideBody td{padding:17px 18px;vertical-align:top;border-bottom:1px solid var(--line)}
+.guideBody thead th{background:#f5f1ea;color:#65584a;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
+.guideBody tbody th{width:24%;font-size:.91rem;color:#81500f}
+.guideReadingMap tbody th{width:80px;white-space:nowrap}
+.guideBody td p{font-size:.87rem;margin:5px 0 0;color:#74695e}
+.guideBody tr:last-child td,.guideBody tr:last-child th{border-bottom:0}
+.guidePlaces{margin:24px 0}
+.guidePlaces>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.guidePlaces dt{font-weight:700;color:#81500f;font-size:.95rem}
+.guidePlaces dd{margin:6px 0 0;font-size:.95rem}
+.guideSources{border-top:1px solid var(--line);padding-top:32px;font-size:.9rem;line-height:1.8}
+.guideSources ul{padding-left:20px}
+.guideSources li{padding:8px 0}
+.guideSources li p{font-size:.82rem;color:#74695e;margin:5px 0 10px}
+.guideRelated{margin:48px 0;padding:26px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.guideRelated h2{font-size:1.5rem}
+.guideRelated ul{padding:0;list-style:none;margin:0}
+.guideRelated li+li{margin-top:14px}
+.guideRelated a{font-size:.94rem}
+.kandaPagination{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:50px 0;padding:24px 0}
+.kandaPagination a{display:flex;flex-direction:column;gap:5px}
+.kandaPagination a:last-child{text-align:right}
+.kandaPagination span{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:#74695e}
+.kandaPagination strong{font-family:Georgia,serif;font-size:1.25rem;font-weight:400;color:#81500f}
+.guideMusic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.guideBody .articleFaq{margin:0 0 60px}
+.guideBody .articleFaq h2{margin:8px 0 20px}
+.guideBody .faqList p{margin-top:14px}
+@media(max-width:900px){.guideLayout{grid-template-columns:minmax(0,1fr)}.guideSidebar{position:static;max-height:none}.guideContents{padding:16px 22px;border:1px solid var(--line);border-radius:12px;background:#f5f1ea}.guideContents ol{columns:2;column-gap:32px}.guideContents li{break-inside:avoid}.guideBody{max-width:780px}.guideHero{padding-top:28px}}
+@media(max-width:620px){.guideLayout,.guideHero{width:calc(100% - 36px)}.guideHero h1{font-size:2.4rem}.guideDek{font-size:1.05rem}.guideQuickAnswer{padding:20px}.guideQuickAnswer p{font-size:.98rem}.guideContents ol{columns:1}.guideBody{font-size:1rem;line-height:1.85}.guideBody h2{font-size:1.75rem}.guideBody th,.guideBody td{padding:13px 12px}.guideBody tbody th{width:28%}.guideReadingMap tbody th{width:65px}.guideMusic{grid-template-columns:1fr}.kandaDirectory a{gap:12px}.guideRelated{padding:22px}.guideMeta{gap:7px 16px}}
+@media(prefers-reduced-motion:reduce){.kandaDirectory a{transition:none}}

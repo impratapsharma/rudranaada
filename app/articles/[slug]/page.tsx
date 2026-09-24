@@ -8,6 +8,7 @@ import {JsonLd} from '@/components/JsonLd';
 import {getArticleEnhancement} from '@/lib/article-enhancements';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
+import {GuideText} from '@/components/GuideText';
 import {DiwaliOverview} from '@/components/DiwaliOverview';
 
 export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
@@ -62,7 +63,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     <div className="articleBody">
       {a.body.map((s,i)=><section key={i}>
         {s.heading&&<h2>{s.heading}</h2>}
-        {s.paragraphs.map((p,j)=><p key={j}>{p}</p>)}
+        {s.paragraphs.map((p,j)=><p key={j}><GuideText text={p}/></p>)}
         {s.image&&<figure className="articleInlineImage"><img src={s.image.src} alt={s.image.alt} loading="lazy"/>{s.image.caption&&<figcaption>{s.image.caption}</figcaption>}</figure>}
         {s.items&&<ul className="articleList">{s.items.map(item=><li key={item}>{item}</li>)}</ul>}
       </section>)}

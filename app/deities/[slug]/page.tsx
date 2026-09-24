@@ -1,3 +1,5 @@
+import {GuideRelated} from '@/components/RamayanaGuide';
+import {ramayanaConnections} from '@/lib/ramayana';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import {deityHubs,fullSongs} from '@/lib/content';
@@ -16,6 +18,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){con
   <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Deities',href:'/deities'},{label:d.name,href:'/deities/'+d.slug}]}/><div className="eyebrow">{profile.eyebrow}</div><h1>{d.name}</h1><p>{profile.intro}</p></div></section>
   <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
   {profile.sections.map((section,index)=><section className="section" key={section.heading}><div className="shell copyColumns"><div>{index===0&&<div className="eyebrow">In the tradition</div>}<h2>{section.heading}</h2></div><div className="sectionCopy">{section.paragraphs.map(p=><p key={p}>{p}</p>)}</div></div></section>)}
+  {ramayanaConnections[slug]&&<section className="section"><div className="shell hubLongform"><GuideRelated links={ramayanaConnections[slug]}/></div></section>}
   {related.length>0&&<section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>{d.name} in RudraNāda.</h2></div><p>Music offers another way into the same questions. Start with the recordings below, then return to the story with different ears.</p></div><div className="grid3">{related.map(m=><MusicCard entry={m} key={m.videoId}/>)}</div></div></section>}
   <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
 </>}

@@ -142,7 +142,7 @@ body:[
 {heading:'What should “victory” mean?',paragraphs:['The deepest question after any sacred victory is what happens next. A demon can be defeated and a kingdom can still be ruled badly.','Vijayadashami becomes meaningful when victory leads to responsibility rather than self-congratulation.']}
 ],
 sources:[{label:'Valmiki Ramayana, Yuddha Kanda',note:'Primary epic context for Rama’s defeat of Ravana.'},{label:'Devi Mahatmya tradition',note:'Context for Durga and Mahishasura.'},{label:'Ramlila and regional Vijayadashami traditions',note:'Context for public performance and effigy burning.'}],
-relatedLinks:[{label:'Navratri guide',href:'/festivals/navratri'},{label:'Explore the Ramayana',href:'/ramayana'}]
+relatedLinks:[{label:'Ravana’s defeat in Yuddha Kanda',href:'/ramayana/yuddha-kanda#ravana'},{label:'Navratri guide',href:'/festivals/navratri'},{label:'Explore the Ramayana',href:'/ramayana'}]
 },
 {
 slug:'sharad-purnima',

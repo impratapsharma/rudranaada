@@ -2,6 +2,7 @@ import type {MetadataRoute} from 'next';
 import {articles,fullSongs,deityHubs} from '@/lib/content';
 import {site} from '@/lib/site';
 import {festivalGuides} from '@/lib/festival-guides';
+import {kandaGuides,ramayanaUpdatedAt} from '@/lib/ramayana';
 
 const majorFestivalSlugs=new Set([
   'diwali','navratri','maha-shivaratri','janmashtami','ganesh-chaturthi',
@@ -28,7 +29,14 @@ export default function sitemap():MetadataRoute.Sitemap{
     ...staticRoutes.map(route=>({
       url:site.url+route.path,
       changeFrequency:route.frequency,
+      ...(route.path==='/ramayana'?{lastModified:new Date(ramayanaUpdatedAt)}:{}),
       priority:route.priority
+    })),
+    ...kandaGuides.map(guide=>({
+      url:site.url+'/ramayana/'+guide.slug,
+      lastModified:new Date(ramayanaUpdatedAt),
+      changeFrequency:'monthly' as const,
+      priority:0.82
     })),
     ...deityHubs.map(deity=>({
       url:site.url+'/deities/'+deity.slug,

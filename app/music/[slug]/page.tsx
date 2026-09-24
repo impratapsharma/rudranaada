@@ -1,3 +1,5 @@
+import {GuideRelated} from '@/components/RamayanaGuide';
+import {ramayanaConnections} from '@/lib/ramayana';
 import type {Metadata} from 'next';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
@@ -117,6 +119,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
         </div>
       </> : m.description && <div className="articleBody"><h2>About the song</h2><div className="releaseDescription">{m.description}</div></div>}
 
+      {ramayanaConnections[m.slug]&&<GuideRelated links={ramayanaConnections[m.slug]}/>}
       <div className="tagRow">{m.themes.map(t=><span className="tag" key={t}>{t}</span>)}</div>
       {hubs.length>0&&<div className="heroActions">{hubs.map(d=><Link key={d.slug} href={'/deities/'+d.slug}>Explore {d.name} →</Link>)}</div>}
     </article>

@@ -164,7 +164,7 @@ body:[
 {heading:'What can RudraNāda readers take from the day?',paragraphs:['Rama Navami can become more than a birthday celebration. It can be a day to ask what dharma looks like when duties conflict and when a person cannot satisfy everyone.','That is where the Ramayana becomes alive rather than decorative.']}
 ],
 sources:[{label:'Valmiki Ramayana, Bala Kanda',note:'Primary epic context for Rama’s birth.'},{label:'2026 Rama Navami calendars',note:'Used for the Smarta and Vaishnava date distinction.'}],
-relatedLinks:[{label:'Explore the Ramayana',href:'/ramayana'},{label:'Epic Ramayana music',href:'/music/ramayana-orchestral'}]
+relatedLinks:[{label:'Rama’s birth in Bala Kanda',href:'/ramayana/bala-kanda#birth'},{label:'Explore the Ramayana',href:'/ramayana'},{label:'Epic Ramayana music',href:'/music/ramayana-orchestral'}]
 },
 {
 slug:'hanuman-jayanti',
@@ -190,7 +190,7 @@ body:[
 {heading:'How can the day be observed?',paragraphs:['Recite Hanuman Chalisa or Sundara Kanda if that belongs to your practice. Chant Rama’s name. Visit a Hanuman temple. Offer food or service.','The most Hanuman-like act may be useful work done without demanding applause.']}
 ],
 sources:[{label:'Valmiki Ramayana, especially Sundara Kanda',note:'Primary epic context for Hanuman’s service to Rama and Sita.'},{label:'Regional Hanuman birth traditions',note:'Used to explain why Hanuman Jayanti dates differ across India.'}],
-relatedLinks:[{label:'Explore Hanuman',href:'/deities/hanuman'},{label:'Explore the Ramayana',href:'/ramayana'}]
+relatedLinks:[{label:'Hanuman’s childhood in Uttara Kanda',href:'/ramayana/uttara-kanda#hanuman-childhood'},{label:'Hanuman’s mission in Sundara Kanda',href:'/ramayana/sundara-kanda'},{label:'Explore Hanuman',href:'/deities/hanuman'},{label:'Explore the Ramayana',href:'/ramayana'}]
 },
 {
 slug:'akshaya-tritiya-parashurama-jayanti',
@@ -216,7 +216,7 @@ body:[
 {heading:'A simple way to observe Akshaya Tritiya',paragraphs:['Give something. Begin a useful practice. Offer prayer. Start work you have delayed. Feed someone. Support education or health.','Choose one act you would be happy to see continue and grow. That is a practical way to understand akshaya.']}
 ],
 sources:[{label:'Vaishakha Tritiya festival traditions',note:'Context for Akshaya Tritiya and Parashurama Jayanti.'},{label:'2026 Hindu calendar',note:'Used for the 19 April 2026 date.'}],
-relatedLinks:[{label:'Explore Parashurama',href:'/deities/parashurama'},{label:'Listen to Parashurama',href:'/music/parashurama'}]
+relatedLinks:[{label:'Parashurama meets Rama in Bala Kanda',href:'/ramayana/bala-kanda#parashurama'},{label:'Explore Parashurama',href:'/deities/parashurama'},{label:'Listen to Parashurama',href:'/music/parashurama'}]
 },
 {
 slug:'narasimha-jayanti',

@@ -222,6 +222,8 @@ export const diwaliArticles:Article[]=[
       {label:'Shiromani Gurdwara Parbandhak Committee, Guru Hargobind history',note:'Context for Bandi Chhor Divas.'}
     ],
     relatedLinks:[
+      {label:'Rama’s homecoming in Yuddha Kanda',href:'/ramayana/yuddha-kanda#homecoming'},
+      {label:'Read the Valmiki Ramayana guide',href:'/ramayana'},
       {label:'2026 Hindu festival calendar',href:'/festivals/2026'},
       {label:'Dhanteras 2026',href:'/articles/dhanteras-2026-date-meaning-dhanvantari'},
       {label:'Naraka Chaturdashi 2026',href:'/articles/naraka-chaturdashi-2026-choti-diwali-story'},
