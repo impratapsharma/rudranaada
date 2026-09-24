@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import {festivalGuides,getFestivalGuide} from '@/lib/festival-guides';
+import {festivalGuides,getFestivalGuide,getRelatedFestivalGuides} from '@/lib/festival-guides';
 import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
@@ -31,6 +31,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const guide=getFestivalGuide(slug);
   if(!guide)notFound();
   const author=guide.author??'Pratap Sharma';
+  const relatedGuides=getRelatedFestivalGuides(guide.slug);
   const enhancement=getArticleEnhancement(guide.slug)??(guide.quickAnswer&&guide.keyTakeaways&&guide.faq?{quickAnswer:guide.quickAnswer,keyTakeaways:guide.keyTakeaways,faq:guide.faq}:undefined);
 
   return <div className="articlePage festivalGuidePage"><article className="articleWrap researchArticle">
@@ -62,6 +63,14 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {enhancement&&<FaqSection items={enhancement.faq}/>}
     {guide.relatedLinks&&guide.relatedLinks.length>0&&<section className="internalJourney"><div className="eyebrow">Continue inside RudraNāda</div><div className="internalJourneyLinks">{guide.relatedLinks.map(link=><Link href={link.href} key={link.href}>{link.label}<span>→</span></Link>)}</div></section>}
+
+    {relatedGuides.length>0&&<section className="internalJourney">
+      <div className="eyebrow">Related festival guides</div>
+      <div className="internalJourneyLinks">
+        {relatedGuides.map(item=><Link href={'/festivals/'+item.slug} key={item.slug}>{item.title.replace(/ 2026:.*/, '')}<span>→</span></Link>)}
+      </div>
+    </section>}
+
     {guide.sources&&guide.sources.length>0&&<section className="articleSources"><div className="eyebrow">Research references</div><h2>Texts and references consulted</h2><p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>{guide.sources.map(source=><div className="sourceReference" key={source.label}><strong>{source.label}</strong>{source.note&&<span>{source.note}</span>}</div>)}</section>}
     <div className="tagRow">{guide.tags.map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
   </article></div>;

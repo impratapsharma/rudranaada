@@ -10,7 +10,7 @@ import {getHubEnhancement} from '@/lib/hub-enhancements';
 
 export function generateStaticParams(){return deityHubs.map(d=>({slug:d.slug}));}
 
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const d=deityHubs.find(x=>x.slug===slug);if(!d)return{};return{title:d.name,description:d.description,alternates:{canonical:'/deities/'+d.slug},robots:{index:false,follow:true}}}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const d=deityHubs.find(x=>x.slug===slug);if(!d)return{};return{title:d.name,description:d.description,alternates:{canonical:'/deities/'+d.slug},robots:{index:true,follow:true}}}
 
 export default async function Page({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const d=deityHubs.find(x=>x.slug===slug);const profile=deityProfiles[slug];const enhancement=getHubEnhancement('deity-'+slug);if(!d||!profile||!enhancement)notFound();const related=fullSongs.filter(m=>m.themes.some(t=>t.toLowerCase()===d.name.toLowerCase()||t.toLowerCase()===d.slug));return <>
   <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Deities',href:'/deities'},{label:d.name,href:'/deities/'+d.slug}]}/><div className="eyebrow">{profile.eyebrow}</div><h1>{d.name}</h1><p>{profile.intro}</p></div></section>

@@ -42,3 +42,24 @@ export const festivalGuides:Article[]=[
   ...(navratri?[{...navratri,slug:'navratri',relatedLinks:navratri.relatedLinks?.map(link=>({...link,href:link.href==='/articles/navratri-2026-nine-forms-of-durga'?'/festivals/navratri':link.href}))}]:[])
 ];
 export const getFestivalGuide=(slug:string)=>festivalGuides.find(guide=>guide.slug===slug);
+
+
+export const getRelatedFestivalGuides=(slug:string)=>{
+  const current=festivalGuides.find(guide=>guide.slug===slug);
+  const index=festivalGuides.findIndex(guide=>guide.slug===slug);
+  if(!current||index<0||festivalGuides.length<2)return [];
+
+  const previous=festivalGuides[(index-1+festivalGuides.length)%festivalGuides.length];
+  const next=festivalGuides[(index+1)%festivalGuides.length];
+  const reserved=new Set([slug,previous.slug,next.slug]);
+
+  const thematic=festivalGuides
+    .filter(guide=>!reserved.has(guide.slug))
+    .map(guide=>({
+      guide,
+      score:guide.tags.filter(tag=>current.tags.includes(tag)).length
+    }))
+    .sort((a,b)=>b.score-a.score || a.guide.title.localeCompare(b.guide.title))[0]?.guide;
+
+  return [previous,next,thematic].filter((guide):guide is Article=>Boolean(guide));
+};
