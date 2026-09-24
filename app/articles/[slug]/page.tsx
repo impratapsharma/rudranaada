@@ -31,7 +31,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const a=getArticle(slug);
   if(!a)notFound();
   const author=a.author??'Pratap Sharma';
-  const enhancement=getArticleEnhancement(a.slug);
+  const storedEnhancement=getArticleEnhancement(a.slug);
+  const enhancement=storedEnhancement??(a.quickAnswer&&a.keyTakeaways&&a.faq?{quickAnswer:a.quickAnswer,keyTakeaways:a.keyTakeaways,faq:a.faq}:undefined);
   const authorSchema=a.author
     ? {'@type':'Person',name:a.author,url:site.url+'/authors/pratap'}
     : {'@type':'Organization',name:'RudraNāda',url:site.url};
