@@ -26,6 +26,7 @@ export type Article={
 export {music,fullSongs,shorts,getMusic} from './music';
 export type {MusicEntry} from './music';
 import {researchArticles} from './research-articles';
+import {hanumanForgotPowersArticle} from './hanuman-forgot-powers-article';
 
 const originalArticles:Article[]=[
   {slug:'why-rudranaada-exists',title:'Why We Sing the Old Stories',dek:'Because a story remembered only as information grows distant. A story sung can enter the breath.',description:'Why RudraNāda brings music, story and reflection together around India’s epic and devotional traditions.',publishedAt:'2026-09-21',readingMinutes:5,category:'RudraNāda',author:'Pratap Sharma',tags:['RudraNāda','Indian epics','devotional music'],body:[
@@ -49,7 +50,7 @@ const originalArticles:Article[]=[
   ],relatedLinks:[{label:'Explore Guru Bodha',href:'/guru'}]}
 ];
 
-export const articles:Article[]=[...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
+export const articles:Article[]=[hanumanForgotPowersArticle,...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
 
 export const deityHubs=[
   {slug:'krishna',name:'Krishna',description:'Friend, charioteer, teacher and the divine presence at the heart of the Bhagavad Gita.'},
