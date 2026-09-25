@@ -1,7 +1,7 @@
 import source from '@/data/youtube-catalogue.json';
 import annotations from '@/data/video-editorial.json';
 
-type Editorial = {slug:string; eyebrow:string; themes:string[]; summary:string; relatedVideoId:string|null};
+type Editorial = {slug:string; eyebrow:string; themes:string[]; summary:string; description?:string; relatedVideoId:string|null};
 export type MusicEntry = {
   videoId:string; title:string; youtubeUrl:string; format:'video'|'short';
   description:string; publishedAt:string; durationSeconds:number; thumbnail:string;

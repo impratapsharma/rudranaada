@@ -10,7 +10,7 @@ The music collection contains a verified snapshot of the public videos and Short
 `UCm0nm2PjdBv5-2OVwEYtu4g`. This is a metadata import, not an audio/video download.
 
 - `data/youtube-catalogue.json`: exact YouTube titles, descriptions, dates, IDs, thumbnails and format.
-- `data/video-editorial.json`: stable page slugs, short summaries, theme labels and related-video links.
+- `data/video-editorial.json`: stable page slugs, short summaries, theme labels, related-video links and optional website description overrides for editorial terminology.
 - `scripts/import-youtube.py`: repeatable metadata importer; its header contains the commands.
 
 The importer verifies channel ownership and public visibility, and writes only after

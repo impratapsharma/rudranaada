@@ -3,7 +3,7 @@
 **Version:** 1.0  
 **Owner:** Pratap Sharma  
 **Status:** Source of truth  
-**Last updated:** 22 September 2026
+**Last updated:** 25 September 2026
 
 > **Ancient in spirit. Contemporary in execution.**
 
@@ -333,7 +333,10 @@ Never:
 
 ## 16. Sanskrit and transliteration
 
-- Use familiar English spellings where natural.
+- Prefer familiar Sanskrit and Hindi terms wherever they fit naturally for the audience: kavach, kundal, puja, diya, prasad, bhakti and dharma. Keep the surrounding English clear.
+- Use **kavach** and **kundal** consistently in audience-facing copy about Karna, including summaries, FAQs and music-page descriptions. Use these familiar spellings rather than kavacha/kundala or English substitutes.
+- Preserve exact quotations and published source titles; add a brief English explanation only when a term needs one.
+- Use familiar spellings where natural.
 - Use diacritics when precision materially helps.
 - Define Sanskrit terms in plain English on first use.
 - Do not overload general-reader articles with academic transliteration.

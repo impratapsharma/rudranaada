@@ -38,7 +38,7 @@ export default function Page(){
       <div className="featuredEssay">
         <div className="eyebrow">A harder look at Karna</div>
         <h2>Karna becomes smaller when we make him only a victim or only a villain.</h2>
-        <p>Our new essay follows his birth, Duryodhana, Draupadi, the kavacha-kundala, Kunti and his death, including the manuscript question around Draupadi’s famous svayamvara rejection.</p>
+        <p>Our new essay follows his birth, Duryodhana, Draupadi, his kavach and kundal, Kunti and his death, including the manuscript question around Draupadi’s famous svayamvara rejection.</p>
         <Link href="/articles/karna-mahabharata-story-text-popular-retellings">Read the Karna essay →</Link>
       </div>
     </div></section>
