@@ -348,23 +348,30 @@ export const diwaliArticles:Article[]=[
   },
   {
     slug:'lakshmi-puja-diwali-2026-meaning-rituals',
-    title:'Lakshmi Puja 2026: Diwali Date, Meaning, Simple Puja and Why Lakshmi Is Worshipped',
-    seoTitle:'Lakshmi Puja 2026: Date, Meaning & Simple Diwali Puja',
-    dek:'Lakshmi Puja falls on the main Diwali night, 8 November 2026. The ritual is about prosperity, but prosperity in the Lakshmi tradition is larger than money.',
-    description:'Lakshmi Puja 2026 date, why Lakshmi is worshipped on Diwali, simple puja steps, meaning of diyas, rangoli, Ganesh worship and Samudra Manthana context.',
+    title:'Lakshmi Puja 2026: Kojagari and Diwali Dates, Meaning and Puja',
+    seoTitle:'Lakshmi Puja 2026: Kojagari & Diwali Dates, Puja Guide',
+    dek:'Bengali Kojagari Lakshmi Puja falls on 25 October 2026 in Kolkata; Diwali Lakshmi Puja is on 8 November. Both honour Maa Lakshmi, on different tithis and with different family traditions.',
+    description:'Lakshmi Puja 2026: Kojagari or Lokkhi Puja on 25 October in Kolkata, Diwali Lakshmi Puja on 8 November, regional differences and simple puja steps.',
     publishedAt:'2026-09-22',
+    updatedAt:'2026-09-25',
     readingMinutes:12,
     category:'Festivals',
     author:'Pratap Sharma',
-    tags:['Lakshmi Puja 2026','Diwali Puja','Goddess Lakshmi','Diwali 2026','Lakshmi Puja meaning'],
+    tags:['Lakshmi Puja 2026','Diwali Puja','Maa Lakshmi','Diwali 2026','Lakshmi Puja meaning','Kojagari Lakshmi Puja','Lokkhi Puja'],
     body:[
       {paragraphs:[
-        'Lakshmi Puja in 2026 falls on Sunday, 8 November, the main Diwali night. Families clean the home, light diyas, prepare a worship space and offer prayers to Goddess Lakshmi, often with Ganesha and Saraswati.',
+        'Lakshmi Puja has more than one observance. In Kolkata, Bengali Kojagari Lakshmi Puja is on Sunday, 25 October 2026, on Ashwin Purnima. Diwali Lakshmi Puja falls on Sunday, 8 November, on Kartika Amavasya in the Indian calendars consulted. Both honour Maa Lakshmi; the tithi and family tradition determine which puja you observe.',
         'The common explanation is that Lakshmi brings wealth. That is true but incomplete. In Sanskrit and devotional tradition, Lakshmi is closely connected with Śrī: prosperity, beauty, auspiciousness, flourishing and the conditions that allow a household to live well.'
       ]},
       {heading:'When is Lakshmi Puja in 2026?',paragraphs:[
-        'Lakshmi Puja is observed on 8 November 2026 during Kartika Amavasya. Exact muhurta changes by city. In New Delhi, Drik Panchang places the main evening window in Pradosh Kaal; Bengaluru has a different local timing.',
-        'If you are performing formal puja, use your city’s panchang for the final time. The date is national; the clock time is local.'
+        'For Kolkata, Drik Panchang lists Kojagari Lakshmi Puja on 25 October and Diwali Lakshmi Puja on 8 November. These are separate observances, not competing dates for one puja. Check your local panjika or panchang and family tradition for the puja time.'
+      ],items:[
+        'Kojagari Lakshmi Puja: Sunday, 25 October 2026 in Kolkata; Ashwin Purnima, following Durga Puja.',
+        'Diwali Lakshmi Puja: Sunday, 8 November 2026 in the Indian calendars consulted; Kartika Amavasya. The evening muhurat varies by city.'
+      ]},
+      {heading:'Is Bengali Lokkhi Puja the same as Diwali Lakshmi Puja?',paragraphs:[
+        'Lokkhi Puja and Lakkhi Pujo are familiar Bengali forms of the name Lakshmi Puja. In the autumn festival calendar, the Bengali observance commonly refers to Kojagari Lakshmi Puja after Durga Puja. It falls on Purnima, while Diwali Lakshmi Puja falls on Amavasya.',
+        'Kojagari traditions include jagaran, staying awake at night in devotion to Maa Lakshmi. Diwali traditions often include Lakshmi-Ganesha puja and diyas. Customs differ across households and regions; the Diwali puja steps below are a simple guide, not a replacement for a family’s Kojagari puja paddhati.'
       ]},
       {heading:'Why is Lakshmi worshipped on Diwali?',paragraphs:[
         'Diwali is a time of renewal: homes are cleaned, accounts are reset, lamps are lit and families prepare to begin again. Lakshmi fits naturally into that rhythm because she represents auspicious prosperity.',
@@ -378,7 +385,7 @@ export const diwaliArticles:Article[]=[
         'Many North Indian Lakshmi Puja traditions worship Ganesha alongside Lakshmi. The pairing is easy to understand: prosperity is asked to arrive with wisdom, right beginnings and the removal of obstacles.',
         'This is a living ritual convention rather than a rule followed by every Hindu community. Some homes add Saraswati, Kubera or family deities; others follow a very different sequence.'
       ]},
-      {heading:'A simple Lakshmi Puja at home',paragraphs:[
+      {heading:'A simple Diwali Lakshmi Puja at home',paragraphs:[
         'If your family has a puja tradition, follow that first. A simple household puja can be modest and still meaningful.'
       ],items:[
         'Clean the worship area and place the murti or image respectfully.',
@@ -387,7 +394,7 @@ export const diwaliArticles:Article[]=[
         'Invoke Ganesha first if that is part of your tradition.',
         'Offer prayers or a Lakshmi stotra you already know.',
         'Sit quietly for a few minutes rather than rushing from one ritual to the next.',
-        'Share the prasada and, if possible, give something to someone outside the household as well.'
+        'Share the prasad and, if possible, give something to someone outside the household as well.'
       ]},
       {heading:'Why are doors, windows and thresholds decorated?',paragraphs:[
         'The threshold is where the outside world meets the home. Rangoli, kolam, flowers and lamps turn that boundary into a place of welcome.',
@@ -403,7 +410,8 @@ export const diwaliArticles:Article[]=[
       ]}
     ],
     sources:[
-      {label:'Drik Panchang, 2026 Lakshmi Puja calendar',note:'Used for the 8 November 2026 date and the location-specific muhurta note.'},
+      {label:'Drik Panchang, 2026 Kojagara Puja calendar, Kolkata',note:'Kojagari Lakshmi Puja on 25 October, Ashwin Purnima and the regional observance. Checked 25 September 2026.'},
+      {label:'Drik Panchang, 2026 Diwali Lakshmi Puja calendar, Kolkata',note:'Diwali Lakshmi Puja on 8 November, Kartika Amavasya and city-specific muhurat. Checked 25 September 2026.'},
       {label:'Bhagavata Purana, Book 8',note:'Samudra Manthana context for Lakshmi’s emergence.'},
       {label:'Living Lakshmi Puja and Chopda Puja traditions',note:'Household and business practices vary across regions and communities.'}
     ],

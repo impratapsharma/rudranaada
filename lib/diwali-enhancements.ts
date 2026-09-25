@@ -57,16 +57,18 @@ export const diwaliEnhancements:Record<string,ArticleEnhancement>={
     ]
   },
   'lakshmi-puja':{
-    quickAnswer:'Lakshmi Puja in 2026 falls on Sunday, 8 November, the main Diwali night. Families worship Lakshmi as the goddess of prosperity and auspiciousness, often alongside Ganesha, after cleaning and illuminating the home.',
+    quickAnswer:'Bengali Kojagari Lakshmi Puja is on Sunday, 25 October 2026 in Kolkata, on Ashwin Purnima. Diwali Lakshmi Puja is on Sunday, 8 November, on Kartika Amavasya in the Indian calendars consulted. Both honour Maa Lakshmi; choose the date and muhurat for your local panjika and family tradition.',
     keyTakeaways:[
-      'Lakshmi Puja 2026 is on 8 November.',
+      'Kojagari or Bengali Lokkhi Puja is on 25 October 2026 in Kolkata; Diwali Lakshmi Puja is on 8 November.',
       'Exact evening muhurta depends on city.',
       'Lakshmi represents prosperity and auspicious flourishing, not only money.',
       'Samudra Manthana provides an important Puranic story for Lakshmi’s emergence.',
       'Household puja traditions vary, so family practice should come before generic internet checklists.'
     ],
     faq:[
-      {question:'When is Lakshmi Puja in 2026?',answer:'Lakshmi Puja falls on Sunday, 8 November 2026 during Kartika Amavasya. Exact puja time depends on location.'},
+      {question:'When is Lakshmi Puja in 2026?',answer:'Kojagari Lakshmi Puja falls on 25 October 2026 in Kolkata, on Ashwin Purnima. Diwali Lakshmi Puja is on 8 November, on Kartika Amavasya in the Indian calendars consulted. Check your local panjika and family tradition for the puja time.'},
+      {question:'When is Bengali Lokkhi Puja or Lakkhi Pujo in 2026?',answer:'The Kojagari observance is on Sunday, 25 October 2026 in Kolkata, after Durga Puja. It is separate from Diwali Lakshmi Puja on 8 November.'},
+      {question:'Is Kojagari Lakshmi Puja the same as Diwali Lakshmi Puja?',answer:'Both honour Maa Lakshmi, but Kojagari Puja falls on Ashwin Purnima and Diwali Lakshmi Puja on Kartika Amavasya. Their puja traditions differ across regions and households.'},
       {question:'Why is Lakshmi worshipped on Diwali?',answer:'Lakshmi is associated with prosperity, auspiciousness, beauty and flourishing. Diwali’s cleaning, lamps and new beginnings create a natural ritual setting for welcoming Lakshmi.'},
       {question:'Why is Ganesha worshipped with Lakshmi?',answer:'Many North Indian households worship Ganesha with Lakshmi, joining prosperity with wisdom, right beginnings and the removal of obstacles. The exact puja arrangement varies by region and family.'},
       {question:'What is a simple Lakshmi Puja?',answer:'A simple household puja can include cleaning the worship space, lighting diyas, offering flowers or sweets, reciting familiar prayers, sitting quietly for a few minutes and sharing prasada. Follow your family tradition if you have one.'},

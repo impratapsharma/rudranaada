@@ -183,6 +183,7 @@ export const researchArticles:Article[]=[
     dek:'Karna is generous, humiliated, loyal, envious, courageous and cruel at different moments. His tragedy disappears when we force him to be only a victim or only a villain.',
     description:'A research-based reading of Karna in the Mahabharata: his birth, Duryodhana, Draupadi, Kavach Kundal, Kunti, death, and what the Critical Edition changes.',
     publishedAt:'2026-09-21',
+    updatedAt:'2026-09-25',
     readingMinutes:14,
     category:'Mahabharata',
     author:'Pratap Sharma',
@@ -198,9 +199,17 @@ export const researchArticles:Article[]=[
       {
         heading:'He enters the story carrying a secret',
         paragraphs:[
-          'Kunti receives a mantra through which she can invoke a deity. Before her marriage, she tests it and calls Surya. Karna is born with natural armour and earrings, the kavacha and kundala that mark his extraordinary origin. Afraid of social disgrace, Kunti places the infant in a basket and sends him away.',
+          'Kunti receives a mantra through which she can invoke a deity. Before her marriage, she tests it and calls Surya. Karna is born with divine kavach and kundal that mark his extraordinary origin. Afraid of social disgrace, Kunti places the infant in a basket and sends him away.',
           'He is found and raised by Adhiratha, a charioteer, and Radha. This is not a footnote to Karna’s identity. Radha is his mother in the life he actually knows. Adhiratha is his father in affection, upbringing and society. When later characters reveal his biological birth, the revelation does not erase the people who raised him.',
           'Modern retellings sometimes make “secret Kshatriya blood” the answer to every insult he faces. The epic is more interesting if we resist that shortcut. Karna’s pain is not solved by discovering that society had misclassified his biology. The deeper question is why dignity had to depend on classification at all.'
+        ]
+      },
+      {
+        heading:'Why was Karna born with kavach and kundal?',
+        paragraphs:[
+          'Karna was born with kavach and kundal because Kunti asked Surya for a son who would possess them, and Surya promised to grant her request. In K. M. Ganguli’s translation of the Mahabharata, Vana Parva, Section CCCV (305), Kunti asks for a strong son with kavach and kundal. Surya says they will be made of amrita and that the kavach will be invulnerable.',
+          'Section CCCVI (306) then describes Karna’s birth with the kavach and kundal already present. They belong to him from birth; he does not earn them later through tapas or receive them during his training. The passage also connects their protection with his survival as the infant travels down the river.',
+          'This is why his later kavach-kundal daan to Indra carries such weight: Karna gives away the protection he has carried since birth. These section numbers follow Ganguli’s translation; numbering differs across editions.'
         ]
       },
       {
@@ -230,8 +239,8 @@ export const researchArticles:Article[]=[
       {
         heading:'Then comes the gift that made him immortal',
         paragraphs:[
-          'Indra knows that Karna’s natural armour and earrings protect him. Disguised as a Brahmin, he approaches Karna and asks for them. Karna has been warned, yet he gives them away.',
-          'This scene is often read as proof that Karna is the greatest giver. That reading has strong support in the tradition, but the moment is richer than simple generosity. Karna knows the power of reputation. He has built an identity around never refusing a worthy request. To keep the armour would preserve his body but fracture the self he has chosen to be.',
+          'Indra knows that Karna’s kavach and kundal protect him. Disguised as a Brahmin, he approaches Karna and asks for them. Karna has been warned, yet he gives them away.',
+          'This scene is often read as proof that Karna is the greatest giver. That reading has strong support in the tradition, but the moment is richer than simple generosity. Karna knows the power of reputation. He has built an identity around never refusing a worthy request. To keep the kavach would preserve his body but fracture the self he has chosen to be.',
           'The gift therefore sits between virtue and pride, freedom and compulsion. Is an act still completely free when a man would rather die than be seen violating the image by which he lives? The Mahabharata rarely answers such questions for us.'
         ]
       },
@@ -271,7 +280,8 @@ export const researchArticles:Article[]=[
     sources:[
       {label:'Mahabharata, Adi Parva',note:'Karna’s birth, upbringing, martial exhibition and the kingdom of Anga.'},
       {label:'Mahabharata, Sabha Parva',note:'Karna’s role during Draupadi’s humiliation after the dice game.'},
-      {label:'Mahabharata, Vana Parva',note:'Karna’s reputation for giving and the kavacha-kundala episode.'},
+      {label:'Mahabharata, Vana Parva, Sections CCCV–CCCVI (305–306), K. M. Ganguli translation',note:'Kunti’s request, Surya’s promise and Karna’s birth with kavach and kundal. Section numbering is specific to this translation.'},
+      {label:'Mahabharata, Vana Parva',note:'Karna’s reputation for daan and the kavach-kundal episode.'},
       {label:'Mahabharata, Udyoga Parva',note:'The meeting between Kunti and Karna before the war.'},
       {label:'Mahabharata, Karna Parva',note:'Karna’s final battle and Krishna’s response when Karna invokes dharma.'},
       {label:'V. S. Sukthankar, Critical Studies in the Mahabharata',note:'Manuscript-critical discussion of the Draupadi svayamvara rejection passage.'}
