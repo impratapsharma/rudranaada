@@ -39,7 +39,7 @@ function scriptHref(script:ReaderScript){
 
 export function VishnuSahasranamaReader({script}:{script:ReaderScript}){
   const meta=readerMeta[script];
-  const title=renderText('श्रीविष्णुसहस्रनामस्तोत्रम्',script);
+  const title=renderText('श्री विष्णु सहस्रनाम स्तोत्रम्',script);
   const punctuation=(last:boolean)=>script==='english'?(last?' ||':' |'):(last?' ॥':' ।');
 
   return <div className={'stotraReaderPage stotraScript-'+script}>
