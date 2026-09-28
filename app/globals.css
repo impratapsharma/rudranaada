@@ -357,3 +357,55 @@ h3{line-height:1.18}
 @media(max-width:900px){.guideLayout{grid-template-columns:minmax(0,1fr)}.guideSidebar{position:static;max-height:none}.guideContents{padding:16px 22px;border:1px solid var(--line);border-radius:12px;background:#f5f1ea}.guideContents ol{columns:2;column-gap:32px}.guideContents li{break-inside:avoid}.guideBody{max-width:780px}.guideHero{padding-top:28px}}
 @media(max-width:620px){.guideLayout,.guideHero{width:calc(100% - 36px)}.guideHero h1{font-size:2.4rem}.guideDek{font-size:1.05rem}.guideQuickAnswer{padding:20px}.guideQuickAnswer p{font-size:.98rem}.guideContents ol{columns:1}.guideBody{font-size:1rem;line-height:1.85}.guideBody h2{font-size:1.75rem}.guideBody th,.guideBody td{padding:13px 12px}.guideBody tbody th{width:28%}.guideReadingMap tbody th{width:65px}.guideMusic{grid-template-columns:1fr}.kandaDirectory a{gap:12px}.guideRelated{padding:22px}.guideMeta{gap:7px 16px}}
 @media(prefers-reduced-motion:reduce){.kandaDirectory a{transition:none}}
+
+
+/* Stotrams library */
+.stotraHubHero,.stotraHero{background:radial-gradient(circle at 82% 25%,rgba(166,107,22,.09),transparent 32%)}
+.stotraCard{display:flex;flex-direction:column;gap:10px;transition:border-color .18s,transform .18s}
+.stotraCard:hover{border-color:var(--gold);transform:translateY(-2px);color:inherit}
+.stotraCard h3{margin:6px 0 0}
+.stotraCard p{margin:0 0 8px}
+.stotraCard strong{margin-top:auto}
+.stotraLanguageGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stotraLanguageCard{display:flex;min-height:190px;flex-direction:column;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 8px 28px rgba(52,42,31,.035)}
+.stotraLanguageCard:hover{border-color:var(--gold);color:inherit}
+.stotraLanguageCard span{font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",serif;font-size:1.65rem;font-weight:700}
+.stotraLanguageCard small{color:var(--muted);margin-top:4px}
+.stotraLanguageCard strong{margin-top:auto;color:var(--gold-soft)}
+.stotraSourcePanel{width:min(100%,900px);padding:30px;border:1px solid rgba(166,107,22,.25);border-radius:20px;background:rgba(166,107,22,.04)}
+.stotraSourcePanel h2{max-width:19ch;margin:10px 0 18px}
+.stotraSourcePanel p{max-width:780px;color:var(--muted)}
+.stotraSourcePanel>a,.stotraSourceLinks a{color:var(--gold-soft);font-weight:750}
+.stotraSourceLinks{display:flex;gap:14px 24px;flex-wrap:wrap;margin-top:20px}
+.stotraStats{display:flex;gap:9px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin-top:22px}
+.stotraLanguageBar{position:sticky;top:76px;z-index:15;border-block:1px solid var(--line);background:rgba(251,250,247,.96);backdrop-filter:blur(16px)}
+.stotraLanguageBar .shell{display:flex;align-items:center;gap:8px;overflow-x:auto;padding-block:10px}
+.stotraLanguageBarLabel{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--muted);margin-right:5px}
+.stotraLanguageBar a{white-space:nowrap;border:1px solid transparent;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.86rem}
+.stotraLanguageBar a:hover{background:rgba(166,107,22,.06)}
+.stotraLanguageBar a.active{border-color:rgba(166,107,22,.28);background:rgba(166,107,22,.09);color:var(--gold-soft)}
+.stotraAccuracyNote{width:min(100%,900px);padding:20px 22px;border-left:3px solid var(--gold);background:rgba(166,107,22,.05);color:var(--muted)}
+.stotraAccuracyNote strong{color:var(--text)}
+.stotraAccuracyNote a{color:var(--gold-soft);font-weight:700}
+.stotraText{width:min(calc(100% - 48px),900px)}
+.stotraSection{padding:70px 0;border-bottom:1px solid var(--line)}
+.stotraSectionHead{margin-bottom:28px}
+.stotraSectionHead h2{font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",Georgia,serif;font-size:clamp(2rem,4vw,2.8rem);max-width:none;margin:8px 0 0;letter-spacing:0}
+.stotraBlocks{width:min(100%,780px)}
+.stotraSpeaker{font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",serif;font-size:1.18rem;color:var(--gold-soft);margin:34px 0 10px}
+.stotraStandalone{font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",serif;font-size:1.18rem;line-height:1.9;margin:14px 0}
+.stotraVerse{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 42px;gap:20px;padding:19px 0;border-bottom:1px solid rgba(33,29,24,.08)}
+.stotraVerse>div{grid-column:1}
+.stotraVerseNumber{grid-column:2;grid-row:1;justify-self:end;padding-top:5px;color:var(--muted);font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",serif;font-size:.9rem}
+.stotraLine{display:block;font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",serif;font-size:clamp(1.18rem,2.1vw,1.5rem);line-height:1.95;letter-spacing:.005em}
+@media(max-width:960px){.stotraLanguageBar{top:68px}}
+@media(max-width:640px){
+  .stotraLanguageGrid{grid-template-columns:1fr}
+  .stotraLanguageCard{min-height:150px}
+  .stotraSourcePanel{padding:24px 20px}
+  .stotraText{width:calc(100% - 28px)}
+  .stotraSection{padding:54px 0}
+  .stotraVerse{grid-template-columns:minmax(0,1fr) 30px;gap:10px;padding:17px 0}
+  .stotraLine{font-size:1.16rem;line-height:2}
+  .stotraStandalone{font-size:1.08rem}
+}
