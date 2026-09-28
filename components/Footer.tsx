@@ -18,6 +18,7 @@ export function Footer(){return <footer className="footer">
         <Link href="/deities">Deities</Link>
         <Link href="/guru">Guru Bodha</Link>
         <Link href="/mantras">Mantras</Link>
+        <Link href="/stotrams">Stotrams</Link>
         <Link href="/music">Music</Link>
         <a href="/feed.xml">RSS</a>
       </nav>
