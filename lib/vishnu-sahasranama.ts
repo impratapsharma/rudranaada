@@ -15,12 +15,12 @@ export type StotraSection = {
  *
  * Editorial policy:
  * - One Devanagari Sanskrit master drives every script version.
- * - The reading follows the Śaṅkara-commentary recension wherever a common
- *   pāṭhabheda can be identified, matching the textual policy described by
- *   Śṛṅgeri Śāradā Pīṭham for its Sanskrit edition.
- * - The text was cross-checked against a Mahābhārata transcription and
- *   independent stotra transcriptions. Script pages are transliterations,
- *   not paraphrase translations.
+ * - The 108-name core follows the Śaṅkara-commentary recension wherever a
+ *   common pāṭhabheda can be identified, matching the textual policy described
+ *   by Śṛṅgeri Śāradā Pīṭham for its Sanskrit edition.
+ * - The commonly recited 22-verse pūrvapīṭhikā and standard nyāsa sequence are
+ *   kept separate from the 108 core verses.
+ * - Script pages are transliterations, not paraphrase translations.
  */
 export const vishnuSahasranamaSections: StotraSection[] = [
   {
@@ -28,6 +28,14 @@ export const vishnuSahasranamaSections: StotraSection[] = [
     "title": "पूर्वपीठिका",
     "englishTitle": "Pūrvapīṭhikā",
     "blocks": [
+      {
+        "type": "line",
+        "text": "ॐ श्रीपरमात्मने नमः । नारायणं नमस्कृत्य नरं चैव नरोत्तमम् । देवीं सरस्वतीं व्यासं ततो जयमुदीरयेत् ॥"
+      },
+      {
+        "type": "line",
+        "text": "ॐ अथ सकलसौभाग्यदायकं श्रीविष्णुसहस्रनामस्तोत्रम् । हरिः ॐ ॥"
+      },
       {
         "type": "verse",
         "lines": [
@@ -38,31 +46,8 @@ export const vishnuSahasranamaSections: StotraSection[] = [
       {
         "type": "verse",
         "lines": [
-          "नारायणं नमस्कृत्य नरं चैव नरोत्तमम्",
-          "देवीं सरस्वतीं व्यासं ततो जयमुदीरयेत्"
-        ]
-      },
-      {
-        "type": "verse",
-        "lines": [
-          "सच्चिदानन्दरूपाय कृष्णायाक्लिष्टकारिणे",
-          "नमो वेदान्तवेद्याय गुरवे बुद्धिसाक्षिणे"
-        ]
-      },
-      {
-        "type": "verse",
-        "lines": [
-          "कृष्णद्वैपायनं व्यासं सर्वभूतहिते रतम्",
-          "वेदाब्जभास्करं वन्दे शमादिनिलयं मुनिम्"
-        ]
-      },
-      {
-        "type": "verse",
-        "lines": [
-          "सहस्रमूर्तेः पुरुषोत्तमस्य",
-          "सहस्रनेत्राननपादबाहोः",
-          "सहस्रनाम्नां स्तवनं प्रशस्तं",
-          "निरुच्यते जन्मजरादिशान्त्यै"
+          "यस्य द्विरदवक्त्राद्याः पारिषद्याः परः शतम्",
+          "विघ्नं निघ्नन्ति सततं विष्वक्सेनं तमाश्रये"
         ]
       },
       {
@@ -95,7 +80,7 @@ export const vishnuSahasranamaSections: StotraSection[] = [
       },
       {
         "type": "line",
-        "text": "ॐ नमो विष्णवे प्रभविष्णवे"
+        "text": "ॐ नमो विष्णवे प्रभविष्णवे ॥"
       },
       {
         "type": "speaker",
@@ -110,12 +95,12 @@ export const vishnuSahasranamaSections: StotraSection[] = [
       },
       {
         "type": "speaker",
-        "text": "श्रीयुधिष्ठिर उवाच"
+        "text": "युधिष्ठिर उवाच"
       },
       {
         "type": "verse",
         "lines": [
-          "किमेकं दैवतं लोके किं वाऽप्येकं परायणम्",
+          "किमेकं दैवतं लोके किं वाप्येकं परायणम्",
           "स्तुवन्तः कं कमर्चन्तः प्राप्नुयुर्मानवाः शुभम्"
         ]
       },
@@ -123,12 +108,12 @@ export const vishnuSahasranamaSections: StotraSection[] = [
         "type": "verse",
         "lines": [
           "को धर्मः सर्वधर्माणां भवतः परमो मतः",
-          "किं जपन् मुच्यते जन्तुर्जन्मसंसारबन्धनात्"
+          "किं जपन्मुच्यते जन्तुर्जन्मसंसारबन्धनात्"
         ]
       },
       {
         "type": "speaker",
-        "text": "श्रीभीष्म उवाच"
+        "text": "भीष्म उवाच"
       },
       {
         "type": "verse",
@@ -169,7 +154,7 @@ export const vishnuSahasranamaSections: StotraSection[] = [
         "type": "verse",
         "lines": [
           "परमं यो महत्तेजः परमं यो महत्तपः",
-          "परमं यो महद् ब्रह्म परमं यः परायणम्"
+          "परमं यो महद्ब्रह्म परमं यः परायणम्"
         ]
       },
       {
@@ -210,8 +195,8 @@ export const vishnuSahasranamaSections: StotraSection[] = [
       {
         "type": "verse",
         "lines": [
-          "अमृतांशूद्भवो बीजं शक्तिर्देवकिनन्दनः",
-          "त्रिसामा हृदयं तस्य शान्त्यर्थे विनियुज्यते"
+          "अमृतांशूद्भवो बीजं शक्तिर्देवकीनन्दनः",
+          "त्रिसामा हृदयं तस्य शान्त्यर्थे विनियोज्यते"
         ]
       },
       {
@@ -229,56 +214,172 @@ export const vishnuSahasranamaSections: StotraSection[] = [
     "englishTitle": "Pūrva Nyāsa",
     "blocks": [
       {
-        "type": "line",
-        "text": "अस्य श्रीविष्णोर्दिव्यसहस्रनामस्तोत्रमहामन्त्रस्य।"
+        "type": "speaker",
+        "text": "श्रीवेदव्यास उवाच"
       },
       {
         "type": "line",
-        "text": "श्री-वेदव्यासो भगवान् ऋषिः। अनुष्टुप् छन्दः।"
+        "text": "ॐ अस्य श्रीविष्णोर्दिव्यसहस्रनामस्तोत्रमहामन्त्रस्य ।"
       },
       {
         "type": "line",
-        "text": "श्रीमहाविष्णुः परमात्मा श्रीमन्नारायणो देवता।"
+        "text": "श्रीवेदव्यासो भगवान् ऋषिः ।"
       },
       {
         "type": "line",
-        "text": "अमृतांशूद्भवो भानुरिति बीजम्। देवकीनन्दनः स्रष्टेति शक्तिः।"
+        "text": "अनुष्टुप् छन्दः ।"
       },
       {
         "type": "line",
-        "text": "उद्भवः क्षोभणो देव इति परमो मन्त्रः।"
+        "text": "श्रीमहाविष्णुः परमात्मा श्रीमन्नारायणो देवता ।"
       },
       {
         "type": "line",
-        "text": "शङ्खभृन्नन्दकी चक्रीति कीलकम्।"
+        "text": "अमृतांशूद्भवो भानुरिति बीजम् ।"
       },
       {
         "type": "line",
-        "text": "शार्ङ्गधन्वा गदाधर इत्यस्त्रम्।"
+        "text": "देवकीनन्दनः स्रष्टेति शक्तिः ।"
       },
       {
         "type": "line",
-        "text": "रथाङ्गपाणिरक्षोभ्य इति नेत्रम्।"
+        "text": "उद्भवः क्षोभणो देव इति परमो मन्त्रः ।"
       },
       {
         "type": "line",
-        "text": "त्रिसामा सामगः सामेति कवचम्।"
+        "text": "शङ्खभृन्नन्दकी चक्रीति कीलकम् ।"
       },
       {
         "type": "line",
-        "text": "आनन्दं परब्रह्मेति योनिः।"
+        "text": "शार्ङ्गधन्वा गदाधर इत्यस्त्रम् ।"
       },
       {
         "type": "line",
-        "text": "ऋतुः सुदर्शनः काल इति दिग्बन्धः।"
+        "text": "रथाङ्गपाणिरक्षोभ्य इति नेत्रम् ।"
       },
       {
         "type": "line",
-        "text": "श्रीविश्वरूप इति ध्यानम्।"
+        "text": "त्रिसामा सामगः सामेति कवचम् ।"
       },
       {
         "type": "line",
-        "text": "श्रीमहाविष्णुप्रीत्यर्थे सहस्रनामजपे विनियोगः॥"
+        "text": "आनन्दं परब्रह्मेति योनिः ।"
+      },
+      {
+        "type": "line",
+        "text": "ऋतुः सुदर्शनः काल इति दिग्बन्धः ।"
+      },
+      {
+        "type": "line",
+        "text": "श्रीविश्वरूप इति ध्यानम् ।"
+      },
+      {
+        "type": "line",
+        "text": "श्रीमहाविष्णुप्रीत्यर्थे सहस्रनामस्तोत्रपाठे विनियोगः ॥"
+      },
+      {
+        "type": "line",
+        "text": "अथ न्यासः ।"
+      },
+      {
+        "type": "line",
+        "text": "ॐ शिरसि वेदव्यासर्षये नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "मुखे अनुष्टुप्छन्दसे नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "हृदि श्रीकृष्णपरमात्मदेवतायै नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "गुह्ये अमृतांशूद्भवो भानुरिति बीजाय नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "पादयोर्देवकीनन्दनः स्रष्टेति शक्तये नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "सर्वाङ्गे शङ्खभृन्नन्दकी चक्रीति कीलकाय नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "करसम्पूटे मम श्रीकृष्णप्रीत्यर्थे जपे विनियोगः ॥"
+      },
+      {
+        "type": "line",
+        "text": "इति ऋष्यादिन्यासः ॥"
+      },
+      {
+        "type": "line",
+        "text": "अथ करन्यासः ।"
+      },
+      {
+        "type": "line",
+        "text": "ॐ विश्वं विष्णुर्वषट्कार इत्यङ्गुष्ठाभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "अमृतांशूद्भवो भानुरिति तर्जनीभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "ब्रह्मण्यो ब्रह्मकृद्ब्रह्मेति मध्यमाभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "सुवर्णबिन्दुरक्षोभ्य इत्यनामिकाभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "निमिषोऽनिमिषः स्रग्वीति कनिष्ठिकाभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "रथाङ्गपाणिरक्षोभ्य इति करतलकरपृष्ठाभ्यां नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "इति करन्यासः ॥"
+      },
+      {
+        "type": "line",
+        "text": "अथ षडङ्गन्यासः ।"
+      },
+      {
+        "type": "line",
+        "text": "ॐ विश्वं विष्णुर्वषट्कार इति हृदयाय नमः ।"
+      },
+      {
+        "type": "line",
+        "text": "अमृतांशूद्भवो भानुरिति शिरसे स्वाहा ।"
+      },
+      {
+        "type": "line",
+        "text": "ब्रह्मण्यो ब्रह्मकृद्ब्रह्मेति शिखायै वषट् ।"
+      },
+      {
+        "type": "line",
+        "text": "सुवर्णबिन्दुरक्षोभ्य इति कवचाय हुम् ।"
+      },
+      {
+        "type": "line",
+        "text": "निमिषोऽनिमिषः स्रग्वीति नेत्रत्रयाय वौषट् ।"
+      },
+      {
+        "type": "line",
+        "text": "रथाङ्गपाणिरक्षोभ्य इत्यस्त्राय फट् ।"
+      },
+      {
+        "type": "line",
+        "text": "इति षडङ्गन्यासः ॥"
+      },
+      {
+        "type": "line",
+        "text": "श्रीकृष्णप्रीत्यर्थे विष्णोर्दिव्यसहस्रनामजपमहं करिष्ये इति सङ्कल्पः ।"
       }
     ]
   },
@@ -304,6 +405,10 @@ export const vishnuSahasranamaSections: StotraSection[] = [
           "अन्तःस्थं यस्य विश्वं सुरनरखगगोभोगिगन्धर्वदैत्यैः",
           "चित्रं रंरम्यते तं त्रिभुवनवपुषं विष्णुमीशं नमामि"
         ]
+      },
+      {
+        "type": "line",
+        "text": "ॐ नमो भगवते वासुदेवाय ॥"
       },
       {
         "type": "line",
@@ -1569,7 +1674,7 @@ export const vishnuSahasranamaSections: StotraSection[] = [
 ];
 
 export const vishnuSahasranamaCounts = {
-  purvaPithikaVerses: 25,
+  purvaPithikaVerses: 22,
   dhyanaVerses: 7,
   sahasranamaVerses: 108,
   phalaAndConcludingVerses: 33,
