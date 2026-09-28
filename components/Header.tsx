@@ -8,6 +8,7 @@ const nav=[
   ['Deities','/deities'],
   ['Guru','/guru'],
   ['Mantras','/mantras'],
+  ['Stotrams','/stotrams'],
   ['Music','/music']
 ];
 
