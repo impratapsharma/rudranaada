@@ -27,8 +27,10 @@ const kannadaChars = [
   '೦','೧','೨','೩','೪','೫','೬','೭','೮','೯'
 ] as const;
 
-function buildMap(target: readonly string[]) {
-  return new Map(devChars.map((char,index)=>[char,target[index]]));
+function buildMap(target: readonly string[]): Map<string,string> {
+  return new Map<string,string>(
+    devChars.map((char,index)=>[char,target[index]!] as const)
+  );
 }
 
 const maps = {
