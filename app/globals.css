@@ -409,3 +409,109 @@ h3{line-height:1.18}
   .stotraLine{font-size:1.16rem;line-height:2}
   .stotraStandalone{font-size:1.08rem}
 }
+
+
+/* Stotram reader mobile-first UX refinement */
+.stotraReaderPage{overflow-x:clip}
+.stotraReaderPage .stotraHero{padding:52px 0 36px}
+.stotraReaderPage .breadcrumbs{margin-bottom:18px;max-width:100%;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.stotraReaderPage .breadcrumbs::-webkit-scrollbar{display:none}
+.stotraMainTitle{
+  max-width:100%!important;
+  margin:10px 0 16px;
+  font-family:"Noto Serif Devanagari","Noto Serif Telugu","Noto Serif Kannada","Nirmala UI",Georgia,serif;
+  font-size:clamp(2.35rem,5.3vw,4rem);
+  line-height:1.2;
+  letter-spacing:0;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.stotraScript-english .stotraMainTitle{font-family:Georgia,serif;max-width:17ch!important}
+.stotraHeroDek{max-width:720px!important;margin:0;font-size:1.04rem!important;line-height:1.7}
+.stotraHeroActions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.stotraCount{display:inline-flex;align-items:center;min-height:38px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.84rem}
+.stotraLanguageBar .shell{gap:7px}
+.stotraLanguageBar a{display:inline-flex;align-items:center;justify-content:center;min-height:40px}
+.stotraUtility{padding-top:20px}
+.stotraJumpNav{display:flex;gap:8px;overflow-x:auto;padding:0 0 16px;margin:0;scrollbar-width:none}
+.stotraJumpNav::-webkit-scrollbar{display:none}
+.stotraJumpNav a{display:inline-flex;align-items:center;min-height:40px;white-space:nowrap;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.82rem;font-weight:700;color:var(--muted)}
+.stotraJumpNav a:hover{border-color:rgba(166,107,22,.35);color:var(--gold-soft)}
+.stotraAccuracyNote{width:min(100%,780px);margin:0 0 8px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 14px 14px 0;background:rgba(166,107,22,.035);color:var(--muted)}
+.stotraAccuracyNote summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:750;color:var(--text)}
+.stotraAccuracyNote summary::-webkit-details-marker{display:none}
+.stotraAccuracyNote summary::after{content:"+";float:right;color:var(--gold-soft);font-size:1.15rem;line-height:1}
+.stotraAccuracyNote[open] summary::after{content:"−"}
+.stotraAccuracyNote>div{padding:0 18px 16px}
+.stotraAccuracyNote p{margin:0 0 10px;line-height:1.65}
+.stotraAccuracyNote p:last-child{margin-bottom:0}
+.stotraText{width:min(calc(100% - 48px),820px)}
+.stotraSection{scroll-margin-top:148px;padding:62px 0}
+.stotraSection:first-child{padding-top:42px}
+.stotraSectionHead{margin-bottom:22px}
+.stotraSectionHead h2{
+  max-width:100%;
+  line-height:1.28;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.stotraBlocks{width:100%}
+.stotraVerse{align-items:start}
+.stotraLine{overflow-wrap:anywhere;word-break:normal}
+.stotraScript-english .stotraLine,
+.stotraScript-english .stotraStandalone,
+.stotraScript-english .stotraSpeaker{font-family:Georgia,serif}
+.stotraSourceSection{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+.stotraSourcePanel h2{max-width:22ch}
+
+@media(max-width:640px){
+  .stotraReaderPage .stotraHero{padding:28px 0 24px}
+  .stotraReaderPage .stotraHero .shell{width:calc(100% - 32px)}
+  .stotraReaderPage .breadcrumbs{font-size:.74rem;margin-bottom:13px;padding-bottom:2px}
+  .stotraReaderPage .stotraHero .eyebrow{font-size:.66rem;letter-spacing:.09em;text-transform:none}
+  .stotraMainTitle{
+    margin:8px 0 12px;
+    font-size:clamp(1.95rem,8.4vw,2.5rem);
+    line-height:1.24;
+  }
+  .stotraScript-english .stotraMainTitle{font-size:clamp(2.2rem,10vw,2.85rem);line-height:1.08}
+  .stotraHeroDek{font-size:.96rem!important;line-height:1.58!important}
+  .stotraHeroActions{margin-top:17px;gap:8px}
+  .stotraHeroActions .button{min-height:42px;padding:9px 14px}
+  .stotraCount{min-height:42px;font-size:.78rem}
+  .stotraLanguageBar{top:68px}
+  .stotraLanguageBar .shell{width:100%;padding:8px 14px;gap:6px}
+  .stotraLanguageBarLabel{display:none}
+  .stotraLanguageBar a{min-height:42px;padding:8px 12px;font-size:.82rem;flex:0 0 auto}
+  .stotraUtility{width:calc(100% - 32px);padding-top:14px}
+  .stotraJumpNav{margin-inline:-2px;padding-bottom:12px}
+  .stotraJumpNav a{min-height:38px;padding:7px 11px;font-size:.77rem}
+  .stotraAccuracyNote{margin-top:0}
+  .stotraAccuracyNote summary{padding:14px 15px;font-size:.9rem}
+  .stotraAccuracyNote>div{padding:0 15px 14px}
+  .stotraAccuracyNote p{font-size:.87rem;line-height:1.6}
+  .stotraText{width:calc(100% - 32px)}
+  .stotraSection{padding:42px 0;scroll-margin-top:132px}
+  .stotraSection:first-child{padding-top:34px}
+  .stotraSectionHead{margin-bottom:15px}
+  .stotraSectionHead .eyebrow{font-size:.64rem;letter-spacing:.08em}
+  .stotraSectionHead h2{font-size:clamp(1.55rem,7vw,1.95rem);line-height:1.28;margin-top:6px}
+  .stotraVerse{grid-template-columns:minmax(0,1fr) 24px;gap:8px;padding:15px 0}
+  .stotraVerseNumber{font-size:.72rem;padding-top:4px}
+  .stotraLine{font-size:1.08rem;line-height:1.88;letter-spacing:0}
+  .stotraScript-english .stotraLine{font-size:1.04rem;line-height:1.78}
+  .stotraStandalone{font-size:1.02rem;line-height:1.78;margin:11px 0}
+  .stotraSpeaker{font-size:1.02rem;line-height:1.5;margin:26px 0 8px}
+  .stotraSourceSection{padding-top:50px;padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+  .stotraSourcePanel{padding:22px 18px}
+  .stotraSourcePanel h2{font-size:1.65rem;line-height:1.18;margin:8px 0 14px}
+  .stotraSourcePanel p{font-size:.9rem;line-height:1.65}
+  .stotraSourceLinks{display:grid;gap:10px}
+}
+
+@media(max-width:380px){
+  .stotraMainTitle{font-size:1.88rem}
+  .stotraScript-english .stotraMainTitle{font-size:2.08rem}
+  .stotraLanguageBar a{padding-inline:10px;font-size:.78rem}
+  .stotraLine{font-size:1.03rem}
+}
