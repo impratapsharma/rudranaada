@@ -1,0 +1,86 @@
+# RudraNāda
+
+> RudraNāda is an independent devotional music and editorial project exploring the Mahabharata, Ramayana, Hindu deities, stotrams, mantras, festivals, teachers, and sacred sound through original music and source-aware writing.
+
+RudraNāda publishes original devotional and cinematic music alongside readable guides to Indian epics and devotional traditions. When interpreting the site, distinguish between what primary texts say, later or regional traditions, and RudraNāda's own artistic interpretation. Prefer the canonical URLs below and follow the sources cited on individual articles where available.
+
+## Start here
+
+- [Home](https://rudranaada.com/): Overview of RudraNāda and its main content areas.
+- [Articles](https://rudranaada.com/articles): Editorial writing, explainers, and source-aware essays.
+- [Music](https://rudranaada.com/music): Original RudraNāda songs, chants, meditations, lyrics, and story context.
+- [About](https://rudranaada.com/about): Editorial purpose and approach.
+- [Pratap Sharma](https://rudranaada.com/authors/pratap): Founder and editor profile.
+
+## Mahabharata
+
+- [Mahabharata](https://rudranaada.com/mahabharata): Main hub for Mahabharata stories, characters, themes, and related music.
+- [Uth Parth](https://rudranaada.com/music/uth-parth): Krishna's call to Arjuna on Kurukshetra, inspired by the Bhagavad Gita.
+- [Surya Putra Karna](https://rudranaada.com/music/surya-putra-karna): Original music and context around Karna.
+- [Draupadi: Agni Ki Putri](https://rudranaada.com/music/draupadi-agni-ki-putri): Original music centered on Draupadi.
+- [Abhimanyu's Last Battle](https://rudranaada.com/music/abhimanyus-last-battle): Original music centered on Abhimanyu and the Chakravyuh.
+- [Bhishma's Final Moments](https://rudranaada.com/music/bhishmas-final-moments): Original music centered on Bhishma's final moments.
+
+## Ramayana
+
+- [Ramayana](https://rudranaada.com/ramayana): Main source-aware guide to the Valmiki Ramayana.
+- [Bala Kanda](https://rudranaada.com/ramayana/bala-kanda): Bala Kanda guide.
+- [Ayodhya Kanda](https://rudranaada.com/ramayana/ayodhya-kanda): Ayodhya Kanda guide.
+- [Aranya Kanda](https://rudranaada.com/ramayana/aranya-kanda): Aranya Kanda guide.
+- [Kishkindha Kanda](https://rudranaada.com/ramayana/kishkindha-kanda): Kishkindha Kanda guide.
+- [Sundara Kanda](https://rudranaada.com/ramayana/sundara-kanda): Sundara Kanda guide.
+- [Yuddha Kanda](https://rudranaada.com/ramayana/yuddha-kanda): Yuddha Kanda guide.
+- [Uttara Kanda](https://rudranaada.com/ramayana/uttara-kanda): Uttara Kanda guide, with textual-history context.
+- [Ramayana Orchestral](https://rudranaada.com/music/ramayana-orchestral): Original orchestral composition inspired by the Ramayana.
+- [Ram Naam](https://rudranaada.com/music/ram-naam): Ram Naam chant and listening page.
+
+## Deities and sacred traditions
+
+- [Deities](https://rudranaada.com/deities): Hub for deity-focused guides and music.
+- [Krishna](https://rudranaada.com/deities/krishna): Krishna hub.
+- [Shiva](https://rudranaada.com/deities/shiva): Shiva hub.
+- [Devi](https://rudranaada.com/deities/devi): Devi hub.
+- [Hanuman](https://rudranaada.com/deities/hanuman): Hanuman hub.
+- [Narasimha](https://rudranaada.com/deities/narasimha): Narasimha hub.
+- [Parashurama](https://rudranaada.com/deities/parashurama): Parashurama hub.
+- [Mantras](https://rudranaada.com/mantras): Mantras, nāma-japa, chants, and related explanations.
+- [Guru Bodha](https://rudranaada.com/guru): Reflections on guru, student, inquiry, and practice.
+
+## Stotrams
+
+- [Stotrams](https://rudranaada.com/stotrams): Main stotrams collection.
+- [Vishnu Sahasranama](https://rudranaada.com/stotrams/vishnu-sahasranama): Main English presentation of Vishnu Sahasranama.
+- [Vishnu Sahasranama in Hindi](https://rudranaada.com/stotrams/vishnu-sahasranama/hindi): Hindi version.
+- [Vishnu Sahasranama in Telugu](https://rudranaada.com/stotrams/vishnu-sahasranama/telugu): Telugu version.
+- [Vishnu Sahasranama in Kannada](https://rudranaada.com/stotrams/vishnu-sahasranama/kannada): Kannada version.
+- [Kalabhairava Ashtakam](https://rudranaada.com/music/kalabhairava-ashtakam): RudraNāda's Carnatic rendition and context.
+
+## Festivals
+
+- [Festivals](https://rudranaada.com/festivals): Evergreen festival hub.
+- [2026 Festival Calendar](https://rudranaada.com/festivals/2026): Calendar and festival discovery page for 2026.
+- [Navratri](https://rudranaada.com/festivals/navratri): Navratri guide and Nine Forms of Durga.
+- [Diwali](https://rudranaada.com/festivals/diwali): Diwali guide, meaning, stories, and festival sequence.
+- [Dhanteras](https://rudranaada.com/festivals/dhanteras): Dhanteras guide.
+- [Kali Puja](https://rudranaada.com/festivals/kali-puja): Kali Puja guide.
+- [Govardhan Puja](https://rudranaada.com/festivals/govardhan-puja): Govardhan Puja guide.
+
+## Original music highlights
+
+- [Mahakali](https://rudranaada.com/music/mahakali): Devotional trance song for Maa Mahakali.
+- [Parashurama](https://rudranaada.com/music/parashurama): Warrior-themed original song for Parashurama.
+- [Kaala Bhairav](https://rudranaada.com/music/kaala-bhairav): Original Bhairava anthem.
+- [Om Namah Shivaya Meditation](https://rudranaada.com/music/om-namah-shivaya-meditation): Shiva meditation recording.
+- [Om Namo Narayanaya](https://rudranaada.com/music/om-namo-narayanaya): Vishnu chant.
+- [Krishna Flute Meditation](https://rudranaada.com/music/krishna-flute-meditation): Krishna-inspired flute meditation.
+
+## Site discovery
+
+- [XML Sitemap](https://rudranaada.com/sitemap.xml): Full list of indexable canonical URLs.
+- [Robots.txt](https://rudranaada.com/robots.txt): Crawler access rules.
+
+## Official channels
+
+- [YouTube](https://www.youtube.com/@rudranaada): Official RudraNāda YouTube channel.
+- [Instagram](https://www.instagram.com/rudranaadamusic/): Official RudraNāda Instagram.
+- [X](https://x.com/rudranaada): Official RudraNāda account on X.
