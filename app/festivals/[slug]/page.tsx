@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {notFound} from 'next/navigation';
 import {festivalGuides,getFestivalGuide,getRelatedFestivalGuides} from '@/lib/festival-guides';
 import {site} from '@/lib/site';
@@ -52,7 +53,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       <span>·</span><span>{guide.readingMinutes} min read</span><span>·</span><Link href="/authors/pratap" className="authorLink">{author}</Link>
     </div>
 
-    {guide.featuredImage&&<figure className="articleFeaturedImage"><img src={guide.featuredImage.src} alt={guide.featuredImage.alt}/>{guide.featuredImage.caption&&<figcaption>{guide.featuredImage.caption}</figcaption>}</figure>}
+    {guide.featuredImage&&<figure className="articleFeaturedImage"><Image src={guide.featuredImage.src} alt={guide.featuredImage.alt} width={1280} height={720} sizes="(max-width: 920px) 100vw, 920px"/>{guide.featuredImage.caption&&<figcaption>{guide.featuredImage.caption}</figcaption>}</figure>}
     {enhancement&&<QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/>}
     {guide.slug==='diwali'&&<DiwaliOverview/>}
 
@@ -60,7 +61,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       {guide.body.map((section,index)=><section key={index}>
         {section.heading&&<h2>{section.heading}</h2>}
         {section.paragraphs.map((paragraph,pIndex)=><p key={pIndex}>{paragraph}</p>)}
-        {section.image&&<figure className="articleInlineImage"><img src={section.image.src} alt={section.image.alt} loading="lazy"/>{section.image.caption&&<figcaption>{section.image.caption}</figcaption>}</figure>}
+        {section.image&&<figure className="articleInlineImage"><Image src={section.image.src} alt={section.image.alt} width={1280} height={720} sizes="(max-width: 760px) 100vw, 760px"/>{section.image.caption&&<figcaption>{section.image.caption}</figcaption>}</figure>}
         {section.items&&<ul className="articleList">{section.items.map(item=><li key={item}>{item}</li>)}</ul>}
       </section>)}
     </div>
@@ -75,7 +76,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       </div>
     </section>}
 
-    {guide.sources&&guide.sources.length>0&&<section className="articleSources"><div className="eyebrow">Research references</div><h2>Texts and references consulted</h2><p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>{guide.sources.map(source=>{const href=resolveSourceHref(source);return <div className="sourceReference" key={source.label}>{href?<strong><a href={href} target="_blank" rel="noreferrer">{source.label} ↗</a></strong>:<strong>{source.label}</strong>}{source.note&&<span>{source.note}</span>}</div>})}</section>}
+    {guide.sources&&guide.sources.length>0&&<section className="articleSources"><div className="eyebrow">Research references</div><h2>Texts and references consulted</h2><p className="sourceIntro">Linked to the source where a stable public reference is available.</p>{guide.sources.map(source=>{const href=resolveSourceHref(source);return <div className="sourceReference" key={source.label}>{href?<strong><a href={href} target="_blank" rel="noreferrer">{source.label} ↗</a></strong>:<strong>{source.label}</strong>}{source.note&&<span>{source.note}</span>}</div>})}</section>}
     <div className="tagRow">{guide.tags.map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
   </article></div>;
 }
