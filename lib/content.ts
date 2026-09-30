@@ -1,4 +1,4 @@
-export type ArticleSource={label:string;note?:string};
+export type ArticleSource={label:string;note?:string;href?:string};
 export type ArticleLink={label:string;href:string};
 export type ArticleImage={src:string;alt:string;caption?:string};
 export type ArticleSection={heading?:string;paragraphs:string[];items?:string[];image?:ArticleImage};
