@@ -84,3 +84,12 @@ RudraNāda publishes original devotional and cinematic music alongside readable 
 - [YouTube](https://www.youtube.com/@rudranaada): Official RudraNāda YouTube channel.
 - [Instagram](https://www.instagram.com/rudranaadamusic/): Official RudraNāda Instagram.
 - [X](https://x.com/rudranaada): Official RudraNāda account on X.
+
+
+## Machine-readable versions
+
+- [Full Markdown content bundle](https://rudranaada.com/llms-full.txt): AI-readable bundle of RudraNāda's cornerstone guides and research pages.
+- [Ramayana Markdown](https://rudranaada.com/markdown/ramayana): Clean Markdown version of the Ramayana guide.
+- [Mahabharata Markdown](https://rudranaada.com/markdown/mahabharata): Clean Markdown version of the Mahabharata hub.
+- [Vishnu Sahasranama Markdown](https://rudranaada.com/markdown/stotrams/vishnu-sahasranama): Clean IAST Markdown edition.
+- Individual cornerstone articles, festival guides, Kandas and selected music pages advertise their Markdown versions with `rel="alternate"` and `type="text/markdown"`.
