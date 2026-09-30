@@ -5,13 +5,20 @@ import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
+import {JsonLd} from '@/components/JsonLd';
+import {SourcePanel} from '@/components/SourcePanel';
+import {hubSources,citationUrls} from '@/lib/source-links';
+import {site} from '@/lib/site';
 
 export const metadata:Metadata={title:'Guru Bodha',description:'RudraNāda reflections on the guru, the student, humility, inquiry, discipline and lived spiritual understanding.',alternates:{canonical:'/guru'}};
 
 export default function Page(){
   const enhancement=getHubEnhancement('guru');
   const guruArticles=articles.filter(a=>a.category==='Guru Bodha');
+  const sources=hubSources.guru??[];
+  const citations=citationUrls(sources);
   return <>
+    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Guru Bodha',url:site.url+'/guru',description:'RudraNāda reflections on guru, student, inquiry and practice.',citation:citations.length?citations:undefined}}/>
     <section className="pageHero guruHero"><div className="shell"><Breadcrumbs items={[{label:'Guru Bodha',href:'/guru'}]}/><div className="eyebrow">Guru Bodha</div><h1>A teaching is not complete because it was heard.</h1><p>Guru Bodha is RudraNāda’s space for the relationship between teacher and student, and for the slow work by which knowledge becomes understanding.</p></div></section>
 
     <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
@@ -29,5 +36,6 @@ export default function Page(){
     <section className="section sacredStatement"><div className="shell"><div className="eyebrow">About the name</div><h2>Bodha is more than information.</h2><p>The Sanskrit word can carry senses of knowing, understanding, awakening and instruction. “Guru Bodha” is the name we use for this RudraNāda series. It is an editorial title, not the name of a single canonical scripture or formal genre.</p></div></section>
 
     <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
+    <SourcePanel sources={sources}/>
   </>
 }
