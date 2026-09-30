@@ -12,6 +12,7 @@ const sourceRules:{test:RegExp;href:string}[]=[
   {test:/UNESCO.*Ramlila|Ramlila.*UNESCO/i,href:'https://ich.unesco.org/en/RL/ramlila-the-traditional-performance-of-the-ramayana-00110'},
   {test:/Devi Mahatmya|Durga Saptashati|Devi Kavaca/i,href:'https://sanskritdocuments.org/doc_devii/durga700.html'},
   {test:/Sri Rudram|Śrī Rudram|Rudram/i,href:'https://sanskritdocuments.org/doc_shiva/rudram.html'},
+  {test:/Kālabhairavāṣṭakam|Kalabhairava Ashtakam|Kaal Bhairav/i,href:'https://sanskritdocuments.org/doc_shiva/kaalabhairava.html'},
   {test:/Bhagavata Purana|Bhāgavata Purāṇa/i,href:'https://www.wisdomlib.org/hinduism/book/the-bhagavata-purana'},
   {test:/Shiromani Gurdwara Parbandhak Committee|SGPC/i,href:'https://sgpc.net/'}
 ];
