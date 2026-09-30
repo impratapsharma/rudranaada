@@ -10,6 +10,9 @@ import {site} from '@/lib/site';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {JsonLd} from '@/components/JsonLd';
 import {MusicCard} from '@/components/MusicCard';
+import {resolveSourceHref} from '@/lib/source-links';
+
+const markdownMusicSlugs=new Set(['uth-parth','surya-putra-karna','kalabhairava-ashtakam']);
 
 export function generateStaticParams(){return music.map(m=>({slug:m.slug}));}
 
@@ -22,7 +25,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   return {
     title,
     description,
-    alternates:{canonical:'/music/'+m.slug},
+    alternates:{canonical:'/music/'+m.slug,types:markdownMusicSlugs.has(m.slug)?{'text/markdown':'/markdown/music/'+m.slug}:undefined},
     robots:{index:m.format==='video',follow:true},
     openGraph:{title,description,url:site.url+'/music/'+m.slug,type:'video.other',images:[{url:m.thumbnail}]},
     twitter:{card:'summary_large_image',title,description,images:[m.thumbnail]}
@@ -36,6 +39,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const displayTitle=rich?.displayTitle ?? getDisplayTitle(m.slug,m.title);
   const related=music.filter(v=>v.videoId!==m.videoId&&v.format==='video'&&v.themes.some(t=>m.themes.includes(t))).sort((a,b)=>Number(b.videoId===m.relatedVideoId)-Number(a.videoId===m.relatedVideoId)).slice(0,3);
   const hubs=deityHubs.filter(d=>m.themes.some(t=>t.toLowerCase()===d.name.toLowerCase()));
+  const referenceUrls=rich?[...new Set(rich.references.map(ref=>ref.url??resolveSourceHref(ref.source??ref.verse)).filter((url):url is string=>Boolean(url)))]:[];
 
   const schemas:Record<string,unknown>[]=[{
     '@context':'https://schema.org',
@@ -48,7 +52,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     embedUrl:`https://www.youtube-nocookie.com/embed/${m.videoId}`,
     url:site.url+'/music/'+m.slug,
     sameAs:m.youtubeUrl,
-    creator:{'@type':'Organization',name:'RudraNāda',url:site.url}
+    creator:{'@type':'Organization','@id':site.url+'/#organization',name:'RudraNāda',url:site.url},
+    citation:referenceUrls.length?referenceUrls:undefined
   }];
 
   return <>
@@ -106,7 +111,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
               <div className="referenceVerse">{ref.verse}</div>
               <h3>{ref.title}</h3>
               <p>{ref.note}</p>
-              <div className="referenceSource">{ref.source ?? 'Reference checked: IIT Kanpur Gita Supersite'}</div>
+              {(()=>{const sourceLabel=ref.source ?? 'Reference checked: IIT Kanpur Gita Supersite';const href=ref.url??resolveSourceHref(sourceLabel)??resolveSourceHref(ref.verse);return <div className="referenceSource">{href?<a href={href} target="_blank" rel="noreferrer">{sourceLabel} ↗</a>:sourceLabel}</div>})()}
             </section>)}
           </div>
 
