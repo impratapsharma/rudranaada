@@ -515,3 +515,5 @@ h3{line-height:1.18}
   .stotraLanguageBar a{padding-inline:10px;font-size:.78rem}
   .stotraLine{font-size:1.03rem}
 }
+
+.sourceReference a{color:var(--gold-soft);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}.referenceSource a{color:var(--gold-soft);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
