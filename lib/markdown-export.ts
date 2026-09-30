@@ -184,3 +184,26 @@ export function getMarkdownExport(segments:string[]){
   if(segments.join('/')==='stotrams/vishnu-sahasranama')return vishnuMarkdown();
   return null;
 }
+
+
+export const cornerstoneMarkdownPaths=[
+  ['ramayana'],
+  ...kandaGuides.map(guide=>['ramayana',guide.slug]),
+  ['mahabharata'],
+  ['articles','why-krishna-showed-arjuna-vishvarupa-bhagavad-gita'],
+  ['articles','why-hanuman-forgot-his-powers-jambavan-ramayana'],
+  ['articles','karna-mahabharata-story-text-popular-retellings'],
+  ['festivals','navratri'],
+  ['festivals','diwali'],
+  ['music','uth-parth'],
+  ['music','surya-putra-karna'],
+  ['music','kalabhairava-ashtakam'],
+  ['stotrams','vishnu-sahasranama']
+];
+
+export function getFullMarkdownExport(){
+  return cornerstoneMarkdownPaths
+    .map(path=>getMarkdownExport(path))
+    .filter((value):value is string=>Boolean(value))
+    .join('\n\n---\n\n');
+}
