@@ -8,6 +8,8 @@ import {site} from '@/lib/site';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
+import {SourcePanel} from '@/components/SourcePanel';
+import {hubSources,citationUrls} from '@/lib/source-links';
 
 export const metadata:Metadata={title:'Mahabharata: Stories, Characters & RudraNāda Music',description:'Explore the Mahabharata through Krishna, Arjuna, Karna, Abhimanyu, Draupadi, Bhishma, Kurukshetra, the Bhagavad Gita and RudraNāda music.',alternates:{canonical:'/mahabharata',types:{'text/markdown':'/markdown/mahabharata'}},robots:{index:true,follow:true}};
 
@@ -23,8 +25,10 @@ export default function Page(){
   const enhancement=getHubEnhancement('mahabharata');
   const releases=fullSongs.filter(v=>v.themes.includes('Mahabharata'));
   const uthParth=releases.find(v=>v.slug==='uth-parth');
+  const sources=hubSources.mahabharata??[];
+  const citations=citationUrls(sources);
   return <>
-    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mahabharata | RudraNāda',description:'RudraNāda music and story pathways through the Mahabharata.',url:site.url+'/mahabharata',mainEntity:{'@type':'ItemList',itemListElement:releases.map((v,index)=>({'@type':'ListItem',position:index+1,name:v.title,url:site.url+'/music/'+v.slug}))}}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mahabharata | RudraNāda',description:'RudraNāda music and story pathways through the Mahabharata.',url:site.url+'/mahabharata',mainEntity:{'@type':'ItemList',itemListElement:releases.map((v,index)=>({'@type':'ListItem',position:index+1,name:v.title,url:site.url+'/music/'+v.slug}))},citation:citations}}/>
 
     <section className="pageHero mahabharataHero"><div className="shell"><Breadcrumbs items={[{label:'Mahabharata',href:'/mahabharata'}]}/><div className="eyebrow">Mahabharata</div><h1>The Mahabharata does not give easy people easy choices.</h1><p>Vows become burdens. Loyalty becomes dangerous. Dharma changes shape depending on who is standing where. We enter the epic through the people who had to choose.</p>{uthParth&&<div className="heroActions"><Link className="button" href="/music/uth-parth">Begin on Kurukshetra</Link><Link className="button buttonGhost" href="/music">Hear all music</Link></div>}</div></section>
 
@@ -48,5 +52,6 @@ export default function Page(){
     <section className="section sacredStatement"><div className="shell"><div className="eyebrow">How we tell it</div><h2>We would rather say “this is a later telling” than make the story sound simpler than it is.</h2><p>When a song follows a specific passage, we point to it. When a beloved detail comes from a later or regional tradition, we name that layer. When RudraNāda invents a line for dramatic effect, we call it our interpretation.</p></div></section>
 
     <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
+    <SourcePanel sources={sources}/>
   </>
 }
