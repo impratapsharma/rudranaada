@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {notFound} from 'next/navigation';
 import {articles,getArticle} from '@/lib/content';
 import {site} from '@/lib/site';
@@ -58,7 +59,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     </div>
 
     {a.featuredImage&&<figure className="articleFeaturedImage">
-      <img src={a.featuredImage.src} alt={a.featuredImage.alt}/>
+      <Image src={a.featuredImage.src} alt={a.featuredImage.alt} width={1280} height={720} sizes="(max-width: 920px) 100vw, 920px"/>
       {a.featuredImage.caption&&<figcaption>{a.featuredImage.caption}</figcaption>}
     </figure>}
 
@@ -70,7 +71,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       {a.body.map((s,i)=><section key={i}>
         {s.heading&&<h2>{s.heading}</h2>}
         {s.paragraphs.map((p,j)=><p key={j}><GuideText text={p}/></p>)}
-        {s.image&&<figure className="articleInlineImage"><img src={s.image.src} alt={s.image.alt} loading="lazy"/>{s.image.caption&&<figcaption>{s.image.caption}</figcaption>}</figure>}
+        {s.image&&<figure className="articleInlineImage"><Image src={s.image.src} alt={s.image.alt} width={1280} height={720} sizes="(max-width: 760px) 100vw, 760px"/>{s.image.caption&&<figcaption>{s.image.caption}</figcaption>}</figure>}
         {s.items&&<ul className="articleList">{s.items.map(item=><li key={item}>{item}</li>)}</ul>}
       </section>)}
     </div>
@@ -85,7 +86,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
     {a.sources&&a.sources.length>0&&<section className="articleSources">
       <div className="eyebrow">Research references</div>
       <h2>Texts and editions consulted</h2>
-      <p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>
+      <p className="sourceIntro">Linked to the source where a stable public reference is available.</p>
       {a.sources.map(source=>{const href=resolveSourceHref(source);return <div className="sourceReference" key={source.label}>{href?<strong><a href={href} target="_blank" rel="noreferrer">{source.label} ↗</a></strong>:<strong>{source.label}</strong>}{source.note&&<span>{source.note}</span>}</div>})}
     </section>}
 
