@@ -5,6 +5,7 @@ const nav=[
   ['Stories','/articles'],
   ['Mahabharata','/mahabharata'],
   ['Ramayana','/ramayana'],
+  ['Festivals','/festivals'],
   ['Deities','/deities'],
   ['Guru','/guru'],
   ['Mantras','/mantras'],
