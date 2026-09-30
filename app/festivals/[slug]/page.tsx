@@ -9,6 +9,9 @@ import {getArticleEnhancement} from '@/lib/article-enhancements';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {DiwaliOverview} from '@/components/DiwaliOverview';
+import {citationUrls,resolveSourceHref} from '@/lib/source-links';
+
+const markdownSlugs=new Set(['navratri','diwali']);
 
 export function generateStaticParams(){return festivalGuides.map(guide=>({slug:guide.slug}))}
 
@@ -19,7 +22,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   return {
     title:guide.seoTitle??guide.title,
     description:guide.description,
-    alternates:{canonical:'/festivals/'+guide.slug},
+    alternates:{canonical:'/festivals/'+guide.slug,types:markdownSlugs.has(guide.slug)?{'text/markdown':'/markdown/festivals/'+guide.slug}:undefined},
     authors:[{name:guide.author??'Pratap Sharma',url:'/authors/pratap'}],
     openGraph:{type:'article',title:guide.seoTitle??guide.title,description:guide.description,url:site.url+'/festivals/'+guide.slug,publishedTime:guide.publishedAt,modifiedTime:guide.updatedAt??guide.publishedAt,tags:guide.tags,authors:[guide.author??'Pratap Sharma'],images:guide.featuredImage?[{url:guide.featuredImage.src,alt:guide.featuredImage.alt}]:undefined},
     twitter:{card:'summary_large_image',title:guide.seoTitle??guide.title,description:guide.description,images:guide.featuredImage?[guide.featuredImage.src]:undefined}
@@ -33,9 +36,10 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const author=guide.author??'Pratap Sharma';
   const relatedGuides=getRelatedFestivalGuides(guide.slug);
   const enhancement=getArticleEnhancement(guide.slug)??(guide.quickAnswer&&guide.keyTakeaways&&guide.faq?{quickAnswer:guide.quickAnswer,keyTakeaways:guide.keyTakeaways,faq:guide.faq}:undefined);
+  const citations=citationUrls(guide.sources);
 
   return <div className="articlePage festivalGuidePage"><article className="articleWrap researchArticle">
-    <JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,datePublished:guide.publishedAt,dateModified:guide.updatedAt??guide.publishedAt,mainEntityOfPage:site.url+'/festivals/'+guide.slug,author:{'@type':'Person',name:author,url:site.url+'/authors/pratap'},image:guide.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:'Festivals',about:guide.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:guide.tags.join(', ')}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,datePublished:guide.publishedAt,dateModified:guide.updatedAt??guide.publishedAt,mainEntityOfPage:site.url+'/festivals/'+guide.slug,author:{'@type':'Person',name:author,url:site.url+'/authors/pratap'},image:guide.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:'Festivals',about:guide.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:guide.tags.join(', '),citation:citations.length?citations:undefined}}/>
 
     <Breadcrumbs items={[{label:'Festivals',href:'/festivals'},{label:guide.title,href:'/festivals/'+guide.slug}]}/>
     <div className="eyebrow">Festival guide</div>
@@ -71,7 +75,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       </div>
     </section>}
 
-    {guide.sources&&guide.sources.length>0&&<section className="articleSources"><div className="eyebrow">Research references</div><h2>Texts and references consulted</h2><p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>{guide.sources.map(source=><div className="sourceReference" key={source.label}><strong>{source.label}</strong>{source.note&&<span>{source.note}</span>}</div>)}</section>}
+    {guide.sources&&guide.sources.length>0&&<section className="articleSources"><div className="eyebrow">Research references</div><h2>Texts and references consulted</h2><p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>{guide.sources.map(source=>{const href=resolveSourceHref(source);return <div className="sourceReference" key={source.label}>{href?<strong><a href={href} target="_blank" rel="noreferrer">{source.label} ↗</a></strong>:<strong>{source.label}</strong>}{source.note&&<span>{source.note}</span>}</div>})}</section>}
     <div className="tagRow">{guide.tags.map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
   </article></div>;
 }
