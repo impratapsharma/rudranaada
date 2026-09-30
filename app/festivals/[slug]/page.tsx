@@ -40,7 +40,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const citations=citationUrls(guide.sources);
 
   return <div className="articlePage festivalGuidePage"><article className="articleWrap researchArticle">
-    <JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,datePublished:guide.publishedAt,dateModified:guide.updatedAt??guide.publishedAt,mainEntityOfPage:site.url+'/festivals/'+guide.slug,author:{'@type':'Person',name:author,url:site.url+'/authors/pratap'},image:guide.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:'Festivals',about:guide.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:guide.tags.join(', '),citation:citations.length?citations:undefined}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,datePublished:guide.publishedAt,dateModified:guide.updatedAt??guide.publishedAt,mainEntityOfPage:site.url+'/festivals/'+guide.slug,author:{'@type':'Person','@id':site.url+'/authors/pratap#person',name:author,url:site.url+'/authors/pratap'},image:guide.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:'Festivals',about:guide.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:guide.tags.join(', '),citation:citations.length?citations:undefined}}/>
 
     <Breadcrumbs items={[{label:'Festivals',href:'/festivals'},{label:guide.title,href:'/festivals/'+guide.slug}]}/>
     <div className="eyebrow">Festival guide</div>
