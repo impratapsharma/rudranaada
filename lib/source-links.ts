@@ -31,6 +31,14 @@ export function citationUrls(sources:SourceLike[]|undefined){
 export type EditorialSource=SourceLike&{title?:string};
 
 export const hubSources:Record<string,EditorialSource[]>={
+  mahabharata:[
+    {label:'Bhandarkar Oriental Research Institute · Mahabharata Critical Edition',href:'https://bori.ac.in/department/mahabharata/',note:'Institutional reference for the Mahabharata Critical Edition and its textual project.'},
+    {label:'Bhagavad Gita · Gita Supersite, IIT Kanpur',href:'https://www.gitasupersite.iitk.ac.in/',note:'Sanskrit text, translations and traditional commentaries for Bhagavad Gita references.'}
+  ],
+  festivals:[
+    {label:'Drik Panchang',href:'https://www.drikpanchang.com/',note:'Calendar cross-check for tithis and major festival dates; exact timings vary by location.'},
+    {label:'Prokerala Hindu Calendar',href:'https://www.prokerala.com/',note:'Secondary calendar cross-check for major Indian festival dates.'}
+  ],
   guru:[
     {label:'Bhagavad Gita 4.34 · Gita Supersite, IIT Kanpur',href:'https://www.gitasupersite.iitk.ac.in/',note:'Primary verse for humility, inquiry and service in approaching a teacher.'},
     {label:'Mundaka Upanishad 1.2.12',note:'Primary Upanishadic passage on approaching a teacher grounded in the teaching and established in Brahman.'}
