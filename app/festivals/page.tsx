@@ -8,6 +8,10 @@ import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
 import {UpcomingFestivals} from '@/components/UpcomingFestivals';
 import {festivalGuides} from '@/lib/festival-guides';
+import {JsonLd} from '@/components/JsonLd';
+import {SourcePanel} from '@/components/SourcePanel';
+import {hubSources,citationUrls} from '@/lib/source-links';
+import {site} from '@/lib/site';
 
 export const metadata:Metadata={title:'Festivals: Stories, Meaning & Music',description:'Explore the 2026 Hindu festival calendar, Ganesh Chaturthi, Navratri, Dussehra and other festivals through their stories, regional traditions and RudraNāda music.',alternates:{canonical:'/festivals'},robots:{index:true,follow:true}};
 
@@ -16,7 +20,10 @@ const festivalSlugs=['aaya-re-ganpati','nag-panchami','mahakali'];
 export default function Page(){
   const enhancement=getHubEnhancement('festivals');
   const releases=fullSongs.filter(v=>festivalSlugs.includes(v.slug));
+  const sources=hubSources.festivals??[];
+  const citations=citationUrls(sources);
   return <>
+    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Hindu Festivals | RudraNāda',description:'Festival dates, stories, regional traditions and source-aware guides from RudraNāda.',url:site.url+'/festivals',citation:citations,hasPart:festivalGuides.map(guide=>({'@type':'Article',name:guide.title,url:site.url+'/festivals/'+guide.slug}))}}/>
     <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Festivals',href:'/festivals'}]}/><div className="eyebrow">Festivals</div><h1>A festival is a story you can walk into.</h1><p>Music in the street, food in the kitchen, a vrata at home, a procession outside, a story remembered again. Festivals make philosophy physical.</p></div></section>
 
     <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
@@ -65,5 +72,6 @@ export default function Page(){
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">From the music</div><h2>Three festivals, three very different moods.</h2></div><p>Ganpati arrives with drums. Nag Panchami can become a quiet prayer for protection. Dussehra can be heard through the fierce presence of Mahakali.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
     <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
+    <SourcePanel sources={sources} title="Calendar references"/>
   </>;
 }
