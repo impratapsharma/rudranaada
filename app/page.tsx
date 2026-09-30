@@ -6,9 +6,11 @@ import {site} from '@/lib/site';
 const pillars=[
   ['Mahabharata','Dharma becomes difficult when every choice has a cost. Enter through Krishna, Arjuna, Karna, Draupadi, Bhishma and Abhimanyu.','/mahabharata'],
   ['Ramayana','Exile, loyalty, love, kingship, loss and return across one of India’s most beloved story traditions.','/ramayana'],
+  ['Festivals','Dates are the doorway. Explore the stories, deities, regional traditions and meanings behind Hindu festivals.','/festivals'],
   ['Deities','Meet Krishna, Shiva, Devi, Hanuman, Narasimha and Parashurama through story, song and devotion.','/deities'],
   ['Guru Bodha','Reflections on the guru, the student, inquiry, discipline and what it means to truly learn.','/guru'],
-  ['Mantras','Listen, understand and learn the difference between mantra, stotra, nāma-japa and sacred sayings.','/mantras']
+  ['Mantras','Listen, understand and learn the difference between mantra, stotra, nāma-japa and sacred sayings.','/mantras'],
+  ['Stotrams','Read carefully sourced Sanskrit stotras in English/IAST, Devanagari, Telugu and Kannada scripts.','/stotrams']
 ];
 
 export default function Home(){return <>
