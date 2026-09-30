@@ -11,7 +11,8 @@ export const metadata:Metadata={
       'sa-Deva':'/stotrams/vishnu-sahasranama/hindi',
       'sa-Telu':'/stotrams/vishnu-sahasranama/telugu',
       'sa-Knda':'/stotrams/vishnu-sahasranama/kannada'
-    }
+    },
+    types:{'text/markdown':'/markdown/stotrams/vishnu-sahasranama'}
   },
   robots:{index:true,follow:true}
 };
