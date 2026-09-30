@@ -6,6 +6,10 @@ import {MusicCard} from '@/components/MusicCard';
 import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
+import {JsonLd} from '@/components/JsonLd';
+import {SourcePanel} from '@/components/SourcePanel';
+import {hubSources,citationUrls} from '@/lib/source-links';
+import {site} from '@/lib/site';
 
 export const metadata:Metadata={title:'Mantras, Stotras & Sacred Sound',description:'Understand the difference between mantra, stotra, nāma-japa and mahāvākya, and listen to RudraNāda sacred-sound recordings with context.',alternates:{canonical:'/mantras'},robots:{index:true,follow:true}};
 
@@ -14,7 +18,10 @@ const featuredSlugs=['kalabhairava-ashtakam','om-namo-narayanaya','om-namo-naray
 export default function Page(){
   const enhancement=getHubEnhancement('mantras');
   const releases=fullSongs.filter(v=>featuredSlugs.includes(v.slug));
+  const sources=hubSources.mantras??[];
+  const citations=citationUrls(sources);
   return <>
+    <JsonLd data={{'@context':'https://schema.org','@type':'CollectionPage',name:'Mantras, Stotras & Sacred Sound',url:site.url+'/mantras',description:'RudraNāda guides to mantra, stotra, nāma-japa and sacred sound.',citation:citations.length?citations:undefined}}/>
     <section className="pageHero"><div className="shell"><Breadcrumbs items={[{label:'Mantras',href:'/mantras'}]}/><div className="eyebrow">Sacred sound</div><h1>Some words are meant to be understood. Some are also meant to be repeated.</h1><p>This library is for listening with a little more care: what the words mean, what kind of sacred text or practice they belong to, and where a modern musical setting begins.</p></div></section>
 
     <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
@@ -38,5 +45,6 @@ export default function Page(){
     <section className="section"><div className="shell"><div className="sectionHead"><div><div className="eyebrow">Listen</div><h2>Let repetition become attention.</h2></div><p>These RudraNāda recordings move from stotra to mantra, nāma-japa and contemplative music. Listen for the differences in form instead of treating every sacred phrase as the same kind of chant.</p></div><div className="grid3">{releases.map(v=><MusicCard entry={v} key={v.videoId}/>)}</div></div></section>
 
     <section className="section"><div className="shell"><div className="hubLongform"><FaqSection items={enhancement.faq}/></div></div></section>
+    <SourcePanel sources={sources}/>
   </>
 }
