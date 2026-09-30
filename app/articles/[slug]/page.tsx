@@ -10,6 +10,13 @@ import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {GuideText} from '@/components/GuideText';
 import {DiwaliOverview} from '@/components/DiwaliOverview';
+import {citationUrls,resolveSourceHref} from '@/lib/source-links';
+
+const markdownSlugs=new Set([
+  'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
+  'why-hanuman-forgot-his-powers-jambavan-ramayana',
+  'karna-mahabharata-story-text-popular-retellings'
+]);
 
 export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
 
@@ -20,7 +27,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   return {
     title:a.seoTitle??a.title,
     description:a.description,
-    alternates:{canonical:'/articles/'+a.slug},
+    alternates:{canonical:'/articles/'+a.slug,types:markdownSlugs.has(a.slug)?{'text/markdown':'/markdown/articles/'+a.slug}:undefined},
     authors:[{name:a.author??'Pratap Sharma',url:'/authors/pratap'}],
     openGraph:{type:'article',title:a.seoTitle??a.title,description:a.description,url:site.url+'/articles/'+a.slug,publishedTime:a.publishedAt,modifiedTime:a.updatedAt??a.publishedAt,tags:a.tags,authors:[a.author??'Pratap Sharma'],images:a.featuredImage?[{url:a.featuredImage.src,alt:a.featuredImage.alt}]:undefined},
     twitter:{card:'summary_large_image',title:a.seoTitle??a.title,description:a.description,images:a.featuredImage?[a.featuredImage.src]:undefined}
@@ -34,12 +41,11 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   const author=a.author??'Pratap Sharma';
   const storedEnhancement=getArticleEnhancement(a.slug);
   const enhancement=storedEnhancement??(a.quickAnswer&&a.keyTakeaways&&a.faq?{quickAnswer:a.quickAnswer,keyTakeaways:a.keyTakeaways,faq:a.faq}:undefined);
-  const authorSchema=a.author
-    ? {'@type':'Person',name:a.author,url:site.url+'/authors/pratap'}
-    : {'@type':'Organization',name:'RudraNāda',url:site.url};
+  const authorSchema={'@type':'Person','@id':site.url+'/authors/pratap#person',name:author,url:site.url+'/authors/pratap'};
+  const citations=citationUrls(a.sources);
 
   return <div className="articlePage"><article className="articleWrap researchArticle">
-    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:a.category,about:a.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:a.tags.join(', ')}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:a.category,about:a.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:a.tags.join(', '),citation:citations.length?citations:undefined}}/>
     <Breadcrumbs items={[{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
     <div className="eyebrow">{a.category}</div>
     <h1>{a.title}</h1>
@@ -80,7 +86,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
       <div className="eyebrow">Research references</div>
       <h2>Texts and editions consulted</h2>
       <p className="sourceIntro">Listed for transparency. These are references, not outbound links.</p>
-      {a.sources.map(source=><div className="sourceReference" key={source.label}><strong>{source.label}</strong>{source.note&&<span>{source.note}</span>}</div>)}
+      {a.sources.map(source=>{const href=resolveSourceHref(source);return <div className="sourceReference" key={source.label}>{href?<strong><a href={href} target="_blank" rel="noreferrer">{source.label} ↗</a></strong>:<strong>{source.label}</strong>}{source.note&&<span>{source.note}</span>}</div>})}
     </section>}
 
     <div className="tagRow">{a.tags.map(t=><span className="tag" key={t}>{t}</span>)}</div>
