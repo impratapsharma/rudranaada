@@ -15,6 +15,7 @@ export function Footer(){return <footer className="footer">
         <Link href="/articles">Stories</Link>
         <Link href="/mahabharata">Mahabharata</Link>
         <Link href="/ramayana">Ramayana</Link>
+        <Link href="/festivals">Festivals</Link>
         <Link href="/deities">Deities</Link>
         <Link href="/guru">Guru Bodha</Link>
         <Link href="/mantras">Mantras</Link>
