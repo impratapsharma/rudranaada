@@ -11,7 +11,7 @@ import {site} from '@/lib/site';
 
 export const metadata:Metadata={
   title:'Valmiki Ramayana: Story, Seven Kandas & Characters',description:guide.description,
-  alternates:{canonical:'/ramayana'},robots:{index:true,follow:true},
+  alternates:{canonical:'/ramayana',types:{'text/markdown':'/markdown/ramayana'}},robots:{index:true,follow:true},
   openGraph:{title:guide.title,description:guide.description,type:'article',url:site.url+'/ramayana',modifiedTime:ramayanaUpdatedAt},
   twitter:{card:'summary_large_image',title:guide.title,description:guide.description}
 };
