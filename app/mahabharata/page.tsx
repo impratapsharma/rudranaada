@@ -9,7 +9,7 @@ import {QuickAnswer} from '@/components/QuickAnswer';
 import {FaqSection} from '@/components/FaqSection';
 import {getHubEnhancement} from '@/lib/hub-enhancements';
 
-export const metadata:Metadata={title:'Mahabharata: Stories, Characters & RudraNāda Music',description:'Explore the Mahabharata through Krishna, Arjuna, Karna, Abhimanyu, Draupadi, Bhishma, Kurukshetra, the Bhagavad Gita and RudraNāda music.',alternates:{canonical:'/mahabharata'},robots:{index:true,follow:true}};
+export const metadata:Metadata={title:'Mahabharata: Stories, Characters & RudraNāda Music',description:'Explore the Mahabharata through Krishna, Arjuna, Karna, Abhimanyu, Draupadi, Bhishma, Kurukshetra, the Bhagavad Gita and RudraNāda music.',alternates:{canonical:'/mahabharata',types:{'text/markdown':'/markdown/mahabharata'}},robots:{index:true,follow:true}};
 
 const pathways=[
   {title:'Krishna & Arjuna',text:'A warrior lowers his bow. His charioteer begins to speak. The Bhagavad Gita starts inside that silence.',href:'/music/uth-parth'},
