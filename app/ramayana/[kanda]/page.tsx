@@ -13,7 +13,7 @@ export async function generateMetadata({params}:{params:Promise<{kanda:string}>}
   const guide=getKanda((await params).kanda);
   if(!guide)notFound();
   const url=site.url+'/ramayana/'+guide.slug;
-  return {title:guide.title,description:guide.description,alternates:{canonical:url},robots:{index:true,follow:true},
+  return {title:guide.title,description:guide.description,alternates:{canonical:url,types:{'text/markdown':'/markdown/ramayana/'+guide.slug}},robots:{index:true,follow:true},
     openGraph:{title:guide.title,description:guide.description,type:'article',url,publishedTime:ramayanaUpdatedAt,modifiedTime:ramayanaUpdatedAt},
     twitter:{card:'summary_large_image',title:guide.title,description:guide.description}};
 }
