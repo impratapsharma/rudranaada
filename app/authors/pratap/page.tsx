@@ -14,12 +14,13 @@ export const metadata:Metadata={
 export default function Page(){
   const authored=articles.filter(a=>a.author==='Pratap Sharma');
   return <>
-    <JsonLd data={{'@context':'https://schema.org','@type':'ProfilePage',url:site.url+'/authors/pratap',mainEntity:{'@type':'Person','@id':site.url+'/authors/pratap#person',name:'Pratap Sharma',url:site.url+'/authors/pratap',jobTitle:'Founder & Editor',worksFor:{'@id':site.url+'/#organization'},knowsAbout:['Mahabharata','Ramayana','Bhagavad Gita','Hindu devotional traditions','Mantras','Indian epics']}}}/>
+    <JsonLd data={{'@context':'https://schema.org','@type':'ProfilePage',url:site.url+'/authors/pratap',mainEntity:{'@type':'Person','@id':site.url+'/authors/pratap#person',name:'Pratap Sharma',url:site.url+'/authors/pratap',email:'mailto:pratap@rudranaada.com',jobTitle:'Founder & Editor',worksFor:{'@id':site.url+'/#organization'},knowsAbout:['Mahabharata','Ramayana','Bhagavad Gita','Hindu devotional traditions','Mantras','Indian epics']}}}/>
     <section className="pageHero"><div className="shell">
       <Breadcrumbs items={[{label:'Authors',href:'/articles'},{label:'Pratap Sharma',href:'/authors/pratap'}]}/>
       <div className="eyebrow">Founder & Editor</div>
       <h1>Pratap Sharma</h1>
       <p>Pratap Sharma founded RudraNāda to bring devotional music, India’s epics and careful reading into the same space. He writes about the Mahabharata, sacred sound, teachers and the places where popular retellings diverge from older texts. The approach is simple: devotion deserves warmth, and tradition deserves careful reading.</p>
+      <p>Contact: <a href="mailto:pratap@rudranaada.com">pratap@rudranaada.com</a></p>
     </div></section>
     <section className="section"><div className="shell">
       <div className="sectionHead"><div><div className="eyebrow">By Pratap Sharma</div><h2>Research, stories and reflections.</h2></div></div>
