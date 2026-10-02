@@ -45,6 +45,7 @@ RudraNāda publishes original devotional and cinematic music alongside readable 
 - [Parashurama](https://rudranaada.com/deities/parashurama): Parashurama hub.
 - [Mantras](https://rudranaada.com/mantras): Mantras, nāma-japa, chants, and related explanations.
 - [Guru Bodha](https://rudranaada.com/guru): Reflections on guru, student, inquiry, and practice.
+- [Adi Shankaracharya](https://rudranaada.com/articles/adi-shankaracharya-life-sannyasa-peethams): Detailed biography, sannyasa, Advaita teachings, disciples, mukti traditions, current peethams and the transmission of his legacy, with attributed institutional and textual sources.
 
 ## Stotrams
 

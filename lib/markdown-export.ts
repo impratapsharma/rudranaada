@@ -10,6 +10,7 @@ import {vishnuSahasranamaSections} from '@/lib/vishnu-sahasranama';
 import {site} from '@/lib/site';
 
 const articleSlugs=new Set([
+  'adi-shankaracharya-life-sannyasa-peethams',
   'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
   'why-hanuman-forgot-his-powers-jambavan-ramayana',
   'karna-mahabharata-story-text-popular-retellings'
@@ -44,6 +45,10 @@ function articleMarkdown(slug:string,kind:'article'|'festival'){
   for(const section of a.body){
     if(section.heading)lines.push('## '+section.heading,'');
     lines.push(...section.paragraphs.flatMap(p=>[p,'']));
+    if(section.table){
+      const cell=(value:string)=>value.replace(/\|/g,'\\|').replace(/\n/g,' ');
+      lines.push(section.table.caption,'','| '+section.table.headers.map(cell).join(' | ')+' |','| '+section.table.headers.map(()=>'---').join(' | ')+' |',...section.table.rows.map(row=>'| '+row.map(cell).join(' | ')+' |'),'');
+    }
     if(section.items?.length)lines.push(...section.items.map(item=>'- '+item),'');
   }
   if(a.faq?.length){
@@ -187,6 +192,7 @@ export function getMarkdownExport(segments:string[]){
 
 
 export const cornerstoneMarkdownPaths=[
+  ['articles','adi-shankaracharya-life-sannyasa-peethams'],
   ['ramayana'],
   ...kandaGuides.map(guide=>['ramayana',guide.slug]),
   ['mahabharata'],

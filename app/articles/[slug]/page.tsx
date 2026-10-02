@@ -14,6 +14,7 @@ import {DiwaliOverview} from '@/components/DiwaliOverview';
 import {citationUrls,resolveSourceHref} from '@/lib/source-links';
 
 const markdownSlugs=new Set([
+  'adi-shankaracharya-life-sannyasa-peethams',
   'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
   'why-hanuman-forgot-his-powers-jambavan-ramayana',
   'karna-mahabharata-story-text-popular-retellings'
@@ -47,7 +48,7 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
   return <div className="articlePage"><article className="articleWrap researchArticle">
     <JsonLd data={{'@context':'https://schema.org','@type':'BlogPosting',headline:a.title,description:a.description,datePublished:a.publishedAt,dateModified:a.updatedAt??a.publishedAt,mainEntityOfPage:site.url+'/articles/'+a.slug,author:authorSchema,image:a.featuredImage?.src,publisher:{'@id':site.url+'/#organization'},articleSection:a.category,about:a.tags.map(name=>({'@type':'Thing',name})),inLanguage:'en-IN',keywords:a.tags.join(', '),citation:citations.length?citations:undefined}}/>
-    <Breadcrumbs items={[{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
+    <Breadcrumbs items={[a.category==='Guru Bodha'?{label:'Gurus & Guru Bodha',href:'/guru'}:{label:'Stories',href:'/articles'},{label:a.title,href:'/articles/'+a.slug}]}/>
     <div className="eyebrow">{a.category}</div>
     <h1>{a.title}</h1>
     <p className="lede">{a.dek}</p>
@@ -65,12 +66,15 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
 
     {enhancement&&<QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/>} 
 
+    {a.tableOfContents&&<nav className="articleContents" aria-label="On this page"><details><summary>Explore this guide</summary><ol>{a.body.filter(s=>s.id&&s.heading).map(s=><li key={s.id}><a href={'#'+s.id}>{s.heading}</a></li>)}</ol></details></nav>}
+
     {a.slug==='diwali-2026-date-meaning-five-days-stories'&&<DiwaliOverview/>}
 
     <div className="articleBody">
-      {a.body.map((s,i)=><section key={i}>
+      {a.body.map((s,i)=><section key={i} id={s.id}>
         {s.heading&&<h2>{s.heading}</h2>}
         {s.paragraphs.map((p,j)=><p key={j}><GuideText text={p}/></p>)}
+        {s.table&&<div className="articleTableWrap" role="region" aria-label={s.table.caption} tabIndex={0}><table><caption>{s.table.caption}</caption><thead><tr>{s.table.headers.map(h=><th scope="col" key={h}>{h}</th>)}</tr></thead><tbody>{s.table.rows.map((row,j)=><tr key={j}>{row.map((cell,k)=>k===0?<th scope="row" key={k}><GuideText text={cell}/></th>:<td key={k}><GuideText text={cell}/></td>)}</tr>)}</tbody></table></div>}
         {s.image&&<figure className="articleInlineImage"><Image src={s.image.src} alt={s.image.alt} width={1280} height={720} sizes="(max-width: 760px) 100vw, 760px"/>{s.image.caption&&<figcaption>{s.image.caption}</figcaption>}</figure>}
         {s.items&&<ul className="articleList">{s.items.map(item=><li key={item}>{item}</li>)}</ul>}
       </section>)}

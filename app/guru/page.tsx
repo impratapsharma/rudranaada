@@ -10,7 +10,7 @@ import {SourcePanel} from '@/components/SourcePanel';
 import {hubSources,citationUrls} from '@/lib/source-links';
 import {site} from '@/lib/site';
 
-export const metadata:Metadata={title:'Guru Bodha',description:'RudraNāda reflections on the guru, the student, humility, inquiry, discipline and lived spiritual understanding.',alternates:{canonical:'/guru'}};
+export const metadata:Metadata={title:'Gurus & Guru Bodha',description:'Explore Adi Shankaracharya’s life, teachings and peethams, alongside RudraNāda reflections on the guru, the student, inquiry and spiritual understanding.',alternates:{canonical:'/guru'}};
 
 export default function Page(){
   const enhancement=getHubEnhancement('guru');
@@ -22,6 +22,8 @@ export default function Page(){
     <section className="pageHero guruHero"><div className="shell"><Breadcrumbs items={[{label:'Guru Bodha',href:'/guru'}]}/><div className="eyebrow">Guru Bodha</div><h1>A teaching is not complete because it was heard.</h1><p>Guru Bodha is RudraNāda’s space for the relationship between teacher and student, and for the slow work by which knowledge becomes understanding.</p></div></section>
 
     <section className="section compactSection"><div className="shell"><div className="hubLongform"><QuickAnswer answer={enhancement.quickAnswer} takeaways={enhancement.keyTakeaways}/></div></div></section>
+
+    <section className="section"><div className="shell"><div className="featuredEssay"><div className="eyebrow">Gurus · A life in depth</div><h2>Adi Shankaracharya</h2><p>From Shivaguru and Aryamba’s prayers to the young sannyasi, the teacher of Advaita, and the living peethams. Follow his story through traditional biographies, his own commentaries, and the generations who carried his teaching forward.</p><Link href="/articles/adi-shankaracharya-life-sannyasa-peethams">Read his life, sannyasa and legacy →</Link></div></div></section>
 
     <section className="section"><div className="shell copyColumns"><div><div className="eyebrow">Why the guru matters</div><h2>The problem is not always a lack of information.</h2></div><div className="sectionCopy"><p>There are moments when the seeker does not need another quotation. They need correction, context, a question they cannot escape, or someone who can see where understanding has become self-deception.</p><p>The classical texts do not describe this relationship as passive. Bhagavad Gita 4.34 places humility beside inquiry and service. Mundaka Upanishad 1.2.12 asks the seeker to approach a teacher who is both grounded in the teaching and established in what it points toward.</p></div></div></section>
 
