@@ -349,11 +349,11 @@ export const diwaliArticles:Article[]=[
   {
     slug:'lakshmi-puja-diwali-2026-meaning-rituals',
     title:'Lakshmi Puja 2026: Kojagari and Diwali Dates, Meaning and Puja',
-    seoTitle:'Lakshmi Puja 2026: Kojagari & Diwali Dates, Puja Guide',
+    seoTitle:'Lakshmi Puja 2026 Date: Kojagari, Lokkhi Puja & Diwali',
     dek:'Bengali Kojagari Lakshmi Puja falls on 25 October 2026 in Kolkata; Diwali Lakshmi Puja is on 8 November. Both honour Maa Lakshmi, on different tithis and with different family traditions.',
-    description:'Lakshmi Puja 2026: Kojagari or Lokkhi Puja on 25 October in Kolkata, Diwali Lakshmi Puja on 8 November, regional differences and simple puja steps.',
+    description:'Lakshmi Puja 2026 dates: Kojagari, Lokkhi or Lakkhi Puja on 25 October in Kolkata and Diwali Lakshmi Puja on 8 November, with meaning and puja guidance.',
     publishedAt:'2026-09-22',
-    updatedAt:'2026-09-25',
+    updatedAt:'2026-10-04',
     readingMinutes:12,
     category:'Festivals',
     author:'Pratap Sharma',
@@ -418,6 +418,7 @@ export const diwaliArticles:Article[]=[
     relatedLinks:[
       {label:'Diwali 2026 complete guide',href:'/articles/diwali-2026-date-meaning-five-days-stories'},
       {label:'Dhanteras 2026',href:'/articles/dhanteras-2026-date-meaning-dhanvantari'},
+      {label:'Kojagari and Sharad Purnima',href:'/festivals/sharad-purnima'},
       {label:'2026 festival calendar',href:'/festivals/2026'}
     ]
   },
