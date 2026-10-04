@@ -3,10 +3,11 @@ import type {Article} from './content';
 export const vishvarupaArticle:Article={
  slug:'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
  title:'Why Did Krishna Show Arjuna the Vishvarupa?',
- seoTitle:'Why Did Krishna Show Arjuna the Vishvarupa? Bhagavad Gita Chapter 11 Explained',
+ seoTitle:'Why Did Krishna Show Arjuna the Vishvarupa? Gita 11 Explained',
  dek:'Arjuna asks to see the reality Krishna has described. What he receives is not only a vision of divine splendour, but creation, destruction, Time and a radically different understanding of his own duty.',
- description:'Why did Krishna reveal his Vishvarupa to Arjuna? Explore Bhagavad Gita Chapter 11, divine sight, “I am Time,” Arjuna’s fear and the meaning of becoming an instrument.',
+ description:'Why did Krishna show Arjuna the Vishvarupa? Bhagavad Gita Chapter 11 explains the universal form, divine sight, “I am Time,” Arjuna’s fear and his duty to act.',
  publishedAt:'2026-09-24',
+ updatedAt:'2026-10-04',
  readingMinutes:13,
  category:'Bhagavad Gita',
  author:'Pratap Sharma',
@@ -106,6 +107,7 @@ export const vishvarupaArticle:Article={
  relatedLinks:[
   {label:'Explore Krishna',href:'/deities/krishna'},
   {label:'Explore the Mahabharata',href:'/mahabharata'},
+  {label:'Listen to Uth Parth: Krishna’s call to Arjuna',href:'/music/uth-parth'},
   {label:'Listen to RudraNāda music',href:'/music'}
  ]
 };
