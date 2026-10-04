@@ -3,10 +3,11 @@ import type {Article} from './content';
 export const hanumanForgotPowersArticle:Article={
   slug:'why-hanuman-forgot-his-powers-jambavan-ramayana',
   title:'Why Did Hanuman Forget His Powers? What the Ramayana Actually Says',
-  seoTitle:'Why Did Hanuman Forget His Powers? Ramayana Story Explained',
+  seoTitle:'Why Did Hanuman Forget His Powers? Jambavan & Ramayana Explained',
   dek:'Hanuman did not simply lose his strength. The Ramayana tradition says his awareness of it was obscured until his own greatness was recalled to him.',
-  description:'Why did Hanuman forget his powers, and how did Jambavan awaken them? Explore the Ramayana account, the sages’ curse, Hanuman’s childhood and the leap to Lanka.',
+  description:'Why did Hanuman forget his powers, who reminded him, and what did the curse mean? Read the Ramayana account of Jambavan, Hanuman’s strength and the leap to Lanka.',
   publishedAt:'2026-09-24',
+  updatedAt:'2026-10-04',
   readingMinutes:14,
   category:'Ramayana',
   author:'Pratap Sharma',
@@ -120,6 +121,8 @@ export const hanumanForgotPowersArticle:Article={
   ],
   relatedLinks:[
     {label:'Explore the Ramayana',href:'/ramayana'},
+    {label:'Kishkindha Kanda: Jambavan reminds Hanuman',href:'/ramayana/kishkindha-kanda'},
+    {label:'Uttara Kanda: Hanuman’s childhood and the curse',href:'/ramayana/uttara-kanda'},
     {label:'Explore Hanuman',href:'/deities/hanuman'},
     {label:'Sundara Kanda: the leap and the mission in Lanka',href:'/ramayana/sundara-kanda'},
     {label:'Listen to RudraNāda music',href:'/music'}
