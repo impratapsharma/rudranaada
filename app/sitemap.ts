@@ -14,6 +14,7 @@ export default function sitemap():MetadataRoute.Sitemap{
     {path:'',priority:1,frequency:'weekly' as const},
     {path:'/festivals',priority:0.95,frequency:'weekly' as const},
     {path:'/mahabharata',priority:0.9,frequency:'weekly' as const},
+    {path:'/bhagavad-gita',priority:0.95,frequency:'monthly' as const},
     {path:'/ramayana',priority:0.9,frequency:'weekly' as const},
     {path:'/deities',priority:0.9,frequency:'weekly' as const},
     {path:'/mantras',priority:0.9,frequency:'weekly' as const},

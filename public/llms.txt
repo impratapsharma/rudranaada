@@ -14,7 +14,7 @@ RudraNāda publishes original devotional and cinematic music alongside readable 
 
 ## Mahabharata
 
-- [Mahabharata](https://rudranaada.com/mahabharata): Main hub for Mahabharata stories, characters, themes, and related music.
+- [Mahabharata](https://rudranaada.com/mahabharata): Main hub for Mahabharata stories, characters, themes, and related music.\n- [Bhagavad Gita](https://rudranaada.com/bhagavad-gita): Source-aware guide to the Gita in the Mahabharata, all 18 chapters, major teachings, key verses and Adi Shankaracharya’s commentary.
 - [Uth Parth](https://rudranaada.com/music/uth-parth): Krishna's call to Arjuna on Kurukshetra, inspired by the Bhagavad Gita.
 - [Surya Putra Karna](https://rudranaada.com/music/surya-putra-karna): Original music and context around Karna.
 - [Draupadi: Agni Ki Putri](https://rudranaada.com/music/draupadi-agni-ki-putri): Original music centered on Draupadi.
