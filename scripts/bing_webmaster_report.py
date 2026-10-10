@@ -62,12 +62,12 @@ def main():
         sys.exit("Bing API requests failed; verify site URL and key permissions.")
     today = datetime.now(timezone.utc).date()
     # Allow for Bing's processing lag; use complete periods ending 3 days ago.
+    traffic = normalized(data.get("GetRankAndTrafficStats", []))
     available_dates = [d for r in traffic if (d := date_of(r)) and d <= today - timedelta(days=2)]
     latest_end = max(available_dates) if available_dates else today - timedelta(days=3)
     latest_start = latest_end - timedelta(days=6)
     previous_end = latest_start - timedelta(days=1)
     previous_start = previous_end - timedelta(days=6)
-    traffic = normalized(data.get("GetRankAndTrafficStats", []))
     report = {
         "site": SITE_URL, "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "periods": {"latest": [str(latest_start), str(latest_end)],
