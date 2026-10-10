@@ -1,0 +1,26 @@
+name: Bing Webmaster SEO insights
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 2 * * 6'
+permissions:
+  contents: read
+jobs:
+  bing-insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch Bing insights
+        env:
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          BING_SITE_URL: https://rudranaada.com/
+        run: python scripts/bing_webmaster_report.py
+      - name: Save report for authorized retrieval
+        uses: actions/upload-artifact@v4
+        with:
+          name: bing-webmaster-report
+          path: bing-report.json
+          retention-days: 7
