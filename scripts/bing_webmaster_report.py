@@ -45,10 +45,9 @@ def period_stats(rows, start, end):
     filtered = [r for r in rows if (d := date_of(r)) and start <= d <= end]
     clicks = sum(float(r.get("Clicks", 0) or 0) for r in filtered)
     impressions = sum(float(r.get("Impressions", 0) or 0) for r in filtered)
-    weighted_position = sum(float(r.get("AvgImpressionPosition", 0) or 0) * float(r.get("Impressions", 0) or 0) for r in filtered)
     return {"days_with_data": len(filtered), "clicks": clicks if filtered else None, "impressions": impressions if filtered else None,
             "ctr_percent": round(clicks / impressions * 100, 2) if impressions else None,
-            "avg_impression_position": round(weighted_position / impressions, 2) if impressions else None}
+            "avg_impression_position": None}
 
 def main():
     data = {}
@@ -77,10 +76,11 @@ def main():
         "traffic_data_available": "GetRankAndTrafficStats" in data,
         "latest_available_date": str(max(available_dates)) if available_dates else None,
         "queries": data.get("GetQueryStats", []),
+        "query_metrics_note": "Query stats are updated weekly by Bing. Their date labels do not align directly with daily traffic windows.",
         "pages": data.get("GetPageStats", []),
         "crawl": data.get("GetCrawlStats", []),
         "errors": errors,
-        "note": "Bing query/page endpoints may return rolling aggregates, not daily rows; do not label them as period comparisons unless dated."
+        "note": "Bing daily traffic API supplies only clicks and impressions, not average position. Weekly query/page snapshots include their own date labels; do not present them as daily performance."
     }
     Path("bing-report.json").write_text(json.dumps(report, indent=2, default=str))
     print("Bing report created. No API key or search terms printed to logs.")
