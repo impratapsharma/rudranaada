@@ -45,10 +45,10 @@ def period_stats(rows, start, end):
     filtered = [r for r in rows if (d := date_of(r)) and start <= d <= end]
     clicks = sum(float(r.get("Clicks", 0) or 0) for r in filtered)
     impressions = sum(float(r.get("Impressions", 0) or 0) for r in filtered)
-    weighted_position = sum(float(r.get("AvgClickPosition", 0) or 0) * float(r.get("Clicks", 0) or 0) for r in filtered)
-    return {"clicks": clicks, "impressions": impressions,
+    weighted_position = sum(float(r.get("AvgImpressionPosition", 0) or 0) * float(r.get("Impressions", 0) or 0) for r in filtered)
+    return {"days_with_data": len(filtered), "clicks": clicks if filtered else None, "impressions": impressions if filtered else None,
             "ctr_percent": round(clicks / impressions * 100, 2) if impressions else None,
-            "avg_click_position": round(weighted_position / clicks, 2) if clicks else None}
+            "avg_impression_position": round(weighted_position / impressions, 2) if impressions else None}
 
 def main():
     data = {}
@@ -62,7 +62,8 @@ def main():
         sys.exit("Bing API requests failed; verify site URL and key permissions.")
     today = datetime.now(timezone.utc).date()
     # Allow for Bing's processing lag; use complete periods ending 3 days ago.
-    latest_end = today - timedelta(days=3)
+    available_dates = [d for r in traffic if (d := date_of(r)) and d <= today - timedelta(days=2)]
+    latest_end = max(available_dates) if available_dates else today - timedelta(days=3)
     latest_start = latest_end - timedelta(days=6)
     previous_end = latest_start - timedelta(days=1)
     previous_start = previous_end - timedelta(days=6)
@@ -73,6 +74,8 @@ def main():
                     "previous": [str(previous_start), str(previous_end)]},
         "performance": {"latest": period_stats(traffic, latest_start, latest_end),
                         "previous": period_stats(traffic, previous_start, previous_end)},
+        "traffic_data_available": "GetRankAndTrafficStats" in data,
+        "latest_available_date": str(max(available_dates)) if available_dates else None,
         "queries": data.get("GetQueryStats", []),
         "pages": data.get("GetPageStats", []),
         "crawl": data.get("GetCrawlStats", []),
