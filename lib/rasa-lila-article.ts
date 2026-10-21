@@ -170,7 +170,7 @@ export const rasaLilaArticle:Article={
         "Read Bhāgavata 10.29.1–3 for the autumn moon and the flute’s call. Picture the setting before moving on.",
         "Read or listen to the Gopī Gīta, chapter 31, with a translation. Choose one verse to revisit instead of rushing through many recordings.",
         "Read 10.32.22 and 10.33.39 together: the first honours the gopīs’ devotion; the second tells the listener what reverent hearing can nurture.",
-        "Allow a few quiet minutes afterward. If music helps you remain attentive, continue with [RudraNāda’s Krishna flute meditation](/music/krishna-flute-meditation), remembering that it is an artistic companion to study."
+        "Allow a few quiet minutes afterward. If music helps you remain attentive, continue with RudraNāda’s Krishna flute meditation, linked below, remembering that it is an artistic companion to study."
       ]
     },
     {
