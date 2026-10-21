@@ -150,7 +150,7 @@ title:'Sharad Purnima 2026: Date, Kojagari, Lakshmi and Krishna Traditions',
 seoTitle:'Sharad Purnima 2026 Date, Kojagari, Lakshmi & Krishna',
 dek:'Sharad Purnima falls on 25 October 2026. The bright autumn full moon carries Lakshmi worship in some regions, Krishna’s rasa traditions in others and a night of moonlight, food and wakefulness.',
 description:'Sharad Purnima 2026 date, Kojagari meaning, Lakshmi worship, Krishna rasa traditions, moonlight customs and regional differences explained simply.',
-publishedAt:'2026-09-22',readingMinutes:8,category:'Festivals',author:'Pratap Sharma',
+publishedAt:'2026-09-22',updatedAt:'2026-10-21',readingMinutes:8,category:'Festivals',author:'Pratap Sharma',
 featuredImage:krishnaImage,
 tags:['Sharad Purnima 2026','Kojagari','Lakshmi','Krishna','Full moon'],
 quickAnswer:'Sharad Purnima 2026 falls on Sunday, 25 October. The autumn full moon is observed through different regional traditions, including Kojagari Lakshmi worship and Krishna’s rasa-lila memory.',
@@ -164,7 +164,7 @@ faq:[
 body:[
 {paragraphs:['Sharad Purnima falls on 25 October in 2026. The moon is the visual centre of the night, but the religious centre changes by region.','In Kojagari traditions, Lakshmi is worshipped and people stay awake. In Krishna traditions, the full moon is tied to rasa-lila. Elsewhere, families prepare milk or rice dishes and place them under moonlight.']},
 {heading:'What does Kojagari mean?',paragraphs:['The name is associated with wakefulness and the question of who is awake. The night therefore carries a vigil-like quality in some regions.','Lakshmi worship turns wakefulness toward auspiciousness and prosperity.']},
-{heading:'Why is Krishna connected with the full moon?',paragraphs:['Braj and Vaishnava traditions connect Sharad Purnima with Krishna’s rasa-lila. The full moon becomes part of the devotional setting of divine play, music and longing.','This is not the same ritual emphasis as Kojagari Lakshmi worship, even though the lunar night is shared.']},
+{heading:'Why is Krishna connected with the full moon?',paragraphs:['Braj and Vaishnava traditions connect Sharad Purnima with Krishna’s rasa-lila. The full moon becomes part of the devotional setting of divine play, music and longing.','Read [Krishna’s Rasa Lila: the story and meaning](/articles/krishna-rasa-lila-meaning-sharad-purnima) for the flute’s call, the Gopī Gīta and the complete five-chapter Bhāgavata account. Kojagari Lakshmi worship has its own ritual emphasis on this shared lunar night.']},
 {heading:'What about moonlight food?',paragraphs:['Several regions prepare milk, kheer or similar foods and leave them under moonlight before sharing them.','The custom is beautiful as tradition. It should not be promoted with exaggerated health claims that the moon chemically transforms food in medically proven ways.']},
 {heading:'What is the simplest way to observe?',paragraphs:['Spend time under the moon if possible. Offer prayer according to your tradition. Read a Krishna or Lakshmi text. Share food.','The festival is one of the calendar’s quieter nights. It does not need to become louder to become meaningful.']}
 ],

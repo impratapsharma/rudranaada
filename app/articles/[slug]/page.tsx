@@ -14,6 +14,7 @@ import {DiwaliOverview} from '@/components/DiwaliOverview';
 import {citationUrls,resolveSourceHref} from '@/lib/source-links';
 
 const markdownSlugs=new Set([
+  'krishna-rasa-lila-meaning-sharad-purnima',
   'adi-shankaracharya-life-sannyasa-peethams',
   'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
   'why-hanuman-forgot-his-powers-jambavan-ramayana',

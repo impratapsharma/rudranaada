@@ -27,6 +27,7 @@ export type Article={
 export {music,fullSongs,shorts,getMusic} from './music';
 export type {MusicEntry} from './music';
 import {researchArticles} from './research-articles';
+import {rasaLilaArticle} from './rasa-lila-article';
 import {hanumanForgotPowersArticle} from './hanuman-forgot-powers-article';
 import {vishvarupaArticle} from './vishvarupa-article';
 import {narasimhaPillarArticle} from './narasimha-pillar-article';
@@ -56,7 +57,7 @@ const originalArticles:Article[]=[
   ],relatedLinks:[{label:'Explore Guru Bodha',href:'/guru'}]}
 ];
 
-export const articles:Article[]=[dakshinamurtiArticle,neelkanthaArticle,adiShankaracharyaArticle,narasimhaPillarArticle,vishvarupaArticle,hanumanForgotPowersArticle,...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
+export const articles:Article[]=[rasaLilaArticle,dakshinamurtiArticle,neelkanthaArticle,adiShankaracharyaArticle,narasimhaPillarArticle,vishvarupaArticle,hanumanForgotPowersArticle,...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
 
 export const deityHubs=[
   {slug:'krishna',name:'Krishna',description:'Friend, charioteer, teacher and the divine presence at the heart of the Bhagavad Gita.'},

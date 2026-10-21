@@ -10,6 +10,7 @@ import {vishnuSahasranamaSections} from '@/lib/vishnu-sahasranama';
 import {site} from '@/lib/site';
 
 const articleSlugs=new Set([
+  'krishna-rasa-lila-meaning-sharad-purnima',
   'adi-shankaracharya-life-sannyasa-peethams',
   'why-krishna-showed-arjuna-vishvarupa-bhagavad-gita',
   'why-hanuman-forgot-his-powers-jambavan-ramayana',
@@ -192,6 +193,7 @@ export function getMarkdownExport(segments:string[]){
 
 
 export const cornerstoneMarkdownPaths=[
+  ['articles','krishna-rasa-lila-meaning-sharad-purnima'],
   ['articles','adi-shankaracharya-life-sannyasa-peethams'],
   ['ramayana'],
   ...kandaGuides.map(guide=>['ramayana',guide.slug]),
