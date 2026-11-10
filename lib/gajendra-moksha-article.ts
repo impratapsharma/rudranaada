@@ -36,7 +36,7 @@ export const gajendraMokshaArticle:Article={
       "id": "what-is-gajendra-moksha",
       "heading": "What is Gajendra Moksha?",
       "paragraphs": [
-        "Gajendra Moksha, also written Gajendra Moksham, means the liberation of Gajendra, the king of the elephants. It is among the most moving accounts of Sri Hari's compassion in the [Srimad Bhagavata Purana](/articles/krishna-rasa-lila-meaning-sharad-purnima). The narrative runs through Canto 8, chapters 2, 3 and 4: danger at a lake, a profound prayer, the Lord's arrival and the revelation of two previous births.",
+        "Gajendra Moksha, also written Gajendra Moksham, means the liberation of Gajendra, the king of the elephants. It is among the most moving accounts of Sri Hari's compassion in the Srimad Bhagavata Purana. The narrative runs through Canto 8, chapters 2, 3 and 4: danger at a lake, a profound prayer, the Lord's arrival and the revelation of two previous births.",
         "An elephant holds enormous physical strength, yet here his power cannot save him. The waters favour the crocodile, the long struggle weakens the elephant, and his companions cannot pull him free. In that helpless moment Gajendra remembers Bhagavan. The Lord responds personally, arriving on Garuda and freeing him.",
         "Moksha is more than escape from a crocodile. Chapter 4 explicitly describes Gajendra's freedom from bondage and his attainment of a divine form by the Lord's grace. The story therefore asks two questions at once: how is the elephant saved, and what does it mean for a soul to be free?"
       ]
@@ -247,7 +247,7 @@ export const gajendraMokshaArticle:Article={
   "relatedLinks": [
     {
       "label": "Read about Narasimha and Prahlada",
-      "href": "/articles/why-narasimha-emerged-from-pillar-prahlada"
+      "href": "/articles/why-narasimha-appeared-from-pillar-prahlada"
     },
     {
       "label": "Explore Krishna's Vishvarupa in the Bhagavad Gita",
