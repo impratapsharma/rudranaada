@@ -37,6 +37,7 @@ import {dakshinamurtiArticle} from './dakshinamurti-article';
 import {bhajaGovindamArticle} from './bhaja-govindam-article';
 import {kanakadharaArticle} from './kanakadhara-article';
 import {gajendraMokshaArticle} from './gajendra-moksha-article';
+import {ganeshaVighneshwaraArticle} from './ganesha-vighneshwara-article';
 
 const originalArticles:Article[]=[
   {slug:'why-rudranaada-exists',title:'Why We Sing the Old Stories',dek:'Because a story remembered only as information grows distant. A story sung can enter the breath.',description:'Why RudraNāda brings music, story and reflection together around India’s epic and devotional traditions.',publishedAt:'2026-09-21',readingMinutes:5,category:'RudraNāda',author:'Pratap Sharma',tags:['RudraNāda','Indian epics','devotional music'],body:[
@@ -60,7 +61,7 @@ const originalArticles:Article[]=[
   ],relatedLinks:[{label:'Explore Guru Bodha',href:'/guru'}]}
 ];
 
-export const articles:Article[]=[gajendraMokshaArticle,kanakadharaArticle,bhajaGovindamArticle,rasaLilaArticle,dakshinamurtiArticle,neelkanthaArticle,adiShankaracharyaArticle,narasimhaPillarArticle,vishvarupaArticle,hanumanForgotPowersArticle,...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
+export const articles:Article[]=[ganeshaVighneshwaraArticle,gajendraMokshaArticle,kanakadharaArticle,bhajaGovindamArticle,rasaLilaArticle,dakshinamurtiArticle,neelkanthaArticle,adiShankaracharyaArticle,narasimhaPillarArticle,vishvarupaArticle,hanumanForgotPowersArticle,...researchArticles.filter(article=>article.category!=='Festivals'),...originalArticles];
 
 export const deityHubs=[
   {slug:'krishna',name:'Krishna',description:'Friend, charioteer, teacher and the divine presence at the heart of the Bhagavad Gita.'},
