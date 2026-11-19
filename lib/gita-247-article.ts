@@ -34,6 +34,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "in-brief",
       "heading": "In brief",
       "paragraphs": [
         "“Karmany evadhikaras te” begins Bhagavad Gita 2.47. The essential instruction is to attend to the duty before you, release possessiveness about its fruits, and avoid retreating into inactivity.",
@@ -41,6 +42,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "what-does-bhagavad-gita-2-47-say",
       "heading": "What does Bhagavad Gita 2.47 say?",
       "paragraphs": [
         "The Sanskrit verse reads: कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥",
@@ -50,6 +52,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "why-does-krishna-say-this-to-arjuna",
       "heading": "Why does Krishna say this to Arjuna?",
       "paragraphs": [
         "Arjuna is standing between two armies in the Kurukshetra war. His anguish concerns teachers, relatives and companions whom he sees on both sides. In the opening chapter and the beginning of the second, he questions the meaning of victory purchased at such a cost. His distress is moral and deeply personal.",
@@ -59,6 +62,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "does-the-verse-mean-results-do-not-matter",
       "heading": "Does the verse mean results do not matter?",
       "paragraphs": [
         "No. Krishna does not ask Arjuna to be careless about consequences or to work without thought. The verse addresses attachment to the fruits and the inner motive of action. A physician must still attend to a patient's welfare, a student must still prepare, and a leader must still weigh the effects of a decision.",
@@ -68,6 +72,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "what-is-the-meaning-of-ma-phaleshu-kadachana",
       "heading": "What is the meaning of ‘ma phaleshu kadachana’?",
       "paragraphs": [
         "“Mā phaleṣu kadācana” means that one should not lay claim to the fruits of action at any time. Phala literally means fruit and is used for the result of an act. The instruction concerns the attitude with which a seeker performs prescribed or appropriate work.",
@@ -76,6 +81,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "why-does-krishna-warn-against-inaction",
       "heading": "Why does Krishna warn against inaction?",
       "paragraphs": [
         "The final words, “mā te saṅgo ’stv akarmaṇi,” are indispensable: do not become attached to non-action. Without them, the verse could be misunderstood as advice to withdraw whenever success is uncertain. Krishna closes that interpretation explicitly.",
@@ -85,6 +91,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "what-does-samatvam-yoga-uchyate-add",
       "heading": "What does ‘samatvam yoga uchyate’ add?",
       "paragraphs": [
         "Bhagavad Gita 2.48 says that evenness of mind in success and failure is called yoga: samatvaṃ yoga ucyate. This line completes the movement begun in 2.47. The seeker acts, releases attachment and learns to remain inwardly balanced when the world answers differently from expectation.",
@@ -94,6 +101,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "how-do-traditional-commentaries-explain-the-teaching",
       "heading": "How do traditional commentaries explain the teaching?",
       "paragraphs": [
         "Sri Adi Shankaracharya's commentary places 2.47 within the discipline of karma yoga for a seeker not yet established in steadfast knowledge. His explanation stresses freedom from craving for results and rejects the thought that one may therefore avoid action. In this Advaita framework, disciplined action prepares the mind for knowledge.",
@@ -103,6 +111,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "how-can-we-practise-karma-yoga-in-everyday-life",
       "heading": "How can we practise karma yoga in everyday life?",
       "paragraphs": [
         "Begin by naming the duty before you. Ask what honesty, competence and care require in this situation. Then do the work thoroughly. If the task calls for preparation, prepare; if it calls for difficult speech, speak respectfully; if it calls for correction, correct what can be corrected.",
@@ -113,6 +122,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "does-karma-yoga-mean-accepting-injustice",
       "heading": "Does karma yoga mean accepting injustice?",
       "paragraphs": [
         "No. A verse about non-attachment should never be used to demand silence from someone treated unfairly. Krishna is addressing Arjuna's spiritual discipline in the performance of dharma. The verse does not authorise exploitation, negligence or the denial of legitimate rights.",
@@ -122,6 +132,7 @@ export const gita247Article:Article={
       ]
     },
     {
+      "id": "a-small-practice-of-remembrance",
       "heading": "A small practice of remembrance",
       "paragraphs": [
         "Before beginning important work, take a moment to remember the four movements of the verse: act; do not cling to the reward; do not make reward the only motive; do not retreat into inaction. Then remember the next verse's call to an even mind.",
@@ -200,7 +211,7 @@ export const gita247Article:Article={
     },
     {
       "label": "Read about Arjuna and Krishna's Vishvarupa",
-      "href": "/articles/why-krishna-showed-arjuna-vishvarupa"
+      "href": "/articles/why-krishna-showed-arjuna-vishvarupa-bhagavad-gita"
     }
   ]
 };
