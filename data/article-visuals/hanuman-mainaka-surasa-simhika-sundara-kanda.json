@@ -1,0 +1,29 @@
+{
+  "slug": "hanuman-mainaka-surasa-simhika-sundara-kanda",
+  "articleFile": "lib/hanuman-ocean-encounters-article.ts",
+  "images": [
+    {
+      "role": "featured",
+      "file": "hanuman-crossing-ocean.webp",
+      "alt": "Sri Hanuman flying across the vast ocean toward Lanka on his sacred mission for Sri Rama",
+      "caption": "An artistic interpretation of Hanuman's journey in Sundara Kanda.",
+      "prompt": "Create a striking cinematic 16:9 devotional epic painting, with extraordinary physical realism, reverent iconographic accuracy and immense scale. Sri Hanuman, an athletic divine vanara with a realistic vanara face, simple saffron dhoti and golden ornaments, flies majestically over the vast cobalt ocean toward distant Lanka on his mission for Sri Rama. Dynamic forward motion, dramatic sweeping warm sunlight, towering tropical clouds, distant island coastline, richly textured waves, subtle ancient Indian sacred mural influence. No weapons necessary; accurate anatomy, no added arms, no artificial looking characters. Center the protagonist for mobile cropping. No writing, watermark or text. Beautiful emotionally engaging scene rather than loud commercial poster."
+    },
+    {
+      "role": "inline",
+      "file": "mainaka-offers-rest.webp",
+      "sectionHeading": "What happens when Mainaka offers Hanuman rest?",
+      "alt": "Golden Mount Mainaka rising from the sea and offering Hanuman hospitality during his journey",
+      "caption": "Mainaka offers rest with kindness; Hanuman respectfully continues his mission.",
+      "prompt": "Reverent cinematic 16:9 ancient Indian epic illustration of the moment in Valmiki Ramayana's Sundara Kanda when golden mountain Mainaka rises out of the ocean to welcome Sri Hanuman and kindly offer rest. The mountain is natural and radiant with shimmering rocky cliffs, greenery and flowers, no invented personification or deities. Hanuman is an accurately rendered divine vanara wearing saffron dhoti and simple gold ornaments, with a warm respectful expression, poised to continue. Luxurious sunshine, blue waves and airborne sea spray, cinematic deep atmosphere, reverent emotional interaction, exquisite painterly-realistic craftsmanship, no text, no weapon, no watermark, no invented divine characters or monstrous forms."
+    },
+    {
+      "role": "inline",
+      "file": "surasa-tests-hanuman.webp",
+      "sectionHeading": "How does Hanuman pass Surasa's test?",
+      "alt": "Hanuman adopting a tiny form to pass Surasa's test above the ocean without fighting her",
+      "caption": "Surasa tests Hanuman's intelligence; he passes without fighting.",
+      "prompt": "Dramatic but reverent cinematic 16:9 Ramayana painting showing the divine test of Hanuman by Surasa during his crossing over the sea. Surasa appears as a formidable supernatural serpent-mother with an enormous open mouth, and Hanuman, accurate vanara face and saffron cloth, cleverly takes a very small form to enter and exit her mouth without harm or battle. Make this a noble test of ingenuity rather than violence or horror. Vibrant sapphire ocean far beneath, luminous clouds and golden sunlight, complex dynamic epic composition, premium realistic painterly craft, faithful traditional Indian iconography; no extra arms, no generic monsters, no captions or watermark."
+    }
+  ]
+}
