@@ -18,7 +18,7 @@ function prop(obj,key){
 const str=n=>n&&ts.isStringLiteralLike(n)?n.text:null;
 function validate(n,slug,label,seen){
   const src=str(prop(n,'src')),alt=str(prop(n,'alt'));
-  if(!src||!src.startsWith('/images/articles/'+slug+'/')||!/^\/images\/articles\/[a-z0-9-]+\/[a-z0-9-]+\.(webp|png|jpe?g|avif)$/.test(src)){
+  if(!src||!src.startsWith('/images/articles/'+slug+'/')||!/^\/images\/articles\/[a-z0-9-]+\/[a-z0-9-]+\.(webp|png|jpe?g|avif|svg)$/.test(src)){
     errors.push(slug+': '+label+' requires a real local /images/articles/'+slug+'/ image path');return;
   }
   if(!alt||alt.trim().length<18)errors.push(slug+': '+label+' requires descriptive alt text');
@@ -27,8 +27,9 @@ function validate(n,slug,label,seen){
   const filename=path.join(cwd,'public',src.slice(1));
   if(!fs.existsSync(filename)){errors.push(slug+': missing binary asset '+src);return;}
   const b=fs.readFileSync(filename),ext=path.extname(src);
-  if(b.length<15000||b.length>6000000)errors.push(slug+': abnormal image size '+src);
-  const valid=ext==='.webp'?b.toString('ascii',0,4)==='RIFF'&&b.toString('ascii',8,12)==='WEBP':
+  if(ext==='.svg' ? (b.length<2000||b.length>1000000) : (b.length<15000||b.length>6000000)) errors.push(slug+': abnormal image size '+src);
+  const safeSvg=ext==='.svg'&&b.toString('utf8').includes('<svg')&&!/<script|<foreignObject|onload\s*=|href\s*=\s*["']https?:|javascript:|<image/i.test(b.toString('utf8'));
+  const valid=ext==='.svg'?safeSvg:ext==='.webp'?b.toString('ascii',0,4)==='RIFF'&&b.toString('ascii',8,12)==='WEBP':
     ext==='.png'?b.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])):
     ext==='.jpg'||ext==='.jpeg'?b[0]===255&&b[1]===216:
     ext==='.avif'?b.toString('ascii',4,16).includes('ftypavi'):false;

@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/verify-article-images.mjs && next build",
+    "build": "npm run articles:smoke && node scripts/verify-article-images.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "articles:check-images": "node scripts/verify-article-images.mjs",
     "articles:images": "node scripts/generate-article-images.mjs",
-    "articles:verify-live": "node scripts/verify-production-article.mjs"
+    "articles:verify-live": "node scripts/verify-production-article.mjs",
+    "articles:smoke": "node scripts/verify-article-images.mjs --slug hanuman-mainaka-surasa-simhika-sundara-kanda"
   },
   "dependencies": {
     "next": "16.3.3",

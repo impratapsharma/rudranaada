@@ -52,7 +52,12 @@ export const hanumanOceanEncountersArticle:Article={
         "This is a striking moment of restraint. Mainaka is not a villain, and the offer is not a trap. Hospitality is worthy of gratitude. Hanuman does not mistake kindness for an enemy simply because it interrupts his path. He honours the mountain and keeps moving.",
         "The distinction matters for readers who know the episode only as a list of three obstacles. One of the three is a friend. To treat every interruption as hostile would miss the tenderness in Valmiki's account.",
         "Devotional reflection can draw a lesson here: even a good thing may have to wait when a duty urgently calls. That is an interpretation of the scene, rather than a direct maxim spoken by Hanuman in the Sanskrit text."
-      ]
+      ],
+      "image": {
+        "src": "/images/articles/hanuman-mainaka-surasa-simhika-sundara-kanda/mainaka-offers-rest.svg",
+        "alt": "Illustrated golden Mount Mainaka rising above the ocean to welcome Hanuman",
+        "caption": "Mainaka's hospitality is a gesture of friendship, not an attack."
+      }
     },
     {
       "heading": "How does Hanuman pass Surasa's test?",
@@ -61,7 +66,12 @@ export const hanumanOceanEncountersArticle:Article={
         "This is one of the Ramayana's most memorable demonstrations of practical intelligence. Hanuman possesses immense strength, but the solution is not simply to become larger. He recognises that the condition can be fulfilled without a prolonged struggle.",
         "Surasa is not treated in the same way as Simhika. Once Hanuman passes the test, she blesses his undertaking. The episode honours adaptability, quick understanding and the ability to preserve dignity in a difficult encounter.",
         "The popular lesson that humility is sometimes greater than physical size is a useful devotional reading. The literal action is his change of bodily form; the moral reflection grows from that action."
-      ]
+      ],
+      "image": {
+        "src": "/images/articles/hanuman-mainaka-surasa-simhika-sundara-kanda/surasa-tests-hanuman.svg",
+        "alt": "Illustration of Hanuman becoming tiny to pass Surasa's ocean-crossing test",
+        "caption": "Hanuman uses intelligence to pass Surasa's test without a prolonged battle."
+      }
     },
     {
       "heading": "Who is Simhika, and why does Hanuman defeat her?",
@@ -189,5 +199,11 @@ export const hanumanOceanEncountersArticle:Article={
       "label": "Ramayana",
       "href": "/ramayana"
     }
-  ]
+  ],
+  "featuredImage": {
+    "src": "/images/articles/hanuman-mainaka-surasa-simhika-sundara-kanda/hanuman-crossing-ocean.svg",
+    "alt": "Devotional vector illustration of Sri Hanuman soaring above the vast ocean toward Lanka",
+    "caption": "An original artistic interpretation of Hanuman’s flight across the ocean."
+  },
+  "updatedAt": "2026-11-25"
 };

@@ -21,7 +21,7 @@ while(Date.now()<timeout){
       const asset=await get(base+'/images/articles/'+slug+'/'+img.file);
       if(!asset.ok||!(asset.headers.get('content-type')||'').startsWith('image/')){assets=false;break;}
       const payload=await asset.arrayBuffer();
-      if(payload.byteLength<15000){assets=false;break;}
+      if(payload.byteLength<(img.file.endsWith('.svg')?2000:15000)){assets=false;break;}
     }
     if(res.ok&&titleOk&&expected&&sitemap.ok&&map.includes(url)&&assets){
       console.log('LIVE VERIFIED: '+url+' (HTTP 200, featured plus inline images, assets and sitemap)');

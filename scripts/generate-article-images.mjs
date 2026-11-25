@@ -10,7 +10,7 @@ const images=m.images||[];
 if(images.length<3||images.length>5||images.filter(v=>v.role==='featured').length!==1||images.filter(v=>v.role==='inline').length<2)throw Error('Need one featured and two to four inline images');
 const seen=new Set();
 for(const im of images){
-  if(!/^[a-z0-9-]+\.webp$/.test(im.file)||seen.has(im.file)||typeof im.prompt!=='string'||im.prompt.length<120||typeof im.alt!=='string'||im.alt.length<18)throw Error('Invalid image filename, prompt or alt text');
+  if(!/^[a-z0-9-]+\.(webp|svg)$/.test(im.file)||seen.has(im.file)||typeof im.prompt!=='string'||im.prompt.length<120||typeof im.alt!=='string'||im.alt.length<18)throw Error('Invalid image filename, prompt or alt text');
   seen.add(im.file);
   if(im.role==='inline'&&typeof im.sectionHeading!=='string')throw Error('Missing exact section heading');
 }
@@ -24,7 +24,7 @@ for(const im of images.filter(v=>v.role==='inline'))if(a.body.filter(s=>s.headin
 console.log((execute?'Generate':'Preflight')+': '+images.length+' assets for '+slug);
 if(!execute){console.log('Preflight OK; --generate invokes paid Image API');process.exit(0);}
 const secret=process.env.OPENAI_API_KEY;
-if(!secret)throw Error('Missing OPENAI_API_KEY. Configure secret in GitHub Actions (never commit or paste it).');
+if(images.some(im=>im.file.endsWith('.webp'))&&!secret)throw Error('Missing OPENAI_API_KEY. Configure secret in GitHub Actions (never commit or paste it).');
 const directory=path.join('public','images','articles',slug);
 await fs.mkdir(directory,{recursive:true});
 async function generate(prompt){
@@ -42,6 +42,7 @@ async function generate(prompt){
 }
 for(const im of images){
   const output=path.join(directory,im.file);
+  if(im.file.endsWith('.svg')){const existing=await fs.readFile(output,'utf8');if(!existing.includes('<svg'))throw Error('Invalid original SVG '+output);console.log('Reusing original SVG '+output);continue;}
   try{if((await fs.stat(output)).size>15000){console.log('Reusing '+im.file);continue;}}catch{}
   const image=await generate(im.prompt);
   if(image.length<15000||image.length>6000000||image.toString('ascii',0,4)!=='RIFF'||image.toString('ascii',8,12)!=='WEBP')throw Error('Invalid image response for '+im.file);
