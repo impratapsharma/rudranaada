@@ -1,0 +1,32 @@
+{
+  "slug": "vibhishana-sharanagati-rama-vow-of-refuge",
+  "articleFile": "lib/vibhishana-sharanagati-article.ts",
+  "images": [
+    {
+      "role": "featured",
+      "file": "lanka-and-the-northern-shore.webp",
+      "alt": "A wide dusk sea between distant Lanka and a northern headland with five lights over the water",
+      "caption": "The crossing from Lanka to Rama’s camp as an original symbolic illustration.",
+      "prompt": "An original epic landscape viewed from a rocky northern shore at dusk. Show a distant island and five small golden lights over the open sea for Vibhishana and his four companions.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "five-at-the-shore.svg",
+      "sectionHeading": "What happened when Vibhishana reached Rama’s camp?",
+      "alt": "Five lights, one larger than the others, hang above a northern shoreline in a sectional view of the arrival",
+      "caption": "Vibhishana and four companions halt above the shore in Yuddha Kanda 6.17.",
+      "prompt": "An original stylized illustration of five lights above the waves, with one leading light and four companions. Separate the figures of the sky from the shoreline through deep teal and copper colors.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "abhaya-refuge.svg",
+      "sectionHeading": "Rama’s vow of refuge in Sanskrit and English",
+      "alt": "A single golden light travels along a path toward an illuminated arched doorway",
+      "caption": "Abhaya is the assurance of safety Rama gives in his vow.",
+      "prompt": "An original symbolic illustration of a single light traveling toward an open luminous arch. Draw an unobstructed path through blue stone steps to express the welcome promised in the verse.",
+      "source": "original-vector"
+    }
+  ]
+}

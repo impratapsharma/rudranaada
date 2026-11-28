@@ -1,0 +1,32 @@
+{
+  "slug": "bhagavad-gita-6-35-meaning-restless-mind",
+  "articleFile": "lib/gita-635-article.ts",
+  "images": [
+    {
+      "role": "featured",
+      "file": "steady-lamp.webp",
+      "alt": "A bright brass lamp sheltered inside a stone arch as curved lines suggest wind outside",
+      "caption": "The steady flame recalls the image in Bhagavad Gita 6.19.",
+      "prompt": "An original devotional illustration in warm vermilion and deep indigo. Center a plain brass oil lamp with a steady flame in a sheltered stone niche while curved wind lines move outside the arch.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "returning-attention.svg",
+      "sectionHeading": "What is abhyāsa in the Bhagavad Gita?",
+      "alt": "Curving paths of attention arc outward and return toward a single light, illustrating Gita 6.26",
+      "caption": "Verse 6.26 describes returning the mind whenever it wanders.",
+      "prompt": "An original explanatory illustration in lapis blue and pale gold. Show several curved trajectories drifting outward before returning toward one luminous point, a visual interpretation of the recurring movement in verse 6.26.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "practice-and-dispassion.svg",
+      "sectionHeading": "How practice and dispassion work together",
+      "alt": "Two paths labeled practice and dispassion meet at a steady flame",
+      "caption": "Practice returns attention. Dispassion weakens the pull away from it.",
+      "prompt": "An original diagram with two legible labels, Practice and Dispassion, entering from opposite sides and meeting before a steady lamp. Use warm gold against a deep plum background and leave clear space around each label.",
+      "source": "original-vector"
+    }
+  ]
+}

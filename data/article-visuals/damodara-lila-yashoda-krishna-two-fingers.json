@@ -1,0 +1,32 @@
+{
+  "slug": "damodara-lila-yashoda-krishna-two-fingers",
+  "articleFile": "lib/damodara-lila-article.ts",
+  "images": [
+    {
+      "role": "featured",
+      "file": "yashodas-rope-and-mortar.webp",
+      "alt": "A coiled rope, a clay curd pot and a wooden mortar in a sunlit Gokula courtyard",
+      "caption": "The objects that carry the story from Yashoda’s kitchen to the courtyard.",
+      "prompt": "An original devotional still life in warm indigo and terracotta. Use a clay curd pot with a small crack, a coil of rope and a wooden mortar in a simple sunlit courtyard, with marigold petals in the foreground.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "two-fingerbreadths.svg",
+      "sectionHeading": "Why was the rope always two fingers short?",
+      "alt": "Two lengths of rope end on either side of a marked gap of two fingerbreadths",
+      "caption": "The gap stays the same even as Yashoda joins more rope.",
+      "prompt": "An original close-up diagram of two natural rope ends framing the label Two fingerbreadths, with discreet measure ticks. Emphasize the separation visually and keep the lettering large enough for small screens.",
+      "source": "original-vector"
+    },
+    {
+      "role": "inline",
+      "file": "twin-arjuna-trees.svg",
+      "sectionHeading": "What happened to the two arjuna trees?",
+      "alt": "Two trees frame the wooden mortar caught crosswise between their trunks",
+      "caption": "Bhagavata Purana 10.10 describes the mortar turning crosswise between the trees.",
+      "prompt": "An original book illustration of twin arjuna trees in a moonlit green courtyard with the wooden mortar crosswise at their base. A rope leads out of frame, keeping focus on the passage through the trees.",
+      "source": "original-vector"
+    }
+  ]
+}
